@@ -1,0 +1,324 @@
+.font-panel
+    .font-text-lable
+        font-size .9rem
+        font-weight 600
+        line-height 2rem
+        color #a0a0a0
+    padding 1rem 2rem
+    display flex
+    flex-direction column
+    .font-dropdown-effect-preview
+        display flex
+        padding 2.3rem 2rem 
+        border 1px solid #e0e5ea
+        border-radius 4px 4px 0 0
+        font-size 1.4rem
+        color #444950
+        justify-content space-between
+        cursor pointer
+        background #f8fafc
+        &:active
+            opacity .6
+        .font-panel-icon
+            &::after
+                content ""
+                display inline-block
+                margin-top .6rem
+                border-left 5px solid transparent
+                border-right 5px solid transparent
+                border-top 5px solid #666
+    .font-panel-image
+        padding 0 2rem
+        height 6rem
+        border-radius 0 0 4px 4px  
+        border 1px solid #e0e5ea
+        .font-panel-label
+            display flex
+            justify-content space-between
+            line-height 3rem
+            color #444950
+            .vx 
+                width 1.5rem
+                height 1.5rem
+        .font-color-picker
+            padding 0 2rem
+            span
+                .vc-sketch
+                    right 4rem
+    .font-popup
+        z-index 1002
+        display block
+        width 29rem
+        top  17.8rem
+        height 30rem
+        background #fff
+        position fixed
+        right 2rem
+        overflow: auto
+        border-radius 4px
+        border 1px solid #e0e5ea
+        ul  
+            display flex
+            padding .5rem 1rem
+            height auto
+            word-breakb break-all
+            word-wrap break-word 
+            flex-wrap: wrap
+            overflow-x none
+            li 
+                width 8rem
+                height 6rem
+                line-height 6rem
+                text-align center
+                margin: 0 10px 14px 0
+                border 1px solid #e0e5ea
+                border-radius 4px
+                cursor pointer
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position: center;
+                &:hover
+                    border-color #2354f4
+            .font-popup-selected
+                border-color #2354f4
+        .font-effect-tabs
+            padding 1.5rem 2rem
+            .font-effect-tab
+                display flex
+                height 2.5rem
+                flex-direction row
+                border 1px solid #e0e5ea
+                border-radius 4px
+                div
+                    flex 1
+                    display flex
+                    padding .5rem
+                    justify-content center
+                    cursor pointer
+                    
+                .active
+                    color #1d1e1f
+                    font-weight 600
+                    background #e0e5ea
+.font-text
+    padding 1rem 2rem
+    display flex
+    flex-direction column
+    .el-select--small
+        width 16rem
+        margin-bottom 1rem
+        cursor pointer
+    .vx-select
+        width 100%
+        margin-bottom 1rem
+        cursor pointer
+        .vx-select-input
+            border 1px solid #e0e5ea
+            /* &:hover
+                border-color #bec3c9 */
+        .vx-select-content
+            height 12rem
+    .font-size
+        font-size 1rem
+        text-align center
+        width 100%
+        height 3rem
+        line-height 3rem
+        margin-bottom 1rem
+        cursor pointer
+        border 1px solid #e0e5ea
+        border-radius 4px
+    .font-text-lable
+        font-size .9rem
+        font-weight 600
+        line-height 2rem
+        color #a0a0a0
+    .font-text-family
+        padding 1rem 2rem
+        color #444950
+        border 1px solid #e0e5ea
+        display flex
+        justify-content space-between
+        border-radius 4px
+        cursor pointer
+        margin-bottom 1rem
+        .font-text-family-lable
+            text-overflow ellipsis
+            white-space nowrap 
+            overflow hidden
+        .active
+            color #2354f4
+        .vx
+            width 1.5rem
+            height 1.5rem
+            &:active
+                opacity .6
+        /* &:hover 
+            color #000
+            background-color #fff
+            border-color #bec3c9 */
+        .font-text-family-icon
+            &::after
+                content ""
+                display inline-block
+                margin-top .6rem
+                border-left 5px solid transparent
+                border-right 5px solid transparent
+                border-top 5px solid #666
+            
+    .font-family-lists
+        width 16rem
+        height 25rem
+        position fixed
+        border 1px solid #e0e5ea
+        overflow: auto
+        z-index 1002
+        top 34rem
+        background #fff
+        border-radius 4px
+        .font-family-tabs
+            padding 1.5rem 2rem
+            .font-family-tab
+                height 2.3rem
+                flex-direction row
+                border 1px solid #e0e5ea
+                border-radius 4px
+                line-height 2.3rem
+                display flex
+                div
+                    flex 1
+                    display flex
+                    justify-content center
+                    font-size .9rem
+                    cursor pointer
+                .active
+                    background-color #2354f4
+                    color #fff
+        .font-family-label
+            width 100%
+            height 2.5rem
+            line-height 2.5rem
+            background-color #f0f3f4
+            font-size 1rem
+            color #333
+            span    
+                padding 0 1rem
+        .font-family-item
+            width 100%
+            height 2.5rem
+            line-height 2.5rem
+            background-color #fff
+            font-size 1rem
+            color #333
+            display flex
+            justify-content center
+            cursor pointer
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            &:hover
+                background-color #dbddde
+            img
+                max-width:100%
+                max-height:100%
+    .font-text-range
+        display flex
+        flex-direction row
+        .font-range-input
+            height 3rem
+            width 100%
+            line-height 3rem
+            display flex
+            border-radius 4px
+            border 1px solid #dfe3ed
+            font-size .9rem
+            .font-range-value    
+                flex 1
+                height 3rem
+                width 6rem
+                text-align center
+            .font-range-lable
+                flex 1
+                display flex
+                justify-content center
+            .font-range
+                flex 2
+                div
+                .el-slider__runway
+                    .el-slider__button-wrapper
+                        z-index 1
+    .font-word-space
+        z-index 100
+        width 15rem
+        min-width 15rem
+        height 3rem
+        border 1px solid #dfe3ed
+        top 40.5rem
+        right 1rem
+        background-color #fff
+        position absolute
+        display none
+        /* display flex */
+        .lable
+            display flex
+            width 5rem
+            justify-content center
+            line-height 3rem
+        .slider
+            line-height 1rem
+            width 7rem
+            min-width 7rem
+        .value
+            width 3rem
+            min-width 3rem
+            display flex
+            justify-content center
+            font-size .9rem
+            line-height 3rem
+        &:hover
+            display flex
+
+    .font-text-align
+        display none
+        width 8rem
+        height 10rem
+        top 40.5rem
+        right 10rem
+        background-color #fff
+        position absolute
+        z-index 1002
+        border 1px solid #dfe3ed
+        ul
+            li
+                display flex
+                justify-content center
+                height 3.5rem
+                line-height 3.5rem
+                cursor pointer
+                
+                &:hover
+                    background-color #045ff9
+                    color #fff
+                i
+                    display flex
+                    justify-content center
+                    align-items center
+
+        &:hover
+            display block
+    .font-text-alignicon
+        &:hover
+            +.font-text-align
+                    display block
+    .font-wordSpace
+        &:hover
+            +.font-word-space
+                display flex
+    .font-lineSpace
+        &:hover
+            +.font-word-space
+                display flex
+            
+
+
+
+            

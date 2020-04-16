@@ -1,0 +1,1179 @@
+{
+  "version": "5.7.0",
+  "type": "poster",
+  "global": {
+    "zoom": 0.25,
+    "dpi": 72,
+    "unit": "px",
+    "showWatermark": true
+  },
+  "title": "新的设计",
+  "layouts": [
+    {
+      "title": null,
+      "backgroundSize": null,
+      "backgroundImage": null,
+      "backgroundColor": "#6927ffff",
+      "backgroundImageInfo": {
+        "opacity": 1,
+        "width": 100,
+        "height": 100,
+        "transform": {
+          "a": 1,
+          "b": 0,
+          "c": 0,
+          "d": 1,
+          "tx": 0,
+          "ty": 0
+        }
+      },
+      "backgroundRepeat": "no-repeat",
+      "height": 2208,
+      "width": 1242,
+      "className": null,
+      "repeatId": null,
+      "repeatGroup": null,
+      "elements": [
+        {
+          "type": "text",
+          "category": "",
+          "opacity": 1,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "width": 1102,
+          "height": 273,
+          "left": 90.23023168193775,
+          "top": 348.59632024153944,
+          "transform": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1,
+            "tx": 0,
+            "ty": 0
+          },
+          "boxShadow": null,
+          "resize": 5,
+          "dragable": true,
+          "rotatable": true,
+          "editable": true,
+          "frozen": false,
+          "hidden": false,
+          "lock": false,
+          "borderRadius": 0,
+          "filter": {
+            "hueRotate": 0,
+            "saturate": 0,
+            "brightness": 0,
+            "gaussianBlur": 0
+          },
+          "color": "#fdd835ff",
+          "backgroundColor": null,
+          "fontFamily": "HYLiLiangHeiJ",
+          "fontStyle": "normal",
+          "fontWeight": 400,
+          "fontSize": 220,
+          "lineHeight": 1.24,
+          "letterSpacing": 7.6000000000000005,
+          "textDecoration": "none",
+          "writingMode": "horizontal-tb",
+          "textAlign": "center",
+          "verticalAlign": "top",
+          "contents": null,
+          "effectScale": 1,
+          "textShadow": null,
+          "autoScale": true,
+          "textEffects": [
+            {
+              "enable": true,
+              "collapse": false,
+              "offset": {
+                "enable": false,
+                "x": 0,
+                "y": 0
+              },
+              "skew": {
+                "enable": false,
+                "x": 0,
+                "y": 0
+              },
+              "stroke": {
+                "enable": false,
+                "color": "#000000ff",
+                "width": 0,
+                "type": "center"
+              },
+              "shadow": {
+                "enable": true,
+                "color": "#1a00264a",
+                "offsetX": 8.739522014665193,
+                "offsetY": 8.739522014665193,
+                "blur": 39.99
+              },
+              "filling": {
+                "enable": false,
+                "type": 0,
+                "color": "#ffffffff",
+                "imageContent": {
+                  "repeat": 0,
+                  "scaleX": 1,
+                  "scaleY": 1,
+                  "image": null,
+                  "width": null,
+                  "height": null
+                },
+                "gradient": {
+                  "byLine": 0,
+                  "angle": 0,
+                  "stops": [
+                    {
+                      "color": "#ffffffff",
+                      "offset": 0
+                    },
+                    {
+                      "color": "#000000ff",
+                      "offset": 1
+                    }
+                  ]
+                }
+              },
+              "excludeScale": []
+            }
+          ],
+          "aggregatedColors": [
+            "rgb(253, 216, 53)",
+            "rgba(26,0,38,0.29)"
+          ],
+          "mainColor": null,
+          "shadow": {
+            "color": "#0707074a",
+            "offsetX": 0.006370613685866107,
+            "offsetY": 7.999997463454677,
+            "blurRadius": 39.99,
+            "spreadRadius": 3.01,
+            "inset": false
+          },
+          "content": "我请\"课\"",
+          "version": "5.7.0"
+        },
+        {
+          "type": "text",
+          "category": "",
+          "opacity": 1,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "width": 1084,
+          "height": 324,
+          "left": 76.23023168193777,
+          "top": 57.52369345081516,
+          "transform": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1,
+            "tx": 0,
+            "ty": 0
+          },
+          "boxShadow": null,
+          "resize": 5,
+          "dragable": true,
+          "rotatable": true,
+          "editable": true,
+          "frozen": false,
+          "hidden": false,
+          "lock": false,
+          "borderRadius": 0,
+          "filter": {
+            "hueRotate": 0,
+            "saturate": 0,
+            "brightness": 0,
+            "gaussianBlur": 0
+          },
+          "color": "#fdd835ff",
+          "backgroundColor": null,
+          "fontFamily": "HYLiLiangHeiJ",
+          "fontStyle": "normal",
+          "fontWeight": 400,
+          "fontSize": 261.2,
+          "lineHeight": 1.24,
+          "letterSpacing": 9.96,
+          "textDecoration": "none",
+          "writingMode": "horizontal-tb",
+          "textAlign": "center",
+          "verticalAlign": "top",
+          "contents": null,
+          "effectScale": 1,
+          "textShadow": null,
+          "autoScale": true,
+          "textEffects": [
+            {
+              "enable": true,
+              "collapse": false,
+              "offset": {
+                "enable": false,
+                "x": 0,
+                "y": 0
+              },
+              "skew": {
+                "enable": false,
+                "x": 0,
+                "y": 0
+              },
+              "stroke": {
+                "enable": false,
+                "color": "#000000ff",
+                "width": 0,
+                "type": "center"
+              },
+              "shadow": {
+                "enable": true,
+                "color": "#1a00264a",
+                "offsetX": 7.4175217367841855,
+                "offsetY": 7.417521736784186,
+                "blur": 50
+              },
+              "filling": {
+                "enable": false,
+                "type": 0,
+                "color": "#ffffffff",
+                "imageContent": {
+                  "repeat": 0,
+                  "scaleX": 1,
+                  "scaleY": 1,
+                  "image": null,
+                  "width": null,
+                  "height": null
+                },
+                "gradient": {
+                  "byLine": 0,
+                  "angle": 0,
+                  "stops": [
+                    {
+                      "color": "#ffffffff",
+                      "offset": 0
+                    },
+                    {
+                      "color": "#000000ff",
+                      "offset": 1
+                    }
+                  ]
+                }
+              },
+              "excludeScale": []
+            }
+          ],
+          "aggregatedColors": [
+            "#fdd835",
+            "rgba(26,0,38,0.29)"
+          ],
+          "mainColor": null,
+          "shadow": {
+            "color": "#0707074a",
+            "offsetX": 0.006370613685866107,
+            "offsetY": 7.999997463454677,
+            "blurRadius": 39.99,
+            "spreadRadius": 3.01,
+            "inset": false
+          },
+          "content": "你开学",
+          "version": "5.7.0"
+        },
+        {
+          "type": "svg",
+          "category": "",
+          "opacity": 1,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "width": 982,
+          "height": 131,
+          "left": 150.23023168193777,
+          "top": 629,
+          "transform": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1,
+            "tx": 0,
+            "ty": 0
+          },
+          "boxShadow": null,
+          "resize": 7,
+          "dragable": true,
+          "rotatable": true,
+          "editable": true,
+          "frozen": false,
+          "hidden": false,
+          "lock": false,
+          "borderRadius": 0,
+          "filter": {
+            "hueRotate": 0,
+            "saturate": 0,
+            "brightness": 0,
+            "gaussianBlur": 0
+          },
+          "url": "//st-gdx.dancf.com/uxms/20190812-142125-a265.svg",
+          "content": "<svg xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"none\" viewBox=\"-3.5 -3.5 989 138\">\n        <title>圆角矩形 2</title>\n        \n        <path fill=\"{{colors[0]}}\" fill-rule=\"evenodd\" stroke=\"{{colors[1]}}\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M41.000033259391785 1.0000495910644531C41.000033259391785 1.0000495910644531 940.9999667406082 1.0000495910644531 940.9999667406082 1.0000495910644531C963.0913954973221 1.0000495910644531 980.999965429306 18.908611297607422 980.999965429306 41.00004005432129C980.999965429306 41.00004005432129 980.999965429306 89.99997901916504 980.999965429306 89.99997901916504C980.999965429306 112.0914077758789 963.0913954973221 129.99996948242188 940.9999667406082 129.99996948242188C940.9999667406082 129.99996948242188 41.000033259391785 129.99996948242188 41.000033259391785 129.99996948242188C18.908604502677917 129.99996948242188 1.0000345706939697 112.0914077758789 1.0000345706939697 89.99997901916504C1.0000345706939697 89.99997901916504 1.0000345706939697 41.00004005432129 1.0000345706939697 41.00004005432129C1.0000345706939697 18.908611297607422 18.908604502677917 1.0000495910644531 41.000033259391785 1.0000495910644531 Z\" />\n    </svg>",
+          "colors": [
+            "#ffd581ff",
+            "#ffffffff"
+          ],
+          "containerTransform": null,
+          "version": "5.7.0"
+        },
+        {
+          "type": "text",
+          "category": "",
+          "opacity": 1,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "width": 964,
+          "height": 101,
+          "left": 159.2302316819378,
+          "top": 637.775,
+          "transform": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1,
+            "tx": 0,
+            "ty": 0
+          },
+          "boxShadow": null,
+          "resize": 5,
+          "dragable": true,
+          "rotatable": true,
+          "editable": true,
+          "frozen": false,
+          "hidden": false,
+          "lock": false,
+          "borderRadius": 0,
+          "filter": {
+            "hueRotate": 0,
+            "saturate": 0,
+            "brightness": 0,
+            "gaussianBlur": 0
+          },
+          "color": "#837dffff",
+          "backgroundColor": null,
+          "fontFamily": "HYXiaoBoDunHeiW",
+          "fontStyle": "normal",
+          "fontWeight": 400,
+          "fontSize": 84,
+          "lineHeight": 1.2,
+          "letterSpacing": 3.36,
+          "textDecoration": "none",
+          "writingMode": "horizontal-tb",
+          "textAlign": "center",
+          "verticalAlign": "top",
+          "contents": null,
+          "effectScale": 1,
+          "textShadow": null,
+          "autoScale": true,
+          "textEffects": [],
+          "aggregatedColors": [
+            "rgb(131, 125, 255)"
+          ],
+          "mainColor": null,
+          "content": "九月报名买多少送多少",
+          "version": "5.7.0"
+        },
+        {
+          "type": "image",
+          "category": "",
+          "opacity": 1,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "width": 967,
+          "height": 1001,
+          "left": 151,
+          "top": 816,
+          "transform": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1,
+            "tx": 0,
+            "ty": 0
+          },
+          "boxShadow": {
+            "color": null
+          },
+          "resize": 7,
+          "dragable": true,
+          "rotatable": true,
+          "editable": true,
+          "frozen": false,
+          "hidden": false,
+          "lock": false,
+          "borderRadius": 0,
+          "filter": {
+            "hueRotate": 0,
+            "saturate": 0,
+            "brightness": 0,
+            "gaussianBlur": 0
+          },
+          "url": "//st-gdx.dancf.com/uxms/20190812-142125-3588.png",
+          "originWidth": 967,
+          "originHeight": 1001,
+          "effectedImage": null,
+          "effectedImageWidth": 0,
+          "effectedImageHeight": 0,
+          "effectedImageOffsetLeft": 0,
+          "effectedImageOffsetTop": 0,
+          "imageEffects": [],
+          "imageEffectsHash": "",
+          "aggregatedColors": [],
+          "mainColor": null,
+          "effectScale": 1,
+          "version": "5.7.0",
+          "clip": {
+            "bottom": 0,
+            "right": 0,
+            "left": 0,
+            "top": 0
+          }
+        },
+        {
+          "type": "text",
+          "category": "",
+          "opacity": 1,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "width": 777,
+          "height": 184,
+          "left": 241.70407302488772,
+          "top": 984.35,
+          "transform": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1,
+            "tx": 0,
+            "ty": 0
+          },
+          "boxShadow": null,
+          "resize": 5,
+          "dragable": true,
+          "rotatable": true,
+          "editable": true,
+          "frozen": false,
+          "hidden": false,
+          "lock": false,
+          "borderRadius": 0,
+          "filter": {
+            "hueRotate": 0,
+            "saturate": 0,
+            "brightness": 0,
+            "gaussianBlur": 0
+          },
+          "color": "#ffffffff",
+          "backgroundColor": null,
+          "fontFamily": "HYXiaoBoDunHeiW",
+          "fontStyle": "normal",
+          "fontWeight": 400,
+          "fontSize": 58,
+          "lineHeight": 1.6,
+          "letterSpacing": 2.32,
+          "textDecoration": "none",
+          "writingMode": "horizontal-tb",
+          "textAlign": "center",
+          "verticalAlign": "top",
+          "contents": null,
+          "effectScale": 1,
+          "textShadow": null,
+          "autoScale": true,
+          "textEffects": [],
+          "aggregatedColors": [
+            "rgb(255, 255, 255)"
+          ],
+          "mainColor": null,
+          "content": "小学/初中/高中\n语文/数学/外语/阅读/写作",
+          "version": "5.7.0"
+        },
+        {
+          "type": "text",
+          "category": "",
+          "opacity": 1,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "width": 531,
+          "height": 243,
+          "left": 365.27998879293114,
+          "top": 1215.65,
+          "transform": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1,
+            "tx": 0,
+            "ty": 0
+          },
+          "boxShadow": null,
+          "resize": 5,
+          "dragable": true,
+          "rotatable": true,
+          "editable": true,
+          "frozen": false,
+          "hidden": false,
+          "lock": false,
+          "borderRadius": 0,
+          "filter": {
+            "hueRotate": 0,
+            "saturate": 0,
+            "brightness": 0,
+            "gaussianBlur": 0
+          },
+          "color": "#ffffffff",
+          "backgroundColor": null,
+          "fontFamily": "HYXiaoBoDunHeiW",
+          "fontStyle": "normal",
+          "fontWeight": 400,
+          "fontSize": 54,
+          "lineHeight": 1.5,
+          "letterSpacing": 2.16,
+          "textDecoration": "none",
+          "writingMode": "horizontal-tb",
+          "textAlign": "center",
+          "verticalAlign": "top",
+          "contents": null,
+          "effectScale": 1,
+          "textShadow": null,
+          "autoScale": true,
+          "textEffects": [],
+          "aggregatedColors": [
+            "rgb(255, 255, 255)"
+          ],
+          "mainColor": null,
+          "content": "名师授课 精准辅导<br>0基础教学 覆盖面广<br>多年经验 优质教学<br>",
+          "version": "5.7.0"
+        },
+        {
+          "type": "text",
+          "category": "",
+          "opacity": 1,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "width": 843,
+          "height": 164,
+          "left": 212.21991990457985,
+          "top": 1487.0500062000729,
+          "transform": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1,
+            "tx": 0,
+            "ty": 0
+          },
+          "boxShadow": null,
+          "resize": 5,
+          "dragable": true,
+          "rotatable": true,
+          "editable": true,
+          "frozen": false,
+          "hidden": false,
+          "lock": false,
+          "borderRadius": 0,
+          "filter": {
+            "hueRotate": 0,
+            "saturate": 0,
+            "brightness": 0,
+            "gaussianBlur": 0
+          },
+          "color": "#ffffffff",
+          "backgroundColor": null,
+          "fontFamily": "HYXiaoBoDunHeiW",
+          "fontStyle": "normal",
+          "fontWeight": 400,
+          "fontSize": 54,
+          "lineHeight": 1.52,
+          "letterSpacing": 2.16,
+          "textDecoration": "none",
+          "writingMode": "horizontal-tb",
+          "textAlign": "center",
+          "verticalAlign": "top",
+          "contents": null,
+          "effectScale": 1,
+          "textShadow": null,
+          "autoScale": true,
+          "textEffects": [],
+          "aggregatedColors": [
+            "rgb(255, 255, 255)"
+          ],
+          "mainColor": null,
+          "content": "报名任意课程即送同等价位课程\n科目任选",
+          "version": "5.7.0"
+        },
+        {
+          "type": "image",
+          "category": "",
+          "opacity": 1,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "width": 272.30486612313234,
+          "height": 512.1017265569179,
+          "left": -22.366813953734166,
+          "top": 882.6235051575964,
+          "transform": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1,
+            "tx": 0,
+            "ty": 0
+          },
+          "boxShadow": {
+            "color": null
+          },
+          "resize": 7,
+          "dragable": true,
+          "rotatable": true,
+          "editable": true,
+          "frozen": false,
+          "hidden": false,
+          "lock": false,
+          "borderRadius": 0,
+          "filter": {
+            "hueRotate": 0,
+            "saturate": 0,
+            "brightness": 0,
+            "gaussianBlur": 0
+          },
+          "url": "//st-gdx.dancf.com/uxms/20190812-142125-5d81.png",
+          "originWidth": 499,
+          "originHeight": 435,
+          "effectedImage": null,
+          "effectedImageWidth": 0,
+          "effectedImageHeight": 0,
+          "effectedImageOffsetLeft": 0,
+          "effectedImageOffsetTop": 0,
+          "imageEffects": [],
+          "imageEffectsHash": "",
+          "aggregatedColors": [],
+          "mainColor": null,
+          "effectScale": 1,
+          "version": "5.7.0",
+          "clip": {
+            "bottom": 0,
+            "right": 0,
+            "left": 315.14056273181484,
+            "top": 0
+          }
+        },
+        {
+          "type": "image",
+          "category": "",
+          "opacity": 1,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "width": 570,
+          "height": 331,
+          "left": 957.0000000000001,
+          "top": 1637.925,
+          "transform": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1,
+            "tx": 0,
+            "ty": 0
+          },
+          "boxShadow": {
+            "color": null
+          },
+          "resize": 7,
+          "dragable": true,
+          "rotatable": true,
+          "editable": true,
+          "frozen": false,
+          "hidden": false,
+          "lock": false,
+          "borderRadius": 0,
+          "filter": {
+            "hueRotate": 0,
+            "saturate": 0,
+            "brightness": 0,
+            "gaussianBlur": 0
+          },
+          "url": "//st-gdx.dancf.com/uxms/20190812-142125-aa0e.png",
+          "originWidth": 570,
+          "originHeight": 331,
+          "effectedImage": null,
+          "effectedImageWidth": 0,
+          "effectedImageHeight": 0,
+          "effectedImageOffsetLeft": 0,
+          "effectedImageOffsetTop": 0,
+          "imageEffects": [],
+          "imageEffectsHash": "",
+          "aggregatedColors": [],
+          "mainColor": null,
+          "effectScale": 1,
+          "version": "5.7.0",
+          "clip": {
+            "bottom": 0,
+            "right": 0,
+            "left": 0,
+            "top": 0
+          }
+        },
+        {
+          "type": "image",
+          "category": "",
+          "opacity": 1,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "width": 240.19030639254268,
+          "height": 554.7211098230489,
+          "left": -6.309534088439337,
+          "top": 0,
+          "transform": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1,
+            "tx": 0,
+            "ty": 0
+          },
+          "boxShadow": {
+            "color": null
+          },
+          "resize": 7,
+          "dragable": true,
+          "rotatable": true,
+          "editable": true,
+          "frozen": false,
+          "hidden": false,
+          "lock": false,
+          "borderRadius": 0,
+          "filter": {
+            "hueRotate": 0,
+            "saturate": 0,
+            "brightness": 0,
+            "gaussianBlur": 0
+          },
+          "url": "//st-gdx.dancf.com/uxms/20190812-142126-f59a.png",
+          "originWidth": 532,
+          "originHeight": 577,
+          "effectedImage": null,
+          "effectedImageWidth": 0,
+          "effectedImageHeight": 0,
+          "effectedImageOffsetLeft": 0,
+          "effectedImageOffsetTop": 0,
+          "imageEffects": [],
+          "imageEffectsHash": "",
+          "aggregatedColors": [],
+          "mainColor": null,
+          "effectScale": 1,
+          "version": "5.7.0",
+          "clip": {
+            "bottom": 0,
+            "right": 0,
+            "left": 271.2683251947399,
+            "top": 0
+          }
+        },
+        {
+          "type": "image",
+          "category": "",
+          "opacity": 1,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "width": 169,
+          "height": 195,
+          "left": 1112.5000000000002,
+          "top": 448.5896055960517,
+          "transform": {
+            "a": 0.8028342993731342,
+            "b": 0.5962022205175428,
+            "c": -0.5962022205175428,
+            "d": 0.8028342993731342,
+            "tx": 0,
+            "ty": 0
+          },
+          "boxShadow": {
+            "color": null
+          },
+          "resize": 7,
+          "dragable": true,
+          "rotatable": true,
+          "editable": true,
+          "frozen": false,
+          "hidden": false,
+          "lock": false,
+          "borderRadius": 0,
+          "filter": {
+            "hueRotate": 0,
+            "saturate": 0,
+            "brightness": 0,
+            "gaussianBlur": 0
+          },
+          "url": "//st-gdx.dancf.com/uxms/20190812-142126-d04f.png",
+          "originWidth": 169,
+          "originHeight": 195,
+          "effectedImage": null,
+          "effectedImageWidth": 0,
+          "effectedImageHeight": 0,
+          "effectedImageOffsetLeft": 0,
+          "effectedImageOffsetTop": 0,
+          "imageEffects": [],
+          "imageEffectsHash": "",
+          "aggregatedColors": [],
+          "mainColor": null,
+          "effectScale": 1,
+          "version": "5.7.0",
+          "clip": {
+            "bottom": 0,
+            "right": 0,
+            "left": 0,
+            "top": 0
+          }
+        },
+        {
+          "type": "svg",
+          "category": "",
+          "opacity": 1,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "width": 200.23689495450907,
+          "height": 200.23689495450907,
+          "left": 1023.1117842046833,
+          "top": 1271.848243961134,
+          "transform": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1,
+            "tx": 0,
+            "ty": 0
+          },
+          "boxShadow": null,
+          "resize": 7,
+          "dragable": true,
+          "rotatable": true,
+          "editable": true,
+          "frozen": false,
+          "hidden": false,
+          "lock": false,
+          "borderRadius": 0,
+          "filter": {
+            "hueRotate": 0,
+            "saturate": 0,
+            "brightness": 0,
+            "gaussianBlur": 0
+          },
+          "url": "//st-gdx.dancf.com/uxms/20190812-142126-5d12.svg",
+          "content": "<svg xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"none\" viewBox=\"-3 -3 240 240\">\n        <title>椭圆 1</title>\n        \n        <path fill=\"{{colors[0]}}\" fill-rule=\"evenodd\" stroke=\"{{colors[1]}}\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M117.49998271465302 1.0000171661376953C181.28889441490173 1.0000171661376953 232.99997985363007 52.7111930847168 232.99997985363007 116.49994850158691C232.99997985363007 180.2888355255127 181.28889441490173 232.0000114440918 117.49998271465302 232.0000114440918C53.71114504337311 232.0000114440918 1.9999855756759644 180.2888355255127 1.9999855756759644 116.49994850158691C1.9999855756759644 52.7111930847168 53.71114504337311 1.0000171661376953 117.49998271465302 1.0000171661376953 Z\" />\n    </svg>",
+          "colors": [
+            "#ffffffff",
+            "#000000ff"
+          ],
+          "containerTransform": null,
+          "version": "5.7.0"
+        },
+        {
+          "type": "image",
+          "category": "",
+          "opacity": 1,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "width": 144.88155252274547,
+          "height": 129.03513271557017,
+          "left": 67.33836738183443,
+          "top": 1280.1600011612977,
+          "transform": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1,
+            "tx": 0,
+            "ty": 0
+          },
+          "boxShadow": {
+            "color": null
+          },
+          "resize": 7,
+          "dragable": true,
+          "rotatable": true,
+          "editable": true,
+          "frozen": false,
+          "hidden": false,
+          "lock": false,
+          "borderRadius": 0,
+          "filter": {
+            "hueRotate": 0,
+            "saturate": 0,
+            "brightness": 0,
+            "gaussianBlur": 0
+          },
+          "url": "//st-gdx.dancf.com/uxms/20190812-142126-4299.png",
+          "originWidth": 128,
+          "originHeight": 114,
+          "effectedImage": null,
+          "effectedImageWidth": 0,
+          "effectedImageHeight": 0,
+          "effectedImageOffsetLeft": 0,
+          "effectedImageOffsetTop": 0,
+          "imageEffects": [],
+          "imageEffectsHash": "",
+          "aggregatedColors": [],
+          "mainColor": null,
+          "effectScale": 1,
+          "version": "5.7.0",
+          "clip": {
+            "bottom": 0,
+            "right": 0,
+            "left": 0,
+            "top": 0
+          }
+        },
+        {
+          "type": "mask",
+          "category": "QRCODE",
+          "opacity": 1,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "width": 247,
+          "height": 247,
+          "left": 151,
+          "top": 1893,
+          "transform": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1,
+            "tx": 0,
+            "ty": 0
+          },
+          "boxShadow": {
+            "color": null
+          },
+          "resize": 7,
+          "dragable": true,
+          "rotatable": true,
+          "editable": true,
+          "frozen": false,
+          "hidden": false,
+          "lock": false,
+          "borderRadius": 0,
+          "filter": {
+            "hueRotate": 0,
+            "saturate": 0,
+            "brightness": 0,
+            "gaussianBlur": 0
+          },
+          "image": null,
+          "clip": null,
+          "url": "//st-gdx.dancf.com/uxms/20190812-142126-5f2d.png",
+          "mask": "//st-gdx.dancf.com/uxms/20190812-142126-5f2d.png",
+          "imageUrl": "https://st-gdx.dancf.com/gaodingx/406/design/20190812-155838-f9b9.png",
+          "imageTransform": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1,
+            "tx": 0,
+            "ty": 0
+          },
+          "imageWidth": 247,
+          "imageHeight": 247,
+          "originWidth": 247,
+          "originHeight": 247,
+          "effectedImage": null,
+          "effectedImageWidth": 0,
+          "effectedImageHeight": 0,
+          "effectedImageOffsetLeft": 0,
+          "effectedImageOffsetTop": 0,
+          "imageEffects": [],
+          "imageEffectsHash": "",
+          "aggregatedColors": [],
+          "mainColor": null,
+          "effectScale": 1,
+          "version": "5.7.0"
+        },
+        {
+          "type": "text",
+          "category": "",
+          "opacity": 1,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "width": 606,
+          "height": 100,
+          "left": 436,
+          "top": 1868.925,
+          "transform": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1,
+            "tx": 0,
+            "ty": 0
+          },
+          "boxShadow": null,
+          "resize": 5,
+          "dragable": true,
+          "rotatable": true,
+          "editable": true,
+          "frozen": false,
+          "hidden": false,
+          "lock": false,
+          "borderRadius": 0,
+          "filter": {
+            "hueRotate": 0,
+            "saturate": 0,
+            "brightness": 0,
+            "gaussianBlur": 0
+          },
+          "color": "#ffffffff",
+          "backgroundColor": null,
+          "fontFamily": "HYXiaoBoDunHeiW",
+          "fontStyle": "normal",
+          "fontWeight": 400,
+          "fontSize": 83,
+          "lineHeight": 1.2,
+          "letterSpacing": 3.3200000000000003,
+          "textDecoration": "none",
+          "writingMode": "horizontal-tb",
+          "textAlign": "left",
+          "verticalAlign": "top",
+          "contents": null,
+          "effectScale": 1,
+          "textShadow": null,
+          "autoScale": true,
+          "textEffects": [],
+          "aggregatedColors": [
+            "rgb(255, 255, 255)"
+          ],
+          "mainColor": null,
+          "content": "码上了解详情",
+          "version": "5.7.0"
+        },
+        {
+          "type": "text",
+          "category": "",
+          "opacity": 1,
+          "padding": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "width": 760,
+          "height": 168,
+          "left": 436.99999999999994,
+          "top": 1977.4999999999998,
+          "transform": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1,
+            "tx": 0,
+            "ty": 0
+          },
+          "boxShadow": null,
+          "resize": 5,
+          "dragable": true,
+          "rotatable": true,
+          "editable": true,
+          "frozen": false,
+          "hidden": false,
+          "lock": false,
+          "borderRadius": 0,
+          "filter": {
+            "hueRotate": 0,
+            "saturate": 0,
+            "brightness": 0,
+            "gaussianBlur": 0
+          },
+          "color": "#ffffffff",
+          "backgroundColor": null,
+          "fontFamily": "HYXiaoBoDunHeiW",
+          "fontStyle": "normal",
+          "fontWeight": 400,
+          "fontSize": 40,
+          "lineHeight": 1.4,
+          "letterSpacing": 1.6,
+          "textDecoration": "none",
+          "writingMode": "horizontal-tb",
+          "textAlign": "left",
+          "verticalAlign": "top",
+          "contents": null,
+          "effectScale": 1,
+          "textShadow": null,
+          "autoScale": true,
+          "textEffects": [],
+          "aggregatedColors": [
+            "rgb(255, 255, 255)"
+          ],
+          "mainColor": null,
+          "content": "咨询电话：0592-88888888<br>地址：福建省厦门市湖里区高林中路<br>535号稿定大厦1号楼27层",
+          "version": "5.7.0"
+        }
+      ],
+      "top": 0
+    }
+  ]
+}

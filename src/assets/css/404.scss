@@ -1,0 +1,196 @@
+.wscn-http404-container {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 40%;
+    left: 50%;
+  }
+  .bullshit__return-home {
+    color: #fff;
+    text-decoration: none;
+  }
+  .wscn-http404 {
+    position: relative;
+    width: 75rem;
+    padding: 0 3.125rem;
+    overflow: hidden;
+    .pic-404 {
+      position: relative;
+      float: left;
+      width: 37.5rem;
+      overflow: hidden;
+      &__parent {
+        width: 100%;
+      }
+      &__child {
+        position: absolute;
+        &.left {
+          width: 5rem;
+          top: 1.0625rem;
+          left: 13.75rem;
+          opacity: 0;
+          animation-name: cloudLeft;
+          animation-duration: 2s;
+          animation-timing-function: linear;
+          animation-fill-mode: forwards;
+          animation-delay: 1s;
+        }
+        &.mid {
+          width: 2.875rem;
+          top: .625rem;
+          left: 26.25rem;
+          opacity: 0;
+          animation-name: cloudMid;
+          animation-duration: 2s;
+          animation-timing-function: linear;
+          animation-fill-mode: forwards;
+          animation-delay: 1.2s;
+        }
+        &.right {
+          width: 3.875rem;
+          top: 6.25rem;
+          left: 31.25rem;
+          opacity: 0;
+          animation-name: cloudRight;
+          animation-duration: 2s;
+          animation-timing-function: linear;
+          animation-fill-mode: forwards;
+          animation-delay: 1s;
+        }
+        @keyframes cloudLeft {
+          0% {
+            top: 1.0625rem;
+            left: 13.75rem;
+            opacity: 0;
+          }
+          20% {
+            top: 2.0625rem;
+            left: 11.75rem;
+            opacity: 1;
+          }
+          80% {
+            top: 5.0625rem;
+            left: 5.75rem;
+            opacity: 1;
+          }
+          100% {
+            top: 6.0625rem;
+            left: 3.75rem;
+            opacity: 0;
+          }
+        }
+        @keyframes cloudMid {
+          0% {
+            top: .625rem;
+            left: 26.25rem;
+            opacity: 0;
+          }
+          20% {
+            top: 2.5rem;
+            left: 22.5rem;
+            opacity: 1;
+          }
+          70% {
+            top: 8.125rem;
+            left: 11.25rem;
+            opacity: 1;
+          }
+          100% {
+            top: 10rem;
+            left: 7.5rem;
+            opacity: 0;
+          }
+        }
+        @keyframes cloudRight {
+          0% {
+            top: 6.25rem;
+            left: 31.25rem;
+            opacity: 0;
+          }
+          20% {
+            top: 7.5rem;
+            left: 28.75rem;
+            opacity: 1;
+          }
+          80% {
+            top: 11.25rem;
+            left: 21.25rem;
+            opacity: 1;
+          }
+          100% {
+            top: 12.5rem;
+            left: 18.75rem;
+            opacity: 0;
+          }
+        }
+      }
+    }
+    .bullshit {
+      position: relative;
+      float: left;
+      width: 18.75rem;
+      padding: 1.875rem 0;
+      overflow: hidden;
+      &__oops {
+        font-size: 2rem;
+        font-weight: bold;
+        line-height: 2.5rem;
+        color: #1482f0;
+        opacity: 0;
+        margin-bottom: 1.25rem;
+        animation-name: slideUp;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+      }
+      &__headline {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        color: #222;
+        font-weight: bold;
+        opacity: 0;
+        margin-bottom: .625rem;
+        animation-name: slideUp;
+        animation-duration: 0.5s;
+        animation-delay: 0.1s;
+        animation-fill-mode: forwards;
+      }
+      &__info {
+        font-size: .8125rem;
+        line-height: 1.3125rem;
+        color: grey;
+        opacity: 0;
+        margin-bottom: 1.875rem;
+        animation-name: slideUp;
+        animation-duration: 0.5s;
+        animation-delay: 0.2s;
+        animation-fill-mode: forwards;
+      }
+      &__return-home {
+        display: block;
+        float: left;
+        width: 6.875rem;
+        height: 2.25rem;
+        background: #1482f0;
+        border-radius: 6.25rem;
+        text-align: center;
+        color: #ffffff;
+        opacity: 0;
+        font-size: .875rem;
+        line-height: 2.25rem;
+        cursor: pointer;
+        animation-name: slideUp;
+        animation-duration: 0.5s;
+        animation-delay: 0.3s;
+        animation-fill-mode: forwards;
+      }
+      @keyframes slideUp {
+        0% {
+          transform: translateY(3.75rem);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+    }
+  }

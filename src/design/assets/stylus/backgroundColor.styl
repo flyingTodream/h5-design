@@ -1,0 +1,204 @@
+
+.background-tips
+    height 3rem
+    line-height 3rem
+    padding 2rem 2rem
+    flex-direction row
+    display flex
+    align-items:center
+    color #939ba6
+    justify-content space-between
+    .background-back
+        cursor pointer
+        &:hover
+            color: #505050;
+.background-color-pick
+    height 6rem
+    padding 0rem 2rem
+    flex-direction row
+    display flex
+    align-items:center
+    .background-color-panel
+        display flex
+        flex-direction column
+        height 7rem
+        border-radius 4px
+        border 1px solid #e0e5ea
+        padding 0 3rem
+        .vx-color-picker
+            padding 0 2rem
+            .vx-color-select
+                .vc-sketch
+                    left: -3rem;
+                    position absolute
+        &:hove
+            border-color #c6cad5
+        .background-color-panel-lable
+            line-height 3rem
+            color #444950
+            font-weight 500
+            width 10rem
+            text-align left
+        .el-color-picker__color
+            width 10rem
+            height 2rem
+            display flex
+            background #95d1c5
+            border-radius 4px
+            cursor pointer
+            &:hover
+                border 1px solid #e0e5ea
+        .el-color-picker__trigger
+            border none
+.background-upload-image
+    z-index: 1;
+    padding 1rem 2rem
+    flex-direction row
+    display flex
+    align-items:center
+    .background-upload
+        z-index 1
+        cursor pointer
+        position relative
+        display inline-block
+        background #FFF
+        border 1px solid #c6cad5
+        border-radius 4px
+        width 100%
+        height 100%
+        text-align center
+        overflow hidden
+        color #000
+        text-decoration none
+        text-indent 0
+        line-height 4rem
+        &:active
+            opacity .6
+.background-color-image
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .background-color-image-src
+        background-color: #f8fafc;
+        overflow: hidden;
+        position: relative;
+        border: 1px solid #dfe3ed;
+        width: 16rem;
+        height: 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        div
+            height: max-content
+            width: max-content;
+            display: flex;
+        img
+            max-width: 100%;
+            max-height: 100%;
+    .background-color-image-color
+        width: 16rem;
+        background: #fff;
+        height: 18rem;
+        border-radius: 4px;
+        border: 1px solid #cecccc;
+        position: absolute;
+        right: 1rem;
+        top: 23rem;
+        z-index: 20;
+        .background-color-image-color-panel
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 3rem;
+            align-items: center;
+            justify-content: space-around;
+            border-bottom: 1px solid #b5b5b5;
+            div
+                width: 5rem;
+                height: 2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+            .active
+                color #333
+                font-weight: 600;
+        .design-resource-bg__category
+            ul
+                justify-content: center;
+                margin-top 1rem
+                .design-resource-bg__item__color
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: .8rem;
+            .background-clor-image-pickerColor
+                display: flex;
+                flex-direction: row;
+                line-height: 3rem;
+                color: #444950;
+                font-size .9rem
+                .background-clor-image-pickerColor-label
+                    width: 6rem;
+                    text-align: center;
+                .background-clor-image-pickerColor-value
+                    width 4rem
+                    text-align: center;
+      
+                .el-slider
+                    flex 1
+                    z-index: 1;
+
+.background-color-tool
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+.background-color-image-tool
+    padding 1rem 
+    width: 18rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    div
+        border: 1px solid #dfe3ed;
+        width: 6rem;
+        height: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        cursor: pointer;
+        &:active
+            opacity: .6;
+        &:hover
+            border-color #d0d0d0
+.background-color-image-row
+    position: absolute;
+    width: 8rem;
+    height: 6rem;
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    display: flex;
+    border-radius: 4px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    right: 11rem;
+    top: 27.3rem;
+    z-index: 10;
+    div
+        width: 8rem;
+        width: 8rem;
+        height: 2.5rem;
+        line-height: 2.5rem;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+        color: #333;
+        &:hover
+            background: #f0f3f4;
+    

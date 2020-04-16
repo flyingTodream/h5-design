@@ -1,0 +1,43 @@
+.vx-h5-contexmenu{
+    color: #333;
+    text-align: center;
+}
+.vx-h5-contexmenu:hover{
+    background-color: #f0f0f0;
+}
+.ql-container{
+    display: flex;
+    align-items: center;
+}
+.vx-slide{
+    img{
+        max-height: 100%;
+    }
+    max-height: 100%;
+}
+.vx-h5-sider{
+    width: 5rem !important;
+    min-width: 5rem !important;
+    max-width: 5rem !important;
+    background-color: '#fff'; 
+    padding: '12px' ;
+    flex: 1 !important;
+}
+.vx-h5-map{
+    max-width: 100%;
+    max-height: 100%;
+    width: 600px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    img{
+        max-width: 100%;
+        max-height: 100%;
+        cursor: pointer;
+    }
+}
+.vx-h5-map-input{
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}

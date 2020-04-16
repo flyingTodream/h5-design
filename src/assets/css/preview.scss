@@ -1,0 +1,127 @@
+
+.max-mall-preview {
+    width: 100%;
+    min-height: 100%;
+    background: #f6f6f6;
+    overflow-x: hidden;
+    position: relative;
+    .vx-default-footer {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+  
+  .mall-preview {
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    min-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    .mall-preview-top {
+      padding: 20px 0;
+      font-size: 14px;
+      height: 17px;
+      line-height: 17px;
+      color: #666;
+      margin: 5px 0;
+      display: flex;
+      align-items: center;
+      line-height: 1;
+    }
+    .mall-preview-container {
+      display: flex;
+      flex-direction: row;
+      width: 1200px;
+      margin-bottom: 100px;
+      min-width: 1200px;
+      .vx-mall-preview-image-bg {
+        min-height: 533px;
+        width: 700px;
+        background: #fff;
+        border-radius: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 20px;
+      }
+      .mall-preview-container-left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .mall-preview-container-left-img {
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+      .mall-preview-container-right {
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+        .mall-preview-container-right-top {
+          width: 386px;
+          background: #fff;
+          margin-bottom: 20px;
+          border-radius: 6px;
+          box-sizing: border-box;
+  
+          .mall-preview-container-right-top-top {
+            width: 386px;
+            padding: 24px 32px 32px;
+            background: #fff;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            box-sizing: border-box;
+            div {
+              line-height: 40px;
+            }
+          }
+          .mall-preview-container-right-top-buttom {
+            width: 386px;
+            padding: 32px;
+            background: #fff;
+            color: #999;
+            border-radius: 6px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            .mall-preview-container-right-top-buttom-btn {
+              width: 160px;
+              height: 44px;
+              font-size: 16px;
+              font-weight: 600;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 4px;
+              cursor: pointer;
+            }
+            .edit {
+              background: #409eff;
+              color: #fff;
+            }
+            .like {
+              background: #fff;
+              color: #444950;
+              border: 1px solid #dadde1;
+              font-size: 14px;
+              margin-left: 20px;
+            }
+            .like:hover {
+              border-color: #bcc0c5;
+            }
+          }
+        }
+  
+        .mall-preview-container-right-buttom {
+          width: 386px;
+          padding: 24px 32px 32px;
+          background: #fff;
+          margin-bottom: 20px;
+          border-radius: 6px;
+          box-sizing: border-box;
+        }
+      }
+    }
+  }

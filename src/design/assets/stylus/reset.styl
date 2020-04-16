@@ -1,0 +1,46 @@
+*,*,*::before,*::after{
+    box-sizing border-box
+    padding 0
+    margin 0
+}
+
+:root
+    font-size 14px
+
+    scrollbar-size = .6rem
+    // 修改滚动条样式（存在兼容性）
+    *::-webkit-scrollbar{
+    width: scrollbar-size;
+    height: scrollbar-size;
+    background-color: #f5f5f5;
+    border-radius:2px;
+    z-index: 3000;
+    }
+    *::-webkit-scrollbar-thumb{
+    width: scrollbar-size;
+    height: scrollbar-size;
+    border-radius: scrollbar-size;
+    background-color: #ccc;
+    z-index: 3000;
+    }
+ul
+    list-style none
+
+i
+    font-style normal
+
+h1,h2,h3,h4,h5
+    font-size: 1rem
+    font-style: normal
+    font-weight: normal
+
+body
+    overflow hidden
+
+.vx
+    width 1rem
+    height 1rem
+    vertical-align -0.15rem
+    fill currentColor
+    overflow hidden
+    outline none

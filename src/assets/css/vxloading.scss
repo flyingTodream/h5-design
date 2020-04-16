@@ -1,0 +1,206 @@
+.vx-spin {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 14px;
+  font-varivx: tabular-nums;
+  line-height: 1.5;
+  list-style: none;
+  font-feature-settings: 'tnum';
+  position: absolute;
+  display: none;
+  color: #1890ff;
+  text-align: center;
+  vertical-align: middle;
+  opacity: 0;
+  transition: transform 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+  width: 100%;
+}
+.vx-loading-text {
+  padding-left: 10px;
+}
+.vx-spin-spinning {
+  position: static;
+  display: inline-block;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+}
+.vx-spin-nested-loading {
+  position: relative;
+}
+.vx-spin-nested-loading>div>.vx-spin {
+  position: absolute;
+  z-index: 4;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 400px;
+}
+.vx-spin-nested-loading>div>.vx-spin .vx-spin-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -10px;
+}
+.vx-spin-nested-loading>div>.vx-spin .vx-spin-text {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  padding-top: 5px;
+  text-shadow: 0 1px 2px #fff;
+}
+.vx-spin-nested-loading>div>.vx-spin.vx-spin-show-text .vx-spin-dot {
+  margin-top: -20px;
+}
+.vx-spin-nested-loading>div>.vx-spin-sm .vx-spin-dot {
+  margin: -7px;
+}
+.vx-spin-nested-loading>div>.vx-spin-sm .vx-spin-text {
+  padding-top: 2px;
+}
+.vx-spin-nested-loading>div>.vx-spin-sm.vx-spin-show-text .vx-spin-dot {
+  margin-top: -17px;
+}
+.vx-spin-nested-loading>div>.vx-spin-lg .vx-spin-dot {
+  margin: -16px;
+}
+.vx-spin-nested-loading>div>.vx-spin-lg .vx-spin-text {
+  padding-top: 11px;
+}
+.vx-spin-nested-loading>div>.vx-spin-lg.vx-spin-show-text .vx-spin-dot {
+  margin-top: -26px;
+}
+.vx-spin-container {
+  position: relative;
+  transition: opacity 0.3s;
+}
+.vx-spin-container::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  display: none \9;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  opacity: 0;
+  transition: all 0.3s;
+  pointer-events: none;
+  content: '';
+}
+.vx-spin-blur {
+  clear: both;
+  overflow: hidden;
+  opacity: 0.5;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+.vx-spin-blur::after {
+  opacity: 0.4;
+  pointer-events: auto;
+}
+.vx-spin-tip {
+  color: rgba(0, 0, 0, 0.45);
+}
+.vx-spin-dot {
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+}
+.vx-spin-dot i {
+  position: absolute;
+  display: block;
+  width: 9px;
+  height: 9px;
+  background-color: #1890ff;
+  border-radius: 100%;
+  transform: scale(0.75);
+  transform-origin: 50% 50%;
+  opacity: 0.3;
+  -webkit-animation: vxSpinMove 1s infinite linear alternate;
+  animation: vxSpinMove 1s infinite linear alternate;
+}
+.vx-spin-dot i:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+.vx-spin-dot i:nth-child(2) {
+  top: 0;
+  right: 0;
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+.vx-spin-dot i:nth-child(3) {
+  right: 0;
+  bottom: 0;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+.vx-spin-dot i:nth-child(4) {
+  bottom: 0;
+  left: 0;
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+.vx-spin-dot-spin {
+  transform: rotate(45deg);
+  -webkit-animation: vxRotate 1.2s infinite linear;
+  animation: vxRotate 1.2s infinite linear;
+}
+.vx-spin-sm .vx-spin-dot {
+  font-size: 14px;
+  width: 14px;
+  height: 14px;
+}
+.vx-spin-sm .vx-spin-dot i {
+  width: 6px;
+  height: 6px;
+}
+.vx-spin-lg .vx-spin-dot {
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+}
+.vx-spin-lg .vx-spin-dot i {
+  width: 14px;
+  height: 14px;
+}
+.vx-spin.vx-spin-show-text .vx-spin-text {
+  display: block;
+}
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+
+  /* IE10+ */
+  .vx-spin-blur {
+    background: #fff;
+    opacity: 0.5;
+  }
+}
+@-webkit-keyframes vxSpinMove {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes vxSpinMove {
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes vxRotate {
+  to {
+    transform: rotate(405deg);
+  }
+}

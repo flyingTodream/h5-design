@@ -1,0 +1,466 @@
+.el-menu-vertical-demo:not(.el-menu--collapse) {
+  width: 200px;
+  height: 100vh;
+  min-height: 400px;
+  max-height: 600px;
+}
+
+.userTitle {
+  display: inline-block;
+  margin-left: 8px;
+  margin-top: 1px;
+}
+
+.slide-fade-enter-active {
+    transition: all 1s ease;
+  }
+  .slide-fade-leave-active {
+    transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+  .slide-fade-enter, .slide-fade-leave-to
+  /* .slide-fade-leave-active 用于 2.1.8 以下版本 */ {
+    transform: translateX(10px);
+    opacity: 0;
+  }
+  .el-header {
+    background-color: #fff;
+    line-height: 56px;
+    height: 56px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+  }
+  .el-main {
+    background-color: #f0f2f5;
+    color: #333;
+    padding: 0;
+    overflow-x: scroll;
+    overflow-y: auto;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  .vx-user-aside-item-collapse{
+    .el-tooltip{
+      display: flex !important;;
+      align-items: center;
+    }
+  }
+
+  .userCenter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+.userCenter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.userCenter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.userCenter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.el-header {
+  background-color: #fff;
+  line-height: 56px;
+  height: 56px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+
+.userCenter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+.vx-logo-name {
+  width: 5.625rem;
+  text-align: center;
+  border-width: thin;
+  border-left: 1px solid #000;
+  animation: move .5s;
+  -webkit-animation-fill-mode: both;
+  /*解决动画结束后，图标恢复默认消失不见状态*/
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes move {
+
+  /*兼容性写法。move是关键帧的动画名称*/
+  from {
+    /*动画起始状态*/
+    margin-left: -25px;
+  }
+
+  to {
+    /*动画结束状态*/
+    margin-left: 20px;
+  }
+}
+
+.userMenu {
+  cursor: pointer;
+  width: 100px;
+}
+
+.el-dropdown {
+  width: 150px;
+}
+
+.vx-user-aside-logo {
+  height: 3.75rem;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  border-bottom: 1px solid #f0f2f5;
+  border-width: thin;
+  transition: width 4s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+  .mallName {
+    width: 5rem;
+    height: 1.4375rem;;
+    cursor: pointer;
+    margin-left: 1.4rem;
+    display: flex;
+    align-items: center;
+    border-width: thin;
+
+    img {
+      max-width:100%;
+      max-height: 100%;
+      animation: imgMove .5s;
+
+      -webkit-animation-fill-mode: both;/*解决动画结束后，图标恢复默认消失不见状态*/
+      animation-fill-mode: both;
+      @-webkit-keyframes imgMove {
+
+        /*兼容性写法。move是关键帧的动画名称*/
+        from {
+          /*动画起始状态*/
+          width: 0px;
+          height: 0px;
+        }
+
+        to {
+          /*动画结束状态*/
+          width: 80px;
+          height: 23px;
+        }
+      }
+    }
+  }
+}
+
+.vx-user-header {
+  height: 3.75rem;
+  min-height: 3.75rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  justify-content: space-between;
+}
+
+.vx-user-main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #f0f2f5;
+  width: 100%;
+}
+
+.vx-user-header-icon {
+  font-size: 1.4rem;
+  cursor: pointer;
+  position: relative;
+  left: 20px;
+}
+
+.vx-user-header-icon:hover {
+  color: #409eff;
+  transition: .3s;
+}
+
+.paginationFenYe {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.vx-user-aside-title {
+  height: 3.75rem;
+  width: 100%;
+  border-bottom: 1px solid #f0f2f5;
+  border-width: thin;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  border-right: 1px solid #f0f2f5;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.vx-myWorks-warp-makePro-modelPro {
+  width: 100%;
+  height: 408px;
+  box-sizing: border-box;
+  margin: auto;
+
+  // 图片
+  .vx-myWorks-warp-makePro-modelPro-img {
+    padding: 10px;
+    width: 250px;
+    margin: auto;
+    height: 322px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-width: thin;
+    overflow: auto;
+    .el-image{
+      .image-slot{
+        width: 100%;
+        height: 100%;
+        background-color: #eee;
+      }
+    }
+  }
+
+  .vx-myWorks-warp-makePro-modelPro-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 88px;
+  }
+
+  .vx-vx-myWorks-tit {
+    margin-top: 4px;
+    width: 240px;
+    height: 20px;
+    line-height: 14.4px;
+    text-align: left;
+
+    .titletitle {
+      width: 60px;
+      text-align-last: justify;
+    }
+
+    span {
+      display: inline-block;
+      width: 170px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+.list-complete-enter, .list-complete-leave-to
+{
+  // opacity: 0;
+  transform: translateX(300px);
+}
+.list-complete-leave-active {
+  position: absolute;
+}
+.list-complete-enter, .list-complete-leave-to
+/* .list-complete-leave-active for below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateX(100px);
+}
+.list-complete-leave-active {
+  position: absolute;
+}
+.vx-myWorks-warp-makePro {
+  transition: all 1s;
+  width: 250px;
+  height: 450px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: white;
+  box-sizing: border-box;
+  color: #7c7c7c;
+  cursor: pointer;
+  margin-bottom: 16px;
+  margin-right: 16px;
+}
+
+@keyframes show-card {
+  0% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.vx-myWorks-warp-makePro-card-actions {
+  width: 304px;
+  height: 42px;
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid#b7b7b7;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  border-width: thin;
+
+  li {
+    flex: 1;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+  }
+
+  .vx-myWorks-warp-makePro-card-actions-li {
+    border-right: 1px solid #dddddd;
+  }
+}
+
+.vx-vx-myWorks-tit:hover ,.el-icon-edit:hover,.el-icon-view:hover,.el-icon-delete:hover,
+.vx-myWorks-warp-makePro-text:hover,.el-icon-plus:hover{
+  color: #000;
+  transition: all .3s;
+}
+
+.vx-myWorks-warp-makePro-modelPro-message-mess {
+  border-top: thin dashed #b7b7b7;
+  padding-top: 10px;
+  box-sizing: border-box;
+  
+}
+
+.vx-lazyLoad {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vx-myCollect {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-width: 1200px;
+  width: 100%;
+p{
+  display: flex;
+  flex-wrap: wrap;
+}
+  .el-collapse {
+    width: 100%;
+  }
+}
+
+.vx-myWorks-warp {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 1200px;
+  align-items: center;
+  p{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .vxLoading {
+    width: 200px;
+  }
+
+   .vx-myWorks-warp-makePro-add {
+      width: 100%;
+      height: 408px;
+      line-height: 408px;
+      text-align: center;
+      font-size: 30px;
+      cursor: pointer;
+    }
+
+    .vx-myWorks-warp-makePro-text {
+      width: 100%;
+      height: 42px;
+      text-align: center;
+      line-height: 42px;
+      border-top: 1px solid #b7b7b7;
+      border-width: thin;
+    }
+  }
+
+
+.dataTotalLinColl {
+  width: 1200px;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.dataTotalLinColl .clickColl {
+  color: #7c7c7c;
+  padding: 6px;
+  a{
+    cursor: pointer;
+  }
+}
+.vx-collect-bottom{
+  width: 100%;
+  height: 50px;
+}
+.vx-collect-nodata{
+  width: 100%;
+  text-align: center;
+  padding: 50px;
+  a{
+    color: #409eff;
+    cursor: pointer;
+  }
+  a:hover{
+    text-decoration: underline;
+  }
+}
+.vx-user-dropdown{
+  li{
+    display: flex;
+    flex-direction: row;
+    i{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .vx{
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+  }
+  .popper__arrow{
+    left: 50% !important;
+  }
+}

@@ -1,0 +1,471 @@
+.editor-shell
+    position relative
+.editor-canvas
+    overflow hidden
+    z-index 1
+    user-select none
+
+.editor-canvas,
+.editor-canvas .editor-layout
+    height 100%
+    width 100%
+    position absolute
+    left 0
+    top 0
+
+// 背景
+.editor-background,
+.editor-background__main
+    position absolute
+    width 100%
+    height 100%
+    img 
+        position: absolute
+
+
+// 元素
+.editor-element
+    background no-repeat 50% 50%
+    line-height 1
+    position absolute
+    z-index 1
+    text-align left
+    >.border-before
+        display: none;
+        content: "";
+        box-sizing: border-box;
+        border: 1px solid #666;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 2;
+
+.editor-inner
+    font-size 0
+    width 100%
+    height 100%
+    position relative
+    white-space nowrap
+    writing-mode horizontal-tb
+    transform-origin 0 0
+
+.editor-inner-contnet
+    width 100%
+    height 100%
+    position absolute
+    top 0
+    left 0
+.editor-element
+    .element-main 
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        &:focus
+            outline: none;
+
+// 文本
+.editor-element-text 
+    overflow hidden
+    .element-inner 
+        font-size 0
+        height 100%
+        width 100%
+        position relative
+        white-space nowrap
+        writing-mode horizontal-tb
+        transform-origin 0 0
+        .elment-inner-content
+            display inline-block
+        .element-main
+            display inline-block
+            overflow hidden
+
+// 图片
+.editor-element-image
+    overflow: hidden;
+// svg
+.editor-element-svg
+    .element-main svg
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+// 多选样式
+.editor-element-selected
+    >.border-before
+        display: block;
+        border-color: #6ccfff;
+        border-style: solid;
+        border-width: 2px;
+// 多选组件
+.editor-selector-content
+    position: absolute
+    border 2px solid #6ccfff
+    background-color: #6ccfff50
+    z-index 3
+// 元素编辑
+.editor-element-editing
+    >.border-before
+        display: none;
+// 水印
+.editor-watermark
+    position absolute
+    right .5rem
+    bottom .5rem
+    z-index 2
+    pointer-events: none
+    // &:before
+    //     content: attr(data-content)
+    //     font-size: 1em
+    //     font-weight: 900
+    //     color: rgba(#000, .15)
+    img 
+        width 100%
+
+// hover
+.editor-hover
+    position absolute
+    border 1px solid #6ccfff
+    z-index 2
+    pointer-events none
+    user-select none
+    display none
+    &::before
+        position: absolute
+        top -1.9rem
+        left 50%
+        color: #fff
+        width max-content
+        padding: 2px 3px
+        background-color: rgba(#000, .8)
+    &.hover-text::before
+        content: "双击修改文字"
+        
+    &.hover-mask::before
+        content: "双击修改图片(仅12MB以内)"
+    &.hover-lock::before
+        content: "图层已锁定"
+
+// 移动、缩放、旋转        
+.editor-transform-wrap
+    width 100%
+    height 100%
+.editor-transform
+    box-sizing border-box
+    position absolute
+    z-index 5
+    cursor move
+    display none
+    &.editor-custorm
+        pointer-events: none
+    &::before
+        content ""
+        display block
+        width 100%
+        height 100%
+        border 2px solid #6ccfff
+        z-index 1
+        // margin: -2px 0 0 -2px
+    &.editor-transform-multiple:before
+        border-style: dotted;
+    .editor-grip
+        pointer-events: auto
+        padding 11px
+        position absolute
+        z-index 5
+        transition opacity .3s
+        b
+            box-sizing border-box
+            display block
+            background #fff
+            border 1px solid #c0c5cf
+            box-shadow 0 0 2px 0 rgba(86,90,98,.2)
+            border-radius 6px
+            pointer-events none
+        &.editor-grip-n
+            cursor n-resize
+            left 50%
+            top 0//-1px
+            transform translate(-50%, -50%)
+            b
+                height .5rem
+                width 1rem
+        &.editor-grip-e
+            cursor e-resize
+            right 0//3px
+            top 50%
+            transform translate(50%, -50%)
+            b
+                height 1rem
+                width .5rem
+        &.editor-grip-s
+            cursor s-resize
+            left 50%
+            bottom 0//2px
+            transform translate(-50%, 50%)
+            b
+                height .5rem
+                width 1rem
+        &.editor-grip-w
+            cursor w-resize
+            left 0//-1px
+            top 50%
+            transform translate(-50%, -50%)
+            b
+                height 1rem
+                width .5rem
+        
+        &.editor-grip-nw
+            cursor nw-resize
+            left 0//-1px
+            top 0//-1px
+            transform translate(-50%, -50%)
+            b
+                height 1rem
+                width 1rem
+                border-radius 50%
+        &.editor-grip-ne
+            cursor ne-resize
+            right 0//3px
+            top 0//-1px
+            transform translate(50%, -50%)
+            b
+                height 1rem
+                width 1rem
+                border-radius 50%
+        &.editor-grip-se
+            cursor se-resize
+            right 0//3px
+            bottom 0//2px
+            transform translate(50%, 50%)
+            b
+                height 1rem
+                width 1rem
+                border-radius 50%
+        &.editor-grip-sw
+            cursor sw-resize
+            left 0//-1px
+            bottom 0//2px
+            transform translate(-50%, 50%)
+            b
+                height 1rem
+                width 1rem
+                border-radius 50%
+    .editor-rotator
+        pointer-events: auto
+        cursor url('../img/mouse_rotation.svg') 11 9,pointer
+        margin 0 0 1rem 0
+        position absolute
+        left 50%
+        transform translateX(-50%)
+        bottom 100%
+        z-index 5
+        transition opacity .3s
+        b
+            width 2rem
+            height 2rem
+            background-size 100% 100%
+            background-color #fff
+            position relative
+            z-index 2
+            display block
+            border-radius 50%
+            border 1px solid #c0c5cf
+            box-shadow 0 0 2px 0 rgba(86,90,98,.2)
+            .vx
+                width calc(2rem - 2px)
+                height calc(2rem - 2px)
+            .deg
+                position absolute
+                top -120%
+                left 50%
+                transform translateX(-50%)
+                background-color rgba(#000, .6)
+                color #ccc
+                border-radius 3px
+                padding 3px 5px
+                user-select none
+                z-index 20
+                &::before
+                    content ''
+                    position absolute
+                    bottom -5px
+                    left 50%
+                    transform translateX(-50%)
+                    border-left 5px solid transparent
+                    border-right 5px solid transparent
+                    border-top 5px solid rgba(#000, .6)
+    .editor-grip-lock
+        position: absolute
+        left: -.75rem
+        top -.75rem
+        b
+            width 1.8rem
+            height 1.8rem
+            background-size 100% 100%
+            background-color rgba(#000, .8)
+            position relative
+            z-index 2
+            display block
+            border-radius 50%
+            color: #fff
+            text-align: center
+            line-height: 1.8rem
+            .vx
+                width 1.5rem
+                height 1.5rem
+    &.editor-min-w
+        .editor-grip
+            padding: 0
+            &.editor-grip-n,
+            &.editor-grip-s
+                display: none
+    &.editor-min-h
+        .editor-grip
+            padding: 0
+            &.editor-grip-e,
+            &.editor-grip-w
+                display: none
+    &.transform-text
+        .editor-grip
+            &.editor-grip-n,
+            &.editor-grip-s
+                display none
+    &.editor-lock
+        cursor default
+        &::before
+            border-color: #f84545
+        &:hover
+            &::after
+                content: "图层已锁定"
+                position: absolute
+                top: -1.9rem
+                left 50%
+                color: #fff
+                padding: 2px 3px
+                width: max-content;
+                background-color: rgba(#000, .8)
+        .editor-grip,
+        .editor-rotator
+            display: none
+
+    &.editor-transform-editing
+        pointer-events: none
+        &::before
+            border-color #000
+            pointer-events: none
+        .editor-grip
+            position: absolute
+            b
+                position: absolute
+                border-width: 0
+                box-shadow none
+                background: none
+                border-radius: 0
+                width 0
+                height 0
+                
+        .editor-grip-n b
+            left 0
+            top 50%
+            width 20px
+            border-width: 4px 0 0 0
+            border-color: #000
+        .editor-grip-e b
+            right 50%
+            top 0
+            height 20px
+            border-width: 0 4px 0 0
+            border-color: #000
+        .editor-grip-s b
+            left 0
+            bottom 50%
+            width 20px
+            border-width: 0 0 4px 0
+            border-color: #000
+        .editor-grip-w b
+            left 50%
+            top 0
+            height 20px
+            border-width: 0 0 0 4px
+            border-color: #000
+        .editor-grip-nw b
+            left 50%
+            top 50%
+            width 20px
+            height 20px
+            border-width: 4px 0 0 4px
+            border-color: #000;
+        .editor-grip-ne b
+            right 50%
+            top 50%
+            width 20px
+            height 20px
+            border-width: 4px 4px 0 0
+            border-color: #000;
+        .editor-grip-se b
+            right 50%
+            bottom 50%
+            width 20px
+            height 20px
+            border-width: 0 4px 4px 0
+            border-color: #000;
+        .editor-grip-sw b
+            left 50%
+            bottom 50%
+            width 20px
+            height 20px
+            border-width: 0 0 4px 4px
+            border-color: #000;
+        .editor-rotator
+            display: none
+
+// 辅助线
+.editor-guider
+    .editor-guider-line
+        position: absolute
+        z-index 50
+        display: none
+    .editor-guider-t
+        border-top: 1px dashed #f00;
+        height 1px
+    .editor-guider-l
+        border-left: 1px dashed #f00;
+        width 1px
+    .editor-guider-b
+        border-bottom: 1px dashed #f00;
+        height 1px
+    .editor-guider-r
+        border-right: 1px dashed #f00;
+        width 1px
+    .editor-guider-cx
+        border-top: 1px solid #f00;
+        height 1px
+    .editor-guider-cy
+        border-left: 1px solid #f00;
+        width 1px
+
+// 上下文菜单
+.editor-contextmenu
+    position: absolute;
+    z-index: 10;
+    border-radius: 4px;
+    box-shadow: 0 0 5px 0 rgba(11,3,6,.2);
+    background-color: hsla(0,0%,100%,.95);
+    width 15rem
+    .editor-contextmenu__key
+        padding: 4px 0;
+        list-style: none;
+        color: #333;
+        font-size: 13px;
+        li
+            padding: 0 20px;
+            cursor: pointer;
+            line-height: 36px;
+            &:hover
+                background-color: #f0f0f0;

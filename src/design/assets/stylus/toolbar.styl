@@ -1,0 +1,60 @@
+.tool-bar
+    padding 2rem 2rem
+    display flex
+    flex-direction row
+    justify-content space-between
+    .image-locked
+        .vx
+            color #e44
+    .vx 
+        width 2rem
+        height 2rem
+        cursor pointer
+        color #6c788c
+        &:active
+            opacity .6
+.layout-layer-pop
+    position absolute
+    top 8rem
+    right 8rem
+    display flex
+    flex-direction column
+    align-items center
+    box-sizing border-box
+    width 8rem
+    height 16.8rem
+    background #ff
+    border-radius 2px
+    box-shadow 1px 6px 10px rgba(53,100,175,.15)
+    border 1px solid #eff1f6
+    z-index 2
+    .vx
+        width 1.5rem
+        height 1.5rem
+
+    ul
+        width 100%
+        padding 1rem 0
+        li
+            width 100%
+            cursor pointer
+            height 2.5rem
+            line-height 2.5rem
+            display flex
+            justify-content center
+            align-items center
+            font-size .9rem
+            &:hover
+                background-color #dbddde
+            .vx
+                width 1.5rem
+                height 1.5rem
+            &.disable
+                cursor not-allowed
+                
+        i
+            display flex
+            justify-content center
+            align-items center
+        .tool-bar-line
+            border-bottom 1px solid #eff1f6

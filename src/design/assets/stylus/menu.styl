@@ -1,0 +1,226 @@
+/* 上方菜单 */
+.design-menus
+    line-height 4rem
+    padding 0
+    border-bottom 1px solid #eee
+    display flex
+    flex-direction row
+    user-select none
+    /* //logo */
+    .menu-logo
+        display flex
+        text-align center
+        width 80px
+        height 100%
+        letter-spacing .5rem
+        color #000
+        font-weight 600
+        font-size 1.2rem
+        margin-left 1.4rem
+        display: flex;
+        align-items: center;
+        cursor pointer
+        img
+            width 5rem
+            height 1.4375rem
+    //中间部分
+    .menu-view
+        line-height 3rem
+        padding 1rem 0
+        display flex
+        flex 1
+        >div
+            line-height 2rem
+        // 撤销,重做,保存
+        .menu-tool
+            border-right 1px solid #e0eafd
+            text-align center
+            display flex
+            padding 0 .5rem
+            align-items:center
+            justify-content:center
+            display: -webkit-flex 
+            i
+                margin-left: 1rem;
+            .menu-undo
+                &:hover
+                    .vx
+                        color #000
+            .menu-redo
+                &:hover
+                    .vx
+                        color #000
+            .vx
+                width 1.5rem
+                height 1.5rem
+                align-items:center
+                justify-content:center
+                display flex  
+                cursor:pointer
+                color #666
+                &:active
+                    opacity .6
+            .menu-save
+                display flex
+                z-index 11
+                &:hover
+                    .vx
+                        color: #000
+                &::after
+                    content ""
+                    display inline-block
+                    margin-top .6rem
+                    border-left 5px solid transparent
+                    border-right 5px solid transparent
+                    border-top 5px solid #666
+            //保存下弹框        
+            .menu-save-item
+                min-width 10rem
+                width 11rem
+                // height 6rem
+                line-height 3rem
+                font-size .9rem
+                border-radius 0 0 2px 2px
+                background #ffffff
+                position absolute
+                left 11rem
+                top 4rem
+                z-index 10
+                box-shadow 0 10px 14px rgba(53,100,175,.15)
+                border 1px solid #eff1f6
+                box-sizing: border-box  
+                overflow hidden
+                cursor:pointer
+                color #000
+                ul
+                    li
+                        display: flex;
+                        height: 45px;
+                        align-items: center;
+                        justify-content: center;
+                        &:hover
+                            color #fff
+                            background #005cf9
+        /* 缩放比 */
+        .meun-zoom
+            display flex
+            width 10rem
+            justify-content:center
+            border-right 1px solid #e0eafd
+            align-items:center
+            .menu-zoomvalue
+                width 3.5rem
+                color #6c788c
+                font-weight 400
+                font-size .9rem
+                align-items:center
+                justify-content center
+                display: -webkit-flex 
+                /* .menu-zoomnum
+                        display none */
+                &:hover
+                    .menu-zoomnum
+                        display none
+                    .menu-zoomfit
+                        display -webkit-flex 
+                     
+            .menu-zoomfit
+                justify-content center
+                width 3.5rem
+                display none
+                color #000
+            .vx 
+                width 1.5rem
+                height 1.5rem
+                cursor pointer
+                align-items center
+                display -webkit-flex 
+                color #666
+                &:active
+                    opacity .6
+            .menu-add
+                &:hover
+                    .vx
+                        color #000
+            .menu-sub
+                &:hover
+                    .vx
+                        color #000
+        /* 编辑框 */
+        .menu-edit
+            flex 1
+            padding 0 2rem
+            .menu-nickname
+                cursor:text
+                height 28px
+                width 18rem
+                min-width 18rem
+                font-size .8rem
+                align-items center
+                color #333
+                display flex
+                >div
+                    display: flex;
+                .menu-title
+                    max-width 17rem                   
+                    text-overflow ellipsis
+                    white-space nowrap 
+                    overflow hidden
+
+                .vx
+                    color #666
+                    cursor:pointer
+                    display none
+                    &:hover
+                        color #000
+                &:hover
+                    .vx
+                        display inline
+            // 输入框
+            .iseditshow
+                /* border-bottom 1px dashed #666
+                 */
+                border-width: thin;
+                animation: menu-title-input .3s;
+                -webkit-animation-fill-mode: both;/*解决动画结束后，图标恢复默认消失不见状态*/
+                animation-fill-mode: both;
+                height 2rem
+                
+                .menu-title-edit
+                    font-size .8rem
+                    width 14rem
+                    min-width 14rem
+                    color #333
+                    border none
+                    outline:none
+                    background rgba(255,255,255,0)
+@keyframes menu-title-input{
+    0% {
+        border-bottom 1px solid #666
+        height 0rem
+    }
+    
+    100% {
+        border-bottom 1px dashed #666
+        height 2rem
+    }
+}                        
+    // 分享/下载    
+    .menu-operate
+        text-align center
+        display flex
+        min-width 15rem
+        width 10rem
+        cursor:pointer
+        .menu-download
+            background: linear-gradient(#06f,#409eff)
+            flex 1.5
+            color #ffffff
+        .menu-share
+            flex 1
+            background #ffffff
+            border-left 1px solid #eee
+.disable
+    pointer-events none
+    cursor no-drop
+    opacity .3

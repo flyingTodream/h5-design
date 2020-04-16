@@ -1,0 +1,60 @@
+{
+    "textEffects": [
+        {
+            "enable": true,
+            "collapse": false,
+            "excludeScale": [],
+            "offset": {
+                "enable": false,
+                "x": 0,
+                "y": 0
+            },
+            "skew": {
+                "enable": false,
+                "x": 0,
+                "y": 0
+            },
+            "stroke": {
+                "enable": false,
+                "type": "center",
+                "color": "#000000ff",
+                "width": 6.38470588235294
+            },
+            "shadow": {
+                "enable": true,
+                "color": "#00000038",
+                "offsetX": 26.611136304571612,
+                "offsetY": 27.556638327796655,
+                "blur": 16.700000000000003
+            },
+            "filling": {
+                "enable": false,
+                "type": 0,
+                "color": "#000000ff",
+                "imageContent": {
+                    "repeat": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "image": null,
+                    "width": null,
+                    "height": null
+                },
+                "gradient": {
+                    "byLine": 0,
+                    "angle": 0,
+                    "stops": [
+                        {
+                            "color": "#ffffffff",
+                            "offset": 0
+                        },
+                        {
+                            "color": "#000000ff",
+                            "offset": 1
+                        }
+                    ]
+                },
+                "repeat": 1
+            }
+        }
+    ]
+}

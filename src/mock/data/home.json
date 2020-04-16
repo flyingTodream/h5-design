@@ -1,0 +1,112 @@
+{
+    "errno": 0,
+    "data": {
+        "total": 238,
+        "pages": 24,
+        "limit": 10,
+        "page": 1,
+        "list": [
+            {
+                "id": 1110016,
+                "name": "天然硅胶宠物除毛按摩刷",
+                "brief": "顺滑平面，猫狗通用，去除死毛",
+                "picUrl": "http://yanxuan.nosdn.127.net/3bd73b7279a83d1cbb50c0e45778e6d6.png",
+                "isNew": false,
+                "isHot": false,
+                "counterPrice": 59.00,
+                "retailPrice": 39.00
+            },
+            {
+                "id": 1110017,
+                "name": "耐用材料猫咪护理清洁套装",
+                "brief": "精致钢材，美容清洁",
+                "picUrl": "http://yanxuan.nosdn.127.net/534231583f82572398ec84bad425cdaf.png",
+                "isNew": false,
+                "isHot": false,
+                "counterPrice": 99.00,
+                "retailPrice": 79.00
+            },
+            {
+                "id": 1056002,
+                "name": "男式玩色内裤",
+                "brief": "德国工艺，多色随搭",
+                "picUrl": "http://yanxuan.nosdn.127.net/922fdbe007033f7a88f7ebc57c3d1e75.png",
+                "isNew": false,
+                "isHot": false,
+                "counterPrice": 79.00,
+                "retailPrice": 59.00
+            },
+            {
+                "id": 1110018,
+                "name": "耐用狗狗清洁美容护理套装",
+                "brief": "精致钢材，耐咬美容",
+                "picUrl": "http://yanxuan.nosdn.127.net/d93aa5d6e7a296101cf4cb72613aeda6.png",
+                "isNew": false,
+                "isHot": false,
+                "counterPrice": 99.00,
+                "retailPrice": 79.00
+            },
+            {
+                "id": 1110019,
+                "name": "宠物合金钢安全除菌指甲护理组合",
+                "brief": "猫狗皆可用，保护家具",
+                "picUrl": "http://yanxuan.nosdn.127.net/1e7e392b6fc9da99dc112197b7444eec.png",
+                "isNew": false,
+                "isHot": false,
+                "counterPrice": 89.00,
+                "retailPrice": 69.00
+            },
+            {
+                "id": 1152004,
+                "name": "魔兽世界 蛋盾包 双肩包",
+                "brief": "伊利丹掉落，挤地铁神器",
+                "picUrl": "http://yanxuan.nosdn.127.net/8c93cef435d888bd79833777df1cd0c2.png",
+                "isNew": false,
+                "isHot": false,
+                "counterPrice": 419.00,
+                "retailPrice": 399.00
+            },
+            {
+                "id": 1152008,
+                "name": "魔兽世界 部落 护腕 一只",
+                "brief": "吸汗、舒适、弹性、防护、耐用",
+                "picUrl": "http://yanxuan.nosdn.127.net/203cb83d93606865e3ddde57b69b9e9a.png",
+                "isNew": false,
+                "isHot": true,
+                "counterPrice": 49.00,
+                "retailPrice": 29.00
+            },
+            {
+                "id": 1045000,
+                "name": "绿茶蛋黄酥 200克/4枚入",
+                "brief": "香甜茶食，果腹优选",
+                "picUrl": "http://yanxuan.nosdn.127.net/b2adc3fd9b84a289a1be03e8ee400e61.png",
+                "isNew": false,
+                "isHot": false,
+                "counterPrice": 48.00,
+                "retailPrice": 28.00
+            },
+            {
+                "id": 1131017,
+                "name": "平滑细篾头层青碳化竹凉席",
+                "brief": "细篾整密，凉滑不夹肉",
+                "picUrl": "http://yanxuan.nosdn.127.net/2b6e2268ed712f1a336283f013abb7a1.png",
+                "isNew": false,
+                "isHot": false,
+                "counterPrice": 279.00,
+                "retailPrice": 259.00
+            },
+            {
+                "id": 1152009,
+                "name": "魔兽世界 联盟 护腕 一只",
+                "brief": "吸汗、舒适、弹性、防护、耐用",
+                "picUrl": "http://yanxuan.nosdn.127.net/ae6d41117717387b82dcaf1dfce0cd97.png",
+                "isNew": false,
+                "isHot": true,
+                "counterPrice": 49.00,
+                "retailPrice": 29.00
+            }
+        ]
+    },
+    "errmsg": "成功"
+}

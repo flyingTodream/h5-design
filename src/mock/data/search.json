@@ -1,0 +1,755 @@
+{
+    "items": [
+        {
+            "preview": {
+                "extends": [],
+                "maincolor": {
+                    "hex": "#ece9df"
+                },
+                "width": 1242,
+                "url": "https://st-gdx.dancf.com/gaodingx/289/design/20190903-094459-8d7b.png",
+                "height": 2208
+            },
+            "flags": 0,
+            "scene_id": 1118,
+            "description": "",
+            "title": "九月问候/创意/日签/海报",
+            "type": "poster",
+            "colors": 256,
+            "features": 0,
+            "themes": 1024,
+            "category_id": 1119,
+            "channels": 49,
+            "group_id": 85679,
+            "price": 0,
+            "platform_id": 1024,
+            "tag_id": [],
+            "styles": 1,
+            "id": 115553,
+            "vip": 0,
+            "ratios": 16,
+            "fscore": 2147483647
+        },
+        {
+            "preview": {
+                "extends": [],
+                "maincolor": {
+                    "hex": "#0c1b3e"
+                },
+                "width": 1242,
+                "url": "https://st-gdx.dancf.com/uxms/20190823-143240-fa1a.png",
+                "height": 2208
+            },
+            "flags": 0,
+            "scene_id": 1118,
+            "description": "",
+            "title": "中秋营销/中国风质感/祝福/手机海报",
+            "type": "poster",
+            "colors": 4104,
+            "features": 0,
+            "themes": 1034,
+            "category_id": 1119,
+            "channels": 49,
+            "group_id": 84776,
+            "price": 0,
+            "platform_id": 1024,
+            "tag_id": [
+                840,
+                328,
+                175
+            ],
+            "styles": 1026,
+            "id": 114524,
+            "vip": 0,
+            "ratios": 16,
+            "fscore": 2147483647
+        },
+        {
+            "preview": {
+                "elapsed": 2988,
+                "maincolor": {
+                    "hex": "#142b4e"
+                },
+                "width": 1242,
+                "url": "https://st-gdx.dancf.com/templets/115391/shots/20190902-165948-jeQuv.png",
+                "height": 2208
+            },
+            "flags": 0,
+            "scene_id": 1118,
+            "description": "",
+            "title": "中秋节祝福卡通可爱手绘手机海报",
+            "type": "poster",
+            "colors": 10,
+            "features": 0,
+            "themes": 1024,
+            "category_id": 1119,
+            "channels": 41,
+            "group_id": 85548,
+            "price": 0,
+            "platform_id": 64,
+            "tag_id": [
+                328,
+                175
+            ],
+            "styles": 163872,
+            "id": 115391,
+            "vip": 0,
+            "ratios": 16,
+            "fscore": 2147483647
+        },
+        {
+            "preview": {
+                "elapsed": 2534,
+                "maincolor": {
+                    "hex": "#b0b094"
+                },
+                "width": 1242,
+                "url": "https://st-gdx.dancf.com/templets/115981/shots/20190831-124047-xMM4v.png",
+                "height": 2208
+            },
+            "flags": 0,
+            "scene_id": 1118,
+            "description": "",
+            "title": "中秋节可爱兔子中国风手机海报",
+            "type": "poster",
+            "colors": 10,
+            "features": 0,
+            "themes": 1024,
+            "category_id": 1119,
+            "channels": 57,
+            "group_id": 86071,
+            "price": 0,
+            "platform_id": 64,
+            "tag_id": [
+                328,
+                175
+            ],
+            "styles": 163872,
+            "id": 115981,
+            "vip": 0,
+            "ratios": 16,
+            "fscore": 2147483647
+        },
+        {
+            "preview": {
+                "extends": [],
+                "maincolor": {
+                    "hex": "#963a1e"
+                },
+                "width": 1242,
+                "url": "https://st-gdx.dancf.com/gaodingx/334/design/20190814-112425-e44d.png",
+                "height": 2208
+            },
+            "flags": 0,
+            "scene_id": 1118,
+            "description": "",
+            "title": "抗战胜利74周年手机海报",
+            "type": "poster",
+            "colors": 66,
+            "features": 0,
+            "themes": 1024,
+            "category_id": 1119,
+            "channels": 57,
+            "group_id": 82795,
+            "price": 0,
+            "platform_id": 256,
+            "tag_id": [
+                328,
+                877
+            ],
+            "styles": 532488,
+            "id": 112226,
+            "vip": 0,
+            "ratios": 16,
+            "fscore": 337556.0
+        },
+        {
+            "preview": {
+                "maincolor": {
+                    "r": 227,
+                    "b": 209,
+                    "g": 224,
+                    "hex": "#e3e0d1"
+                },
+                "width": 1242,
+                "type": "image",
+                "url": "https://st0.dancf.com/csc/46/templets/99242/20190519-213500-bf64.jpg",
+                "height": 2208
+            },
+            "flags": 0,
+            "scene_id": 1118,
+            "description": "",
+            "title": "白露二十四节气水墨风手机海报",
+            "type": "poster",
+            "colors": 516,
+            "features": 0,
+            "themes": 1024,
+            "category_id": 1119,
+            "channels": 41,
+            "group_id": 71329,
+            "price": 0,
+            "platform_id": 64,
+            "tag_id": [
+                1766,
+                5382,
+                328,
+                457,
+                332,
+                335,
+                1072,
+                401,
+                754,
+                4979,
+                436,
+                4980,
+                3989,
+                4981,
+                4983,
+                862
+            ],
+            "styles": 196896,
+            "id": 99242,
+            "vip": 0,
+            "ratios": 16,
+            "fscore": 1163598036
+        },
+        {
+            "preview": {
+                "elapsed": 2340,
+                "maincolor": {
+                    "hex": "#94362e"
+                },
+                "width": 1242,
+                "url": "https://st-gdx.dancf.com/templets/114093/shots/20190822-113407-cS64V.png",
+                "height": 2208
+            },
+            "flags": 0,
+            "scene_id": 1118,
+            "description": "",
+            "title": "中秋贺图/中秋营销/中秋节手机海报",
+            "type": "poster",
+            "colors": 4160,
+            "features": 0,
+            "themes": 1024,
+            "category_id": 1119,
+            "channels": 33,
+            "group_id": 84433,
+            "price": 0,
+            "platform_id": 4096,
+            "tag_id": [
+                328,
+                175
+            ],
+            "styles": 9865,
+            "id": 114093,
+            "vip": 0,
+            "ratios": 16,
+            "fscore": 1487355603
+        },
+        {
+            "preview": {
+                "extends": [],
+                "maincolor": {
+                    "hex": "#f8b366"
+                },
+                "width": 1242,
+                "url": "https://st-gdx.dancf.com/gaodingx/368/design/20190823-165859-0bbd.png",
+                "height": 2208
+            },
+            "flags": 0,
+            "scene_id": 1118,
+            "description": "",
+            "title": "开学季教师节招生促销海报",
+            "type": "poster",
+            "colors": 322,
+            "features": 0,
+            "themes": 64,
+            "category_id": 1119,
+            "channels": 41,
+            "group_id": 84853,
+            "price": 20,
+            "platform_id": 2,
+            "tag_id": [
+                2848,
+                3296,
+                176,
+                3297,
+                643,
+                85,
+                198,
+                4954,
+                1627,
+                1005,
+                670
+            ],
+            "styles": 48,
+            "id": 114599,
+            "vip": 0,
+            "ratios": 16,
+            "fscore": 834397571
+        },
+        {
+            "preview": {
+                "extends": [],
+                "maincolor": {
+                    "hex": "#0e4a41"
+                },
+                "width": 1242,
+                "url": "https://st-gdx.dancf.com/uxms/20190830-134136-e5f9.png",
+                "height": 2208
+            },
+            "flags": 0,
+            "scene_id": 1118,
+            "description": "",
+            "title": "开学季活动通知清新海报",
+            "type": "poster",
+            "colors": 1024,
+            "features": 0,
+            "themes": 512,
+            "category_id": 1119,
+            "channels": 41,
+            "group_id": 86091,
+            "price": 0,
+            "platform_id": 2,
+            "tag_id": [
+                2848,
+                3296,
+                3297,
+                85,
+                198,
+                2358,
+                8023,
+                4954,
+                1627,
+                1005
+            ],
+            "styles": 262,
+            "id": 116004,
+            "vip": 0,
+            "ratios": 16,
+            "fscore": 1224448388
+        },
+        {
+            "preview": {
+                "elapsed": 1270,
+                "maincolor": {
+                    "hex": "#a4f1fe"
+                },
+                "width": 1242,
+                "url": "https://st-gdx.dancf.com/templets/112987/shots/20190815-140900-KGZCd.png",
+                "height": 2208
+            },
+            "flags": 0,
+            "scene_id": 1118,
+            "description": "",
+            "title": "寻人启事招聘手机海报",
+            "type": "poster",
+            "colors": 9216,
+            "features": 0,
+            "themes": 256,
+            "category_id": 1119,
+            "channels": 41,
+            "group_id": 83444,
+            "price": 0,
+            "platform_id": 64,
+            "tag_id": [
+                328
+            ],
+            "styles": 163840,
+            "id": 112987,
+            "vip": 0,
+            "ratios": 16,
+            "fscore": 583756416
+        },
+        {
+            "preview": {
+                "extends": [],
+                "maincolor": {
+                    "hex": "#f5ddd9"
+                },
+                "width": 1242,
+                "url": "https://st-gdx.dancf.com/gaodingx/368/design/20190823-165516-dafa.png",
+                "height": 2208
+            },
+            "flags": 0,
+            "scene_id": 1118,
+            "description": "",
+            "title": "教师节感恩课程促销海报",
+            "type": "poster",
+            "colors": 384,
+            "features": 0,
+            "themes": 64,
+            "category_id": 1119,
+            "channels": 41,
+            "group_id": 84858,
+            "price": 0,
+            "platform_id": 2,
+            "tag_id": [
+                2848,
+                3296,
+                176,
+                3297,
+                85,
+                2358,
+                1627,
+                1005,
+                670
+            ],
+            "styles": 65553,
+            "id": 114604,
+            "vip": 0,
+            "ratios": 16,
+            "fscore": 552199186
+        },
+        {
+            "preview": {
+                "extends": [],
+                "maincolor": {
+                    "hex": "#9a5837"
+                },
+                "width": 1242,
+                "url": "https://st-gdx.dancf.com/gaodingx/402/design/20190815-164400-8098.png",
+                "height": 2208
+            },
+            "flags": 0,
+            "scene_id": 1118,
+            "description": "",
+            "title": "光辉历史抗战胜利74手机海报",
+            "type": "poster",
+            "colors": 2050,
+            "features": 0,
+            "themes": 1024,
+            "category_id": 1119,
+            "channels": 57,
+            "group_id": 83543,
+            "price": 0,
+            "platform_id": 256,
+            "tag_id": [
+                328,
+                877
+            ],
+            "styles": 204800,
+            "id": 113088,
+            "vip": 0,
+            "ratios": 16,
+            "fscore": 180118.0
+        },
+        {
+            "preview": {
+                "extends": [],
+                "maincolor": {
+                    "hex": "#edf4f3"
+                },
+                "width": 1242,
+                "url": "https://st-gdx.dancf.com/gaodingx/179/design/20190827-010630-d918.png",
+                "height": 2208
+            },
+            "flags": 0,
+            "scene_id": 1118,
+            "description": "",
+            "title": "物理老师介绍海报",
+            "type": "poster",
+            "colors": 1025,
+            "features": 0,
+            "themes": 64,
+            "category_id": 1119,
+            "channels": 41,
+            "group_id": 84639,
+            "price": 20,
+            "platform_id": 2,
+            "tag_id": [
+                3296,
+                3297,
+                1473,
+                85,
+                3209,
+                1498,
+                2443,
+                1627,
+                2844,
+                1005
+            ],
+            "styles": 16,
+            "id": 114340,
+            "vip": 0,
+            "ratios": 16,
+            "fscore": 4.086035E+8
+        },
+        {
+            "preview": {
+                "extends": [],
+                "maincolor": {
+                    "hex": "#3d473e"
+                },
+                "width": 1242,
+                "url": "https://st-gdx.dancf.com/gaodingx/178/design/20190823-182518-5f85.png",
+                "height": 2208
+            },
+            "flags": 0,
+            "scene_id": 1118,
+            "description": "",
+            "title": "教育培训中秋献礼促销海报",
+            "type": "poster",
+            "colors": 4100,
+            "features": 0,
+            "themes": 72,
+            "category_id": 1119,
+            "channels": 41,
+            "group_id": 84521,
+            "price": 20,
+            "platform_id": 2,
+            "tag_id": [
+                3296,
+                3297,
+                85,
+                2839,
+                1627,
+                1004,
+                7485,
+                1005,
+                175
+            ],
+            "styles": 8320,
+            "id": 114181,
+            "vip": 0,
+            "ratios": 16,
+            "fscore": 5.1803906E+8
+        },
+        {
+            "preview": {
+                "extends": [],
+                "maincolor": {
+                    "hex": "#fac03a"
+                },
+                "width": 1242,
+                "url": "https://st-gdx.dancf.com/gaodingx/440/design/20190816-134437-b7aa.png",
+                "height": 2208
+            },
+            "flags": 0,
+            "scene_id": 1118,
+            "description": "",
+            "title": " 开学季迎新生海报",
+            "type": "poster",
+            "colors": 8,
+            "features": 0,
+            "themes": 64,
+            "category_id": 1119,
+            "channels": 41,
+            "group_id": 83675,
+            "price": 0,
+            "platform_id": 2,
+            "tag_id": [
+                2848,
+                3296,
+                3297,
+                85,
+                198,
+                1927,
+                8023,
+                4954,
+                1498,
+                1627,
+                1005
+            ],
+            "styles": 8192,
+            "id": 113227,
+            "vip": 0,
+            "ratios": 16,
+            "fscore": 336910179
+        },
+        {
+            "preview": {
+                "maincolor": {
+                    "hex": "#fdb4ac"
+                },
+                "width": 1242,
+                "type": "image",
+                "url": "https://st0.dancf.com/csc/402/templets/112580/20190714-100620-c4d3.jpg",
+                "height": 2208
+            },
+            "flags": 0,
+            "scene_id": 1118,
+            "description": "",
+            "title": "抗战胜利74周年手机海报",
+            "type": "poster",
+            "colors": 320,
+            "features": 0,
+            "themes": 1024,
+            "category_id": 1119,
+            "channels": 57,
+            "group_id": 83084,
+            "price": 0,
+            "platform_id": 256,
+            "tag_id": [
+                328,
+                877
+            ],
+            "styles": 197640,
+            "id": 112580,
+            "vip": 0,
+            "ratios": 16,
+            "fscore": 120686.0
+        },
+        {
+            "preview": {
+                "extends": [],
+                "maincolor": {
+                    "hex": "#070831"
+                },
+                "width": 1242,
+                "url": "https://st-gdx.dancf.com/gaodingx/440/design/20190826-103126-109b.png",
+                "height": 2208
+            },
+            "flags": 0,
+            "scene_id": 1118,
+            "description": "",
+            "title": "中秋节晚会邀请函",
+            "type": "poster",
+            "colors": 10,
+            "features": 0,
+            "themes": 32768,
+            "category_id": 1119,
+            "channels": 41,
+            "group_id": 85143,
+            "price": 20,
+            "platform_id": 2,
+            "tag_id": [
+                85,
+                245,
+                3209,
+                2443,
+                2843,
+                175,
+                1007
+            ],
+            "styles": 8208,
+            "id": 114926,
+            "vip": 0,
+            "ratios": 16,
+            "fscore": 4.9947203E+8
+        },
+        {
+            "preview": {
+                "elapsed": 4052,
+                "maincolor": {
+                    "hex": "#eabf92"
+                },
+                "width": 1242,
+                "url": "https://st-gdx.dancf.com/templets/115634/shots/20190829-142307-4VNIZ.png",
+                "height": 2208
+            },
+            "flags": 0,
+            "scene_id": 1118,
+            "description": "",
+            "title": "教师节快乐/教师节/插画/手机海报",
+            "type": "poster",
+            "colors": 8450,
+            "features": 0,
+            "themes": 1024,
+            "category_id": 1119,
+            "channels": 33,
+            "group_id": 85748,
+            "price": 0,
+            "platform_id": 4096,
+            "tag_id": [
+                176,
+                328
+            ],
+            "styles": 196608,
+            "id": 115634,
+            "vip": 0,
+            "ratios": 16,
+            "fscore": 666621318
+        },
+        {
+            "preview": {
+                "maincolor": {
+                    "r": 180,
+                    "b": 239,
+                    "g": 224,
+                    "hex": "#b4e0ef"
+                },
+                "width": 1242,
+                "url": "https://st-gdx.dancf.com/templets/99260/shots/20190619-225234-5vkeW.png",
+                "height": 2208
+            },
+            "flags": 0,
+            "scene_id": 1118,
+            "description": "",
+            "title": "白露二十四节气简约风手机海报",
+            "type": "poster",
+            "colors": 1289,
+            "features": 0,
+            "themes": 0,
+            "category_id": 1119,
+            "channels": 41,
+            "group_id": 71347,
+            "price": 0,
+            "platform_id": 64,
+            "tag_id": [
+                328,
+                862
+            ],
+            "styles": 163840,
+            "id": 99260,
+            "vip": 0,
+            "ratios": 16,
+            "fscore": 508716673
+        },
+        {
+            "preview": {
+                "extends": [],
+                "maincolor": {
+                    "r": 231,
+                    "b": 231,
+                    "g": 233,
+                    "hex": "#e7e9e7"
+                },
+                "width": 1242,
+                "url": "https://st-gdx.dancf.com/gaodingx/346/design/20190703-154142-34d8.png",
+                "height": 2208
+            },
+            "flags": 0,
+            "scene_id": 1118,
+            "description": "",
+            "title": "大学入学社团纳新创意手机海报",
+            "type": "poster",
+            "colors": 328,
+            "features": 0,
+            "themes": 256,
+            "category_id": 1119,
+            "channels": 41,
+            "group_id": 74168,
+            "price": 0,
+            "platform_id": 64,
+            "tag_id": [
+                5184,
+                3457,
+                1766,
+                4713,
+                330,
+                2379,
+                335,
+                816,
+                1008,
+                1072,
+                401,
+                436,
+                4980,
+                85,
+                3989,
+                4981,
+                4631,
+                4983,
+                5022,
+                5023
+            ],
+            "styles": 172064,
+            "id": 102315,
+            "vip": 0,
+            "ratios": 16,
+            "fscore": 373035806
+        }
+    ],
+    "corrected": []
+}

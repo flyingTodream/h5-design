@@ -1,0 +1,43 @@
+.vx-select
+    display: inline-block
+    position relative
+    width 170px
+    input 
+        border none
+        outline: none
+        width 100%
+        line-height: 1.2
+        font-size: 1rem
+    .vx-select-input
+        background-color: #ffffff
+        border 1px solid #666
+        border-radius: 5px
+        padding: .5rem
+        &.active
+            border-color: #409EFF
+        span
+            display inline-block
+            width 100%
+    
+    .vx-select-content
+        position: absolute
+        left 0
+        right 0
+        top: 110%
+        box-shadow: 0 0 5px #ccc
+        border-radius: 5px
+        z-index 10
+        padding: 5px 0
+        overflow-y: auto
+        overflow-x: auto
+        max-height: calc(1rem * 2 * 10 + 10px)
+        .vx-select-list
+            .vx-option
+                background-color #fff
+                line-height: 2
+                padding: 0 5px
+                &:hover
+                    background-color: #f0f0f0
+                &.active
+                    color #409EFF
+                    font-weight: 900

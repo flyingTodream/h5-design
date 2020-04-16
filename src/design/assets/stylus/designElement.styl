@@ -1,0 +1,67 @@
+.design-resource-scene
+    overflow: auto;
+    margin-bottom: 3rem;
+    .design-resource-scene-name
+        display flex
+        justify-content: space-between;
+        padding: 1rem 1rem;
+        font-size: 1rem;
+        cursor: pointer;
+        .design-resource-scene-name-all
+            color: rgb(160, 160, 160);
+            &:hover
+                color #525252
+    .design-resource-scene-content
+        padding: 0 1rem;
+        height 6.2rem
+        ul
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            li
+                width 6.2rem
+                height 6.2rem
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 4px;
+                &:hover
+                    background #e5e5e5
+                    transition: .5s;
+                img
+                    max-width 100%
+                    max-height 100%
+    .design-resource-element
+            .design-resource__content
+                overflow: auto;
+
+.design-resource-element-categories
+    padding: 0 1rem;
+    margin-top 1rem
+    margin-bottom: 1rem;
+    display: flex;
+    ul
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        li
+            width 4.5rem
+            height 2.5rem
+            cursor: pointer;
+            margin-left: .5rem;
+            margin-top: .5rem;
+            border: 1px solid #e0e5ea;
+            box-sizing: border-box;
+            background: #f8fafc;
+            font-size: .9rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+        .active
+            color: #fff;
+            background: #2354f4;
+            border-color: #2354f4;
+            font-weight: 700;
+
