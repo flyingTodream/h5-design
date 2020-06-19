@@ -89,6 +89,9 @@ export default {
             await mitation.setTemplate(data.data.info.detail, this.id)
             await this.loadFontHandler(data.data.info.detail.layouts[0])
             mitation.setTitle(data.data.info.name)
+            let canvasW = getter.canvasW()
+            let canvasH = getter.canvasH()
+            mitation.setoriginal(canvasW, canvasH)
             this.loading = false
           })
           .catch(err => {

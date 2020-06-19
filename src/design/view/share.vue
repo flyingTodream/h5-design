@@ -25,7 +25,7 @@ export default {
   name: 'vx-share',
   data() {
     return {
-      link: 'http://' + window.location.host + '/' + 'share/' + this.id,
+      link: 'https://' + window.location.host + '/' + 'share/' + this.id,
       bgColor: '',
       text: '复制链接'
     }
@@ -44,8 +44,8 @@ export default {
         colorDark: '#409eff',
         colorLight: '#FFF',
         width: 150,
-        height: 150
-        // autoColor: true
+        height: 150,
+        autoColor: true
       }
       // Create new QRCode Object
       new QRCode(this.$refs.qrcode, options)

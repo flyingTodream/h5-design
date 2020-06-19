@@ -6,11 +6,11 @@ import './assets/css/index.scss' //引入样式
 import 'src/design/assets/stylus/index.styl'
 //开发环境，引入在线图标
 import 'src/design/lib/iconfont.js';
+import 'src/utils/iconfont'
 // permission control
 import './permission'
 import axios from './design/lib/axios';
 import VxHtml2canvas from 'vue-html2canvas';
-import i18n from './design-h5/locales'
 import {
   Row,
   Col,
@@ -47,15 +47,18 @@ import {
   Message,
   Pagination,
   Collapse,
-  CollapseItem
+  CollapseItem,
+  Avatar
 } from 'element-ui'
-import Antd from 'ant-design-vue'
-// import 'element-ui/lib/theme-chalk/index.css'
-import 'ant-design-vue/dist/antd.css'
+//h5编辑器使用的ANT UI
+// import Antd from 'ant-design-vue'
+// // import 'element-ui/lib/theme-chalk/index.css'
+// import 'ant-design-vue/dist/antd.css'
+// Vue.use(Antd)
 // !#zh 请注意，务必使用 font-awesome@4.7.0 版本
 import 'font-awesome/css/font-awesome.min.css'
 import vClickOutside from 'v-click-outside'
-Vue.use(Antd)
+
 Vue.use(vClickOutside)
 Vue.use(CollapseItem);
 Vue.use(Collapse);
@@ -91,6 +94,7 @@ Vue.use(Backtop);
 Vue.use(Icon);
 Vue.use(Progress);
 Vue.use(Image);
+Vue.use(Avatar);
 import VxIcon from 'src/design/components/icon';
 
 import VxUpload from 'src/design/components/upload';
@@ -116,9 +120,10 @@ new Vue({
   el: '#app',
   router,
   store,
-  i18n,
   template: '<App/>',
   components: {
     App
+  }, mounted() {
+    document.dispatchEvent(new Event('render-event'))
   }
 })

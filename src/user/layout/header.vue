@@ -10,7 +10,8 @@
         <el-col :span="12">
           <el-dropdown trigger="click">
             <span class="el-dropdown-link">
-              {{userName}}
+              <el-avatar :size="35" :src="avatarUrl"></el-avatar>
+              <div style="padding-left: 5px;">{{userName}}</div>
               <i class="el-icon-arrow-down el-icon--right"></i>
             </span>
             <el-dropdown-menu class="vx-user-dropdown" slot="dropdown">
@@ -44,6 +45,9 @@ export default {
     },
     userName() {
       return MyStorage.getItem('userName')
+    },
+    avatarUrl() {
+      return MyStorage.getItem('avatarUrl')
     }
   },
   methods: {
@@ -68,3 +72,10 @@ export default {
   }
 }
 </script>
+<style scoped>
+.el-dropdown-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+</style>

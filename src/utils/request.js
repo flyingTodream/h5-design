@@ -27,19 +27,15 @@ function errorLog(err) {
   });
 }
 
-let BASR_API = 'https://iyouquan.capelabs.cn/wx/'
-if (process.env.NODE_ENV == 'development') {
-  BASR_API = process.env.VUE_APP_BASE_API
-}
 // 'http://111.67.205.205:18080/wx'VUE_APP_BASE_API
 // 创建一个 axios 实例
 const Axios = axios.create({
-  baseURL: BASR_API,
+  baseURL: process.env.VUE_APP_BASE_API,
   timeout: 10000 // 请求超时时间
 });
 
 const Upload = axios.create({
-  baseURL: BASR_API,
+  baseURL: process.env.VUE_APP_BASE_API,
   timeout: 30000,
 })
 /**

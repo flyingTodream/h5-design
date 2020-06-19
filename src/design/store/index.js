@@ -26,6 +26,8 @@ let state = window.state = Vue.observable({
   layout: {
     width: 1242,
     height: 2208,
+    originalW: 0,
+    originalH: 0,
     title: "新的设计",
     elements: [],
     backgroundColor: '#ffffff',
@@ -152,6 +154,7 @@ const getter = window.getter = {
   zoom: () => {
     return state.global.zoom;
   },
+
   save: () => {
     return {
       global: state.global,
@@ -201,6 +204,10 @@ const mitation = window.mitation = {
   resetCutZoom() {
     state.cutInfo.zoom = 100
   },
+  setoriginal(w, h) {
+    state.layout.originalH = h
+    state.layout.originalW = w
+  },
   updateCurrentEdit(val) {
     state.current.edit = val
   },
@@ -235,7 +242,8 @@ const mitation = window.mitation = {
     state.global = template.global
     // state.global.showWatermark = template.global.showWatermark || true
     state.global.dpi = template.global.dpi || 72
-    state.layout = template.hasOwnProperty('layouts') ? template.layouts[0] : template.layout
+
+    state.layout = Object.prototype.hasOwnProperty.call(template, "layouts") ? template.layouts[0] : template.layout
 
     this.initBgInfo()
     await posterStoreSetHandler({

@@ -61,10 +61,38 @@
         height 20px
         display: flex;
         justify-content: center;
+    .vx-login-wx
+        color: #3d3d3d;
+        width: 100%;
+        text-align: center;
+        padding: 5px 0;
+        i
+            color: #86ca5e;
+            padding: 0 5px;
     .vx-login-form-code
         width:13rem
         height 13rem
         padding: 0rem 0;
+        position relative
+        .vx-login-form-code-outdate
+            position: absolute;
+            width: 13rem;
+            height: 13rem;
+            top: 0;
+            background-color: rgba(0,0,0,0.9);
+            text-align: center;
+            p
+                font-size: 14px;
+                padding: 30px 20px;
+                color: #fff;
+                font-weight: 500;
+            i
+                
+                color: #409eff
+                cursor pointer
+                .vx
+                    width 2rem
+                    height 2rem
         .vx-login-form-qrcode
             width 13rem
             height 13rem
@@ -79,7 +107,7 @@
                 align-items: center;
                 justify-content: center;
     .vx-login-form-code-tips
-        margin-top: 1.5rem;
+        margin-top: .8rem;
         color: #444950;
         font-size .9rem
     .vx-login-form-others
@@ -126,10 +154,15 @@
         .vx-login-bottom-text
             width 19rem
             display flex
-            justify-content: center;
+            // justify-content: center;
+            text-align: left;
+            padding-left: 10px;
+            color: #666;
             a
                 cursor: pointer;
-                color: #444950;
+                color: #333;
+                padding: 0 5px;
+
         .vx-login-bottom-phone
             color: #409EFF;
             cursor: pointer;

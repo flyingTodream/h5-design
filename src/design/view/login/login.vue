@@ -11,7 +11,7 @@
         <VxWxLogin v-if="weChatLogin" />
         <VxPhoneLogin @forgetPassword="forgetPasswordHandler" v-if="!weChatLogin" />
         <div class="vx-login-form-others">
-          <div v-if="weChatLogin" class="vx-login-phone">
+          <!-- <div v-if="weChatLogin" class="vx-login-phone">
             <div @click="weChatLogin = !weChatLogin" class="vx-login-phone-icon">
               <img
                 src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNTYwMTU1MjA5Njc1IiBjbGFzcz0iaWNvbiIgc3R5bGU9IiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjI0NzciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNDgiIGhlaWdodD0iNDgiPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PC9zdHlsZT48L2RlZnM+PHBhdGggZD0iTTc3NC4xNDQgMTAyLjRIMjQ5Ljg1NmMtMzkuMzIxNiAwLTY1LjUzNiAyNi4yMTQ0LTY1LjUzNiA2NS41MzZ2NzIwLjg5NmMwIDM5LjMyMTYgMjYuMjE0NCA2NS41MzYgNjUuNTM2IDY1LjUzNmg1MjQuMjg4YzM5LjMyMTYgMCA2NS41MzYtMjYuMjE0NCA2NS41MzYtNjUuNTM2VjE2Ny45MzZjMC0zOS4zMjE2LTI2LjIxNDQtNjUuNTM2LTY1LjUzNi02NS41MzZ6IG0tMTk2LjYwOCA3ODYuNDMyaC0xMzEuMDcydi02NS41MzZoMTMxLjA3MnY2NS41MzZ6IG0xOTYuNjA4LTEzMS4wNzJIMjQ5Ljg1NnYtNjUuNTM2aDUyNC4yODh2NjUuNTM2eiIgcC1pZD0iMjQ3OCIgZmlsbD0iI0Y4OUY1MCI+PC9wYXRoPjwvc3ZnPg=="
@@ -19,7 +19,7 @@
               />
             </div>
             <div class="vx-login-phone-text">手机号登录</div>
-          </div>
+          </div>-->
 
           <div v-if="!weChatLogin" class="vx-login-phone">
             <div @click="weChatLogin = !weChatLogin" class="vx-login-phone-icon">
@@ -37,10 +37,10 @@
             <a>用户协议</a>和
             <a>隐私政策</a>
           </div>
-          <div @click="registerHandler" class="vx-login-bottom-phone">
+          <!-- <div @click="registerHandler" class="vx-login-bottom-phone">
             手机号注册
             <i class="el-icon-arrow-right"></i>
-          </div>
+          </div>-->
         </div>
       </div>
       <VxForget @login="loginHandler" v-if="type == 'findPassword'" />

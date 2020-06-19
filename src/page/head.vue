@@ -14,7 +14,8 @@
                 <el-col :span="8">
                   <el-dropdown style="width:150px;padding:16px" trigger="click">
                     <span class="el-dropdown-link">
-                      {{userName}}
+                      <el-avatar :size="35" :src="avatarUrl"></el-avatar>
+                      <div style="padding-left: 5px;">{{userName}}</div>
                       <i class="el-icon-arrow-down el-icon--right"></i>
                     </span>
                     <el-dropdown-menu class="vx-mall-header-dropdown" slot="dropdown">
@@ -59,7 +60,8 @@
                 <el-col :span="8">
                   <el-dropdown style="width:150px;padding:16px" trigger="click">
                     <span class="el-dropdown-link">
-                      {{userName}}
+                      <el-avatar :size="35" :src="avatarUrl"></el-avatar>
+                      <div style="padding-left: 5px;">{{userName}}</div>
                       <i class="el-icon-arrow-down el-icon--right"></i>
                     </span>
                     <el-dropdown-menu class="vx-mall-header-dropdown" slot="dropdown">
@@ -100,6 +102,9 @@ export default {
     },
     userName() {
       return MyStorage.getItem('userName')
+    },
+    avatarUrl() {
+      return MyStorage.getItem('avatarUrl')
     }
   },
   data() {
@@ -128,3 +133,16 @@ export default {
   }
 }
 </script>
+<style scoped>
+.el-dropdown-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.el-col-12 {
+  width: 150px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+</style>

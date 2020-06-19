@@ -9,7 +9,7 @@ export const myMessage = message
 
 export class AxiosWrapper {
   // eslint-disable-next-line camelcase
-  constructor ({ name = 'default', loading_name, responseType = 'json', headers, dispatch, commit, router, successMsg, failMsg, successCallback, failCallback, customRequest }) {
+  constructor({ name = 'default', loading_name, responseType = 'json', headers, dispatch, commit, router, successMsg, failMsg, successCallback, failCallback, customRequest }) {
     this.name = name
     // eslint-disable-next-line camelcase
     this.loading_name = loading_name
@@ -39,7 +39,7 @@ export class AxiosWrapper {
     })
   }
 
-  get (...args) {
+  get(...args) {
     this.setDefaultLoadingName(args)
 
     this.setLoadingValue(true)
@@ -60,7 +60,7 @@ export class AxiosWrapper {
     }).finally(() => this.setLoadingValue(false))
   }
 
-  post (...args) {
+  post(...args) {
     this.setDefaultLoadingName(args)
 
     this.setLoadingValue(true)
@@ -74,7 +74,7 @@ export class AxiosWrapper {
     }).finally(() => this.setLoadingValue(false))
   }
 
-  put (...args) {
+  put(...args) {
     this.setDefaultLoadingName(args)
 
     this.setLoadingValue(true)
@@ -88,7 +88,7 @@ export class AxiosWrapper {
     }
     return this.instance.put(...args).then(response => {
       const handler = this.getCommonResponseHandler({ failMsg: 'Save Failed.' })
-      // handler.call(this, response)
+      handler.call(this, response)
       handler()
     }).catch(error => {
       // handle error
@@ -96,7 +96,7 @@ export class AxiosWrapper {
     }).finally(() => this.setLoadingValue(false))
   }
 
-  delete (...args) {
+  delete(...args) {
     this.setDefaultLoadingName(args)
 
     this.setLoadingValue(true)
@@ -109,16 +109,16 @@ export class AxiosWrapper {
     }).finally(() => this.setLoadingValue(false))
   }
 
-  cancel (reason) {
+  cancel(reason) {
     this.source.cancel(reason)
   }
 
-  setLoadingValue (payload) {
+  setLoadingValue(payload) {
     // this.dispatch('loading/update', { type: this.loading_name, payload }, { root: true })
     this.commit('loading/update', { type: this.loading_name, payload }, { root: true })
   }
 
-  setDefaultLoadingName (...args) {
+  setDefaultLoadingName(...args) {
     if (!this.loading_name) {
       let url = args[0]
       if (url.indexOf('/') !== -1) {
@@ -133,7 +133,7 @@ export class AxiosWrapper {
     }
   }
 
-  getCommonResponseHandler ({ failMsg } = {}) {
+  getCommonResponseHandler({ failMsg } = {}) {
     return (response) => {
       if (!response.data) {
         myMessage.warn(this.failMsg || failMsg)

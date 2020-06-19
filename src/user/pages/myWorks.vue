@@ -16,7 +16,9 @@
         @click="goEdit('/design')"
       >
         <div class="vx-myWorks-warp-makePro-add">
-          <i class="el-icon-plus"></i>
+          <div class="add-border">
+            <i class="el-icon-plus"></i>
+          </div>
         </div>
         <div class="vx-myWorks-warp-makePro-text">创建新作品</div>
       </div>
@@ -30,7 +32,7 @@
       ></VxUserPicModel>
     </transition-group>
 
-    <div v-if="userCenterListTotal === 0" class="dataTotalLin">←您还未创建作品,左键点击创建新作品</div>
+    <!-- <div v-if="userCenterListTotal === 0" class="dataTotalLin">←您还未创建作品,左键点击创建新作品</div> -->
     <VxLoading class="vxLoading" v-if="loading" />
     <!-- 分页 -->
     <div v-if="userCenterListTotal > pageSize" class="paginationFenYe">

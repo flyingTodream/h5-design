@@ -123,7 +123,12 @@
 
 .userMenu {
   cursor: pointer;
-  width: 100px;
+  width: 150px;
+  margin-right: 10px;
+  .el-col-12 {
+    width: 100%;
+    height: 35px;
+  }
 }
 
 .el-dropdown {
@@ -281,18 +286,13 @@
     }
   }
 }
-.list-complete-enter, .list-complete-leave-to
-{
-  // opacity: 0;
-  transform: translateX(300px);
-}
 .list-complete-leave-active {
   position: absolute;
 }
 .list-complete-enter, .list-complete-leave-to
 /* .list-complete-leave-active for below version 2.1.8 */ {
   opacity: 0;
-  transform: translateX(100px);
+  transform: translateX(-100px);
 }
 .list-complete-leave-active {
   position: absolute;
@@ -347,11 +347,6 @@
   }
 }
 
-.vx-vx-myWorks-tit:hover ,.el-icon-edit:hover,.el-icon-view:hover,.el-icon-delete:hover,
-.vx-myWorks-warp-makePro-text:hover,.el-icon-plus:hover{
-  color: #000;
-  transition: all .3s;
-}
 
 .vx-myWorks-warp-makePro-modelPro-message-mess {
   border-top: thin dashed #b7b7b7;
@@ -402,8 +397,52 @@ p{
       text-align: center;
       font-size: 30px;
       cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .add-border{
+        width: 90%;
+        height: 90%;
+        position: relative;
+      }
+      .add-border::before{
+        content: '';
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        top: 0;
+        left: 0;
+        border-top: 1px solid #333;
+        border-left: 1px solid #333;
+        transition: all 0.5s;
+      }
+      .add-border::after{
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 5px;
+        height: 5px;
+        border-right: 1px solid #333;
+        border-bottom: 1px solid #333;
+        transition: all 0.5s;
+      }
+      .add-border:hover::before{
+        width: 100%;
+        height: 100%;
+      }
+      .add-border:hover::after{
+        width: 100%;
+        height: 100%;
+      }
+      
     }
-
+    .vx-myWorks-warp-makePro-text:hover, .vx-myWorks-warp-makePro-add:hover{
+      color: #000;
+      transition: all .3s;
+     
+    }
+   
     .vx-myWorks-warp-makePro-text {
       width: 100%;
       height: 42px;

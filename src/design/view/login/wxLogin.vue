@@ -15,23 +15,76 @@
           <i class="el-icon-loading"></i>生成二维码中...
         </div>
       </el-image>
+      <div v-if="outOfDate" class="vx-login-form-code-outdate">
+        <p>二维码已超时，请点击重新获取</p>
+        <vx-icon @click.native="getQr" name="refresh"></vx-icon>
+      </div>
     </div>
-    <div class="vx-login-form-code-tips">关注"海报设计设计官方服务号"进行注册</div>
+    <div class="vx-login-wx">
+      <vx-icon name="wechat"></vx-icon>微信扫码
+    </div>
+    <div class="vx-login-form-code-tips">关注"海豹图图官方服务号"进行注册</div>
   </div>
 </template>
 <script>
+import { getQrCode, checkLogin } from 'src/api/wx.js'
+import MyStorage from 'src/utils/cache'
 export default {
   name: 'vx-WxLogin',
   data() {
     return {
-      url: ''
+      url: '',
+      outOfDate: false,
+      clock: null
+    }
+  },
+  computed: {
+    showLogin() {
+      return this.$store.getters.getShowLogin()
+    }
+  },
+  watch: {
+    showLogin(val) {
+      console.log(val)
+      if (!val) {
+        console.log('关闭')
+        clearInterval(this.clock)
+      }
+    }
+  },
+  methods: {
+    getQr() {
+      this.outOfDate = false
+      this.url = ''
+      getQrCode().then(res => {
+        this.url =
+          'https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=' +
+          decodeURIComponent(res.data.ticket)
+        let count = 0
+        this.clock = setInterval(() => {
+          let param = {
+            ticket: res.data.ticket
+          }
+          count++
+          if (count == 60) {
+            this.outOfDate = true
+            clearInterval(this.clock)
+          }
+          checkLogin(param).then(res => {
+            if (res.errno == 0) {
+              clearInterval(this.clock)
+              MyStorage.setItem('Token', res.data.token)
+              MyStorage.setItem('userName', res.data.userInfo.nickName)
+              MyStorage.setItem('avatarUrl', res.data.userInfo.avatarUrl)
+              this.$store.commit('updateLoginState', true)
+            }
+          })
+        }, 1000)
+      })
     }
   },
   created() {
-    setTimeout(() => {
-      this.url =
-        'https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQGM8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyOG1GaU1xelZjbTAxOE45bTF1MVoAAgSxTg1eAwSAOgkA'
-    }, 3 * 1000)
+    this.getQr()
   }
 }
 </script>
