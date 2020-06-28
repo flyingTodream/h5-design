@@ -182,14 +182,12 @@ export default {
     },
 
     canvasStyles() {
-      let { height } = document.body.getBoundingClientRect()
-      let top =
-        (height - this.container.y - this.layout.height * this.global.zoom) / 2
+      // let { height } = document.body.getBoundingClientRect()
+      // let top =
+      //   (height - this.container.y - this.layout.height * this.global.zoom) / 2
       return {
         width: `${this.layout.width * this.global.zoom}px`,
-        height: `${this.layout.height * this.global.zoom}px`,
-        marginTop: `${top > 0 ? top : 10}px`,
-        marginBottom: `10px`
+        height: `${this.layout.height * this.global.zoom}px`
       }
     },
     cutable() {

@@ -35,11 +35,13 @@
         height 100%
         overflow: auto
         position relative
+        display: flex;
+        justify-content: center;
+        align-items: center;
         &.preview
             background: none
             .design-canvas
                 box-shadow: none
-                margin: 0 auto;
                 .editor-canvas
                     border: 1px dashed;
 .print
@@ -398,7 +400,6 @@
 
 .design-canvas
     background-color #fff
-    margin 5rem auto 0
     box-shadow: 0 0 10px #ccc
     background-color #ffffff
     background-size 12px 12px

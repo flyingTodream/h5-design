@@ -267,17 +267,20 @@ export default {
         top: this.widget.top,
         left: this.widget.left
       })
-      if (this.widget.hasOwnProperty('transform')) {
+
+      if (Object.prototype.hasOwnProperty.call(this.widget, 'transform')) {
         return {
           width: this.widget.width * this.zoom + 'px',
           height: this.widget.height * this.zoom + 'px',
           top: this.widget.top * this.zoom + 'px',
           left: this.widget.left * this.zoom + 'px',
+          zIndex: this.widget.index,
           transform: `matrix(${this.widget.transform.a},${this.widget.transform.b},${this.widget.transform.c},${this.widget.transform.d},${this.widget.transform.tx},${this.widget.transform.ty})`,
           display: this.widget.display
         }
       }
       return {
+        zIndex: this.widget.index,
         width: this.widget.width * this.zoom + 'px',
         height: this.widget.height * this.zoom + 'px',
         top: this.widget.top * this.zoom + 'px',
