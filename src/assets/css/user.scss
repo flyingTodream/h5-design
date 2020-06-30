@@ -264,7 +264,9 @@
     align-items: center;
     height: 88px;
   }
-
+  .vx-vx-myWorks-tit:hover{
+    color: #333;
+  }
   .vx-vx-myWorks-tit {
     margin-top: 4px;
     width: 240px;
@@ -344,6 +346,9 @@
 
   .vx-myWorks-warp-makePro-card-actions-li {
     border-right: 1px solid #dddddd;
+  }
+  .vx-myWorks-warp-makePro-card-actions-li:hover {
+    color: #333;
   }
 }
 
