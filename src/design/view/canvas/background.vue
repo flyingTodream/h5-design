@@ -51,11 +51,13 @@ export default {
       if (this.bgImgInfo) {
         style.left = `${this.bgImgInfo.left}px`
         style.top = `${this.bgImgInfo.top}px`
-        style.width = `${this.bgImgInfo.width * this.cutZoom * this.zoom}px`
+        style.width = `${this.bgImgInfo.width * this.cutZoom * this.zoom}px`  
         style.height = `${this.bgImgInfo.height * this.cutZoom * this.zoom}px`
+        // style.width = `${this.bgImgInfo.width}px`
+        // style.height = `${this.bgImgInfo.height}px`
       }
 
-      return style
+      return style 
     },
     backStyle() {
       let style = {}
@@ -90,8 +92,14 @@ export default {
       //   style.height = `${this.h}px`
       //   style.width = `${this.bgImgInfo.width * _h}px`
       // }
-      style.width = `${this.bgImgInfo.width * this.zoom}px`
-      style.height = `${this.bgImgInfo.height * this.zoom}px`
+      // let scale = (this.bgImgInfo.width) / (this.bgImgInfo.height)
+      console.log(this.bgImgInfo)
+      console.log(state.cutInfo.zoom)
+
+
+      style.width = `${this.bgImgInfo.width * this.cutZoom * this.zoom * state.cutInfo.zoom / 100}px`
+      style.height = `${this.bgImgInfo.height * this.cutZoom * this.zoom * state.cutInfo.zoom / 100} px`
+
       return style
     }
   },

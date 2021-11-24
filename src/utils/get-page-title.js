@@ -1,4 +1,4 @@
-const title = '爱友圈'
+const title = '友圈'
 
 export default function getPageTitle(pageTitle) {
   if (pageTitle) {

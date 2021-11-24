@@ -1,5 +1,6 @@
 <template>
   <div class="hotSearch">
+    <div class="text">精彩设计，随时随地</div>
     <div class="vx-search vx-search-page__search">
       <span>
         <div class="vx-search__view">
@@ -8,19 +9,20 @@
             placeholder="搜索海量模板"
             maxlength="50"
             class="vx-search__input"
-            style="width: 600px; padding: 0px 20px;"
+            style="width: 40rem; padding: 0px 20px;"
             @keyup.enter="searchInpChange"
             v-model.trim="searchInpVal"
           />
+          <i @click="searchInpChange" class="el-icon-search"></i>
         </div>
       </span>
-      <button class="vx-search__btn">
+      <!-- <button class="vx-search__btn">
         <span class="gd-button__content" @click="searchInpChange">搜索</span>
-      </button>
+      </button>-->
     </div>
     <div class="vx-search-page__tip">
       <div>
-        <span class="vx-search-page__label">热门搜索</span>
+        <span class="vx-search-page__label">热门搜索：</span>
         <!-- 热门搜索 关键词 -->
         <span
           class="vx-search-page__label vx-search-page__hot-key"
@@ -35,7 +37,7 @@
 </template>
 
 <script>
-import {getHotWord} from '../api/api'
+import { getHotWord } from '../api/api'
 
 export default {
   name: 'vx-vxModelSearch',
@@ -43,7 +45,7 @@ export default {
     return {
       searchInpVal: '',
       // 热门搜索 关键词
-      hotSearchList: []
+      hotSearchList: [],
     }
   },
   methods: {
@@ -60,13 +62,13 @@ export default {
       if (this.searchInpVal.length != 0) {
         this.$emit('keyWord', this.searchInpVal)
       }
-    }
+    },
   },
-   created() {
+  created() {
     // 请求热门词组
-     getHotWord().then(res => {
-       this.hotSearchList = res.data.list;
-     })
-  }
+    getHotWord().then((res) => {
+      this.hotSearchList = res.data.list
+    })
+  },
 }
 </script>

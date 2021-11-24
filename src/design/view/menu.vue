@@ -1,4 +1,5 @@
 <template>
+<!--制作页面头部菜单 -->
   <div class="design-menus">
     <div @click="$router.push('/')" class="menu-logo">
       <img class="vx-logoHome-img" src="../../assets/image/logo.png" />
@@ -74,8 +75,10 @@
       <div @click="downloadHandler" class="menu-download">下载</div>
     </div>
     <!--  -->
-    <VxShare @close="showShare = false" :id="id" v-if="isLogin && showShare"></VxShare>
-    <VxDownload @close="showDownload = false" v-if="isLogin && showDownload" />
+    <VxShare @close="showShare = false" :id="id" v-if="showShare"></VxShare>
+    <VxDownload @close="showDownload = false" v-if="showDownload" />
+    <!-- <VxShare @close="showShare = false" :id="id" v-if="isLogin && showShare"></VxShare>
+    <VxDownload @close="showDownload = false" v-if="isLogin && showDownload" /> -->
     <vx-canvas-download type="print" ref="print" />
     <el-dialog
       :show-close="false"
@@ -121,7 +124,7 @@ export default {
       // title: '', //标题名称
       zoomF: false,
       showDownload: false,
-      zoom: 1,
+      zoom: 0.5,
       showShare: false,
       dialogVisible: false,
       proess: 0,
@@ -131,6 +134,9 @@ export default {
     }
   },
   computed: {
+    test() {
+      return getter.test()
+    },
     title: {
       get() {
         return getter.title()
@@ -140,10 +146,8 @@ export default {
       }
     },
     zoomValue() {
-      return util.floatObj.multiply(
-        util.floatObj.multiply(getter.zoom(), 1, 2),
-        100
-      )
+      // debugger
+      return util.floatObj.multiply(util.floatObj.multiply(getter.zoom(), 1, 2),100)
     },
     id() {
       return getter.id() + ''
@@ -171,11 +175,11 @@ export default {
 
   methods: {
     async shareHandler() {
-      if (!this.isLogin) {
-        this.$store.commit('updateShowLogin', true)
-        this.dialogVisible = false
-        return false
-      }
+      // if (!this.isLogin) {
+      //   this.$store.commit('updateShowLogin', true)
+      //   this.dialogVisible = false
+      //   return false
+      // }
       //随便发一个接口，判断是否登录
       userCenterList().then(async res => {
         if (!res) {
@@ -197,6 +201,13 @@ export default {
           this.showShare = !this.showShare
         }
       })
+
+    
+          // this.showShare = !this.showShare
+
+
+
+
     },
     // 改变缩放比例，。。适应屏幕/实际大小
     zoomHandler() {
@@ -273,6 +284,7 @@ export default {
       await this.$axios
         .post(API.SAVE_API, params)
         .then(res => {
+          console.log(res)
           this.saveTitle = '保存成功'
 
           this.saveSuccess = true
@@ -286,6 +298,7 @@ export default {
           }, 2 * 1000)
         })
         .catch(err => {
+          console.log(123)
           log.warning(err)
         })
     },
@@ -308,10 +321,11 @@ export default {
     hideLoginHandler() {
       this.$store.commit('updateShowLogin', false)
     },
+    // 点击下载
     downloadHandler() {
-      if (!this.isLogin) {
-        this.$store.commit('updateShowLogin', true)
-      }
+      // if (!this.isLogin) {
+      //   this.$store.commit('updateShowLogin', true)
+      // }
       this.showDownload = !this.showDownload
     },
 

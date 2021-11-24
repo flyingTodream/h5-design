@@ -1,20 +1,15 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import MyStorage from 'src/utils/cache'
-import undoRedoPlugin from './plugins/undo-redo/index'
-import editor from './modules/editor'
-import user from './modules/user'
-import visible from './modules/visible'
-import loading from './modules/loading'
 Vue.use(Vuex)
 const state = {
-  isLogin: MyStorage.getItem('Token') || false,
+  isLogin: MyStorage.getItem('Token') || true,
   isCollapse: false,
   showLogin: false
 }
 
 const store = new Vuex.Store({
-  
+
   state,
   getters: {
     getLoginState: (state) => () => {
@@ -35,13 +30,6 @@ const store = new Vuex.Store({
     }, updateisCollapse(state, val) {
       state.isCollapse = val
     }
-  },
-  modules: {
-    editor,
-    user,
-    visible,
-    loading
-  },
-  plugins: [undoRedoPlugin]
+  }
 })
 export default store;

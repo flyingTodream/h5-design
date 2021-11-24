@@ -8,19 +8,16 @@ export default new Router({
   mode: 'history',
   routes: [{
     path: '/',
-    component: () => import('../page/homePage')
+    component: () => import('../page/dashBoard')
   },
   {
-
+    path: '/miniProgram',
+    component: () => import('../page/mobile')
+  },
+  {
     path: '/mall',
     component: Mall,
     children: [
-
-      {
-        path: 'homePage',
-        name: 'vx-homePage',
-        component: () => import('../page/homePage')
-      },
       {
         path: 'modelCenter',
         name: 'vx-modelCenter',
@@ -30,7 +27,7 @@ export default new Router({
         path: 'preview/:id',
         name: 'vx-preview',
         component: () => import('../page/preview')
-      }
+      },
     ]
   }, {
     path: '/design/:id',
@@ -49,7 +46,6 @@ export default new Router({
         title: '我的作品',
       },
       component: () => import('../user/pages/myWorks')
-
     },
     {
       path: 'myCollect',
@@ -71,19 +67,18 @@ export default new Router({
         title: '订单中心',
       },
       component: () => import('../user/pages/myBuy')
-
     }
     ]
-  },
-  {
-    path: '/design-h5/:id',
-    name: 'design-h5',
-    component: () => import('../design-h5')
   },
   {
     path: '/share/:id',
     name: 'share',
     component: () => import('../page/share')
+  },
+  {
+    path: '/notsupport',
+    name: 'notsupport',
+    component: () => import('../page/notsupport')
   },
   {
     path: '/404',

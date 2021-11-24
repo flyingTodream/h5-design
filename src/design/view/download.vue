@@ -55,7 +55,7 @@
         <a>查看使用及版权细则</a>
       </div>
       <div @click="download" class="vx-download-download">确认下载</div>
-      <div class="vx-download-download-phone">下载到手机</div>
+      <!-- <div class="vx-download-download-phone">下载到手机</div> -->
     </div>
     <el-dialog
       :show-close="false"

@@ -1,5 +1,9 @@
 <template>
-  <div id="buttom" class="vx-default-footer">
+  <div
+    id="buttom"
+    class="vx-default-footer"
+    style="position: absolute; left: 0; bottom: 0; width: 100%; height: 120px"
+  >
     <div class="vx-default-footer__main">
       <div class="vx-default-footer__links">
         <ul>
@@ -40,6 +44,6 @@
 </template>
 <script>
 export default {
-  name: 'vx-bottom'
-}
+  name: "vx-bottom",
+};
 </script>

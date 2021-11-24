@@ -92,6 +92,7 @@ export default {
       this.$axios
         .get(API.EFFECT_DETAIL_API, { params })
         .then(data => {
+          console.log(data)
           const detail = JSON.parse(data.data.info.detail)
           data.left = this.l
           data.top = this.t

@@ -37,11 +37,12 @@
         position relative
         display: flex;
         justify-content: center;
-        align-items: center;
+        padding: 20px;
         &.preview
             background: none
             .design-canvas
                 box-shadow: none
+                position: relative
                 .editor-canvas
                     border: 1px dashed;
 .print
@@ -117,7 +118,7 @@
     left 5rem
     transition width .3s cubic-bezier(0,0,.37,1)
     overflow: hidden
-    z-index 10
+    z-index 9999
     .panel
         width 22rem;
         height 100%;
@@ -405,6 +406,7 @@
     background-size 12px 12px
     background-position 0 0, 6px 6px
     background-image linear-gradient(to top right,#ccc 25%,transparent 0,transparent 75%,#ccc 0,#ccc),linear-gradient(to top right,#ccc 25%,transparent 0,transparent 75%,#ccc 0,#ccc)
+    margin: 2.5rem
 
 @media only all and (max-height:720px)
     .design-result ul

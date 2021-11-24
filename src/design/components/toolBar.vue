@@ -34,6 +34,20 @@
         </li>
       </ul>
     </div>
+     <img class="vx-turn" src="../../assets/image/turn.png" @click="showTurnHandler"
+      :class="{'image-disable': isLocked}"/>
+    <!-- <vx-icon
+      title="翻转"
+      @click.native="showTurnHandler"
+      :class="{'image-disable': isLocked}"
+      name="turn"
+    ></vx-icon> -->
+    <div v-show="showTurn" class="layout-layer-pop turn-pop">
+      <ul>
+        <li  @click.stop="rotateYHandler">水平翻转</li>
+        <li  @click.stop="rotateXHandler">垂直翻转</li>
+      </ul>
+    </div>
     <vx-icon
       title="复制"
       @click.native="copyHandler"
@@ -49,12 +63,13 @@
   </div>
 </template>
 <script>
-import { state, mitation } from 'src/design/store'
+import { state } from 'src/design/store'
 export default {
   name: 'vx-toolBar',
   data() {
     return {
       showDesc: false, //图层顺序是否显示
+      showTurn: false ,// 翻转是否显示
       count: 1
     }
   },
@@ -89,12 +104,18 @@ export default {
     }
   },
   methods: {
+    // lockHandler() {
+    //   // state.layout.elements[this.index].lock = !state.layout.elements[
+    //   //   this.index
+    //   // ].lock
+    //   mitation.lockWidget(this.index)
+    //   // this.$emit('isLock', this.locked)
+    // },
     lockHandler() {
-      // state.layout.elements[this.index].lock = !state.layout.elements[
-      //   this.index
-      // ].lock
-      mitation.lockWidget(this.index)
-      // this.$emit('isLock', this.locked)
+      state.layout.elements[this.index].lock = !state.layout.elements[
+        this.index
+      ].lock
+      this.$emit('isLock', this.locked)
     },
     hideDescHandler() {
       this.showDesc = false
@@ -107,6 +128,29 @@ export default {
           window.addEventListener('click', this.hideDescHandler)
         }, 0)
       }
+    },
+    // 翻转列表是否显示
+    hideTurnHandler(){
+      this.showTurn = false
+      window.removeEventListener('click', this.hideTurnHandler)
+    },
+
+    showTurnHandler() {
+      this.showTurn = !this.showTurn
+      if (this.showTurn) {
+        setTimeout(() => {
+          window.addEventListener('click', this.hideTurnHandler)
+        }, 0)
+      }
+    },
+     rotateYHandler() {
+      state.layout.elements[this.index].transform.a = -state.layout.elements[this.index].transform.a
+      state.layout.elements[this.index].transform.b = -state.layout.elements[this.index].transform.b
+
+    },
+    rotateXHandler(){
+      state.layout.elements[this.index].transform.c = -state.layout.elements[this.index].transform.c
+      state.layout.elements[this.index].transform.d = -state.layout.elements[this.index].transform.d
     },
     //向上一层
     moveUpHandler() {
@@ -159,3 +203,14 @@ export default {
   }
 }
 </script>
+<style scoped>
+.turn-pop {
+  height: auto;
+}
+.vx-turn {
+  cursor: pointer;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-top: 0.22rem;
+}
+</style>

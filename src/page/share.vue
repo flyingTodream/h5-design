@@ -12,7 +12,6 @@
           <div slot="placeholder">
             <i class="el-icon-loading"></i>加载中
           </div>
-
           <div slot="error">
             <i class="el-icon-picture-outline"></i>
           </div>
@@ -21,7 +20,7 @@
     </div>
     <div v-if="!isMobile()" class="designDiv">
       <a class="btn useDesign" @click="gotoDesign">复制使用此设计</a>
-      <a class="btn myDesign">我也要设计</a>
+      <a class="btn myDesign" @click="bieginDesign('/design/new')">我也要设计</a>
     </div>
   </div>
 </template>
@@ -52,6 +51,12 @@ export default {
         /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
       )
       return flag
+    },
+    bieginDesign(page) {
+      const { href } = this.$router.resolve({
+        path: page,
+      })
+      window.open(href, '_blank')
     },
     gotoDesign() {
       //先发送一个保存接口，来判断登录

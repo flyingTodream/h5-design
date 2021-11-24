@@ -23,13 +23,21 @@
               class="design-resource-templet__list__item"
               v-for="(item, index) in templateList[1]"
               :key="index"
-              :style="{'height':width*getQueryVariable('height',item.picUrl)/getQueryVariable('width',item.picUrl)+'px',
+              :style="{
+                height:
+                  (width * getQueryVariable('height', item.picUrl)) /
+                    getQueryVariable('width', item.picUrl) +
+                  'px',
               }"
               @click="selectHandler(item.id)"
             >
               <div
-                :style="{'backgroundColor':getQueryVariable('color',item.picUrl),
-              'width':'100%','height':'100%','borderRadius':'4px'}"
+                :style="{
+                  backgroundColor: getQueryVariable('color', item.picUrl),
+                  width: '100%',
+                  height: '100%',
+                  borderRadius: '4px',
+                }"
               >
                 <img v-lazy="item.picUrl" />
               </div>
@@ -40,13 +48,21 @@
               class="design-resource-templet__list__item"
               v-for="(item, index) in templateList[0]"
               :key="index"
-              :style="{'height':width*getQueryVariable('height',item.picUrl)/getQueryVariable('width',item.picUrl)+'px',
-             }"
+              :style="{
+                height:
+                  (width * getQueryVariable('height', item.picUrl)) /
+                    getQueryVariable('width', item.picUrl) +
+                  'px',
+              }"
               @click="selectHandler(item.id)"
             >
               <div
-                :style="{'backgroundColor':getQueryVariable('color',item.picUrl),
-              'width':'100%','height':'100%','borderRadius':'4px'}"
+                :style="{
+                  backgroundColor: getQueryVariable('color', item.picUrl),
+                  width: '100%',
+                  height: '100%',
+                  borderRadius: '4px',
+                }"
               >
                 <img v-lazy="item.picUrl" />
               </div>
@@ -61,19 +77,19 @@
   </vx-template>
 </template>
 <script>
-import { mitation } from 'src/design/store'
-import VxTemplate from './template'
-import { API, log, mixin } from 'src/design/utils'
+import { mitation, getter } from "src/design/store";
+import VxTemplate from "./template";
+import { API, log, mixin } from "src/design/utils";
 
 export default {
-  name: 'vx-design-template',
+  name: "vx-design-template",
   mixins: [mixin],
   components: {
-    VxTemplate
+    VxTemplate,
   },
   data() {
     return {
-      query: '',
+      query: "",
       templateList: [[], []],
       loading: true,
       pageNum: 1,
@@ -81,111 +97,123 @@ export default {
       search: false,
       width: 150,
       h1: 0,
-      h2: 0
-    }
+      h2: 0,
+      watermark: getter.global().showWatermark,
+      originData: [],
+    };
   },
   computed: {
     noMore() {
       //当起始页数大于总页数时停止加载
-      return this.pageNum > this.totalPages
-    }
+      return this.pageNum > this.totalPages;
+    },
   },
   async mounted() {
-    await this.scrollData()
-    this.getDataHandler()
+    await this.scrollData();
+    this.getDataHandler();
   },
   methods: {
     getQueryVariable(variable, url) {
-      let num = url.lastIndexOf('?')
-      var query = url.substring(num + 1, url.length)
-      var vars = query.split('&')
+      let num = url.lastIndexOf("?");
+      var query = url.substring(num + 1, url.length);
+      var vars = query.split("&");
       for (var i = 0; i < vars.length; i++) {
-        var pair = vars[i].split('=')
+        var pair = vars[i].split("=");
         if (pair[0] == variable) {
-          return pair[1]
+          return pair[1];
         }
       }
-      return false
+      return false;
     },
     focusHandler() {
-      mitation.updateCurrentEdit(true)
+      mitation.updateCurrentEdit(true);
     },
     scrollData() {
-      var io = new IntersectionObserver(entries => {
-        let item = entries[0] // 拿第一个就行，反正只有一个
+      var io = new IntersectionObserver((entries) => {
+        let item = entries[0]; // 拿第一个就行，反正只有一个
         if (item.isIntersecting) {
           if (!this.noMore) {
-            this.getDataHandler()
+            this.getDataHandler();
           }
         }
-      })
-      io.observe(document.getElementById('template-bottom'))
+      });
+      io.observe(document.getElementById("template-bottom"));
     },
     inputHandler() {
-      this.search = true
+      this.search = true;
     },
     searchHandler() {
-      mitation.updateCurrentEdit(false)
+      mitation.updateCurrentEdit(false);
       if (this.search) {
-        this.pageNum = 1
-        this.templateList = [[], []]
-        this.h1 = this.h2 = 0
-        this.getDataHandler()
-        this.search = false
+        this.pageNum = 1;
+        this.templateList = [[], []];
+        this.h1 = this.h2 = 0;
+        this.getDataHandler();
+        this.search = false;
       }
     },
     getDataHandler() {
-      this.loading = true
+      this.loading = true;
       let params = {
         page: this.pageNum, // 当前页
         limit: 20, // 页大小
         category_id: 0, // 类别id
         keyword: this.query, // 搜索
-        sort: '' // 排序
-      }
+        sort: "", // 排序
+      };
       this.$axios
         .get(API.SEARCH_API, { params })
-        .then(data => {
-          this.totalPages = data.data.pages
-          this.loading = false
-          data.data.list.map(element => {
+        .then((data) => {
+          this.totalPages = data.data.pages;
+          this.loading = false;
+          data.data.list.map((element) => {
             let h =
-              (this.width * this.getQueryVariable('height', element.picUrl)) /
-              this.getQueryVariable('width', element.picUrl)
+              (this.width * this.getQueryVariable("height", element.picUrl)) /
+              this.getQueryVariable("width", element.picUrl);
             if (this.h1 >= this.h2) {
-              this.h2 = this.h2 + h
-              this.templateList[1].push(element)
+              this.h2 = this.h2 + h;
+              this.templateList[1].push(element);
             } else {
-              this.h1 = this.h1 + h
-              this.templateList[0].push(element)
+              this.h1 = this.h1 + h;
+              this.templateList[0].push(element);
             }
-          })
+          });
 
           // this.templateList[0] = this.templateList[0].concat(data.data.list)
-          this.pageNum++
+          this.pageNum++;
         })
-        .catch(err => {
-          log.danger(err)
-        })
+        .catch((err) => {
+          log.danger(err);
+        });
     },
     selectHandler(id) {
+      mitation.setWaterMask(this.watermark);
+      // 11.25新增
       this.$axios
         .get(API.TEMPLATE_API, {
           params: {
             id: id,
-            type: 'template'
-          }
+            type: "template",
+          },
         })
-        .then(data => {
-          mitation.setTemplate(JSON.parse(data.data.info.detail), id)
-          mitation.setTitle(data.data.info.name)
-          this.$emit('select')
-          this.adaptScreen()
+        .then((data) => {
+          
+          mitation.setTemplate(JSON.parse(data.data.info.detail), id);
+          mitation.setTitle(data.data.info.name);
+          this.$emit("select");
+          this.adaptScreen();
+
+          // 存储页面元素信息
+          let originData = JSON.parse(data.data.info.detail);
+          window.localStorage.setItem(
+            "originData",
+            JSON.stringify(originData)
+          );
         })
-        .catch(err => {
-          log.danger(err)
-        })
-    }
-  }
-}
+        .catch((err) => {
+          log.danger(err);
+        });
+    },
+  },
+};
 </script>

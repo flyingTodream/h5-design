@@ -253,7 +253,8 @@ export default {
     },
     setOrginBackgroundHandler() {
       state.layout.backgroundColor = ''
-    }, //水平翻转
+    }, 
+    //水平翻转
     rotateYHandler() {
       mitation.rotateBgY()
     },

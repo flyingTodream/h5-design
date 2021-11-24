@@ -45,9 +45,7 @@ export default {
   },
   watch: {
     showLogin(val) {
-      console.log(val)
       if (!val) {
-        console.log('关闭')
         clearInterval(this.clock)
       }
     }

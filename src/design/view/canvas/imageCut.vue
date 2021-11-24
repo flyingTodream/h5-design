@@ -41,7 +41,7 @@ export default {
     },
     cutable() {
       return getter.cutable()
-    },
+    }, 
     styles() {
       let style = {}
       style.left = `${this.widget.l * this.zoom + this.widget.left}px`

@@ -12,7 +12,7 @@
       <el-table :data="buyInfo.goodsList" style="width: 100%">
         <el-table-column type="index" label="#" width="50" align="center"></el-table-column>
         <el-table-column prop="picUrl" label="预览图" min-width="180" align="center">
-          <template scope="scope">
+          <template  slot-scope="scope">
             <div aria-label="点击查看大图" class="vx-order-preview btn-tip">
               <el-image
                 ref="previewImg"

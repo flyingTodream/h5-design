@@ -9,11 +9,9 @@ NProgress.configure({
 })
 
 
-
 router.beforeEach((to, from, next) => {
   NProgress.start()
   if (to.matched.some(m => m.meta.auth)) {
-    //
     userCenterList().then(res => {
       if (res) {
         next()
@@ -23,13 +21,14 @@ router.beforeEach((to, from, next) => {
     })
   } else {
     next()
+    NProgress.done()
   }
-
 
   const originalPush = Router.prototype.push
   Router.prototype.push = function push(location) {
     return originalPush.call(this, location).catch(err => err)
   }
+
   document.title = getPageTitle(to.meta.title)
   NProgress.done()
 
@@ -37,6 +36,5 @@ router.beforeEach((to, from, next) => {
 
 
 router.afterEach(() => {
-  // finish progress bar
   NProgress.done()
 })

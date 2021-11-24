@@ -1,369 +1,207 @@
-
-.vx-home-text-icon {
-    width: 15px;
-    height: 15px;
-    margin-top: 10px;
-    background-image: url('../image/ico1.png');
-    background-size: 100% 100%;
-  }
-  .vx-home-text-icon-bottom {
-    float: right;
-    transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-  }
-  .vx-homePage {
-    width: 100%;
-    height: auto;
-    box-sizing: border-box;
-    // 第一部分 轮播图
-    .vx-homePage-swiperFirst {
-      min-width: 1200px;
-      width: 100%;
-  
-      height: 300px;
-      .mallSwiperImg {
-        max-width: 100%;
-        width: 100%;
-      }
+.vx-home{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-width: 80rem;
+  min-height: 43.75rem;
+  .home-content{
+    flex: 1;
+    position: relative;
+    margin-left: 4rem;
+    margin-top: 5.875rem;
+    .home-image{
+      z-index: -1;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 83.25rem;
+      height: 48.4375rem;
+      background-image: url(../image/home.png);
+      background-size: 100% 100%;
     }
-    // 第二部分
-    .vx-homePage-modelInfoSecond {
-      // min-width: 1528px;
-      width: 100%;
-      height: 40rem;
+    .vx-title{
+      width: 18.375rem;
+      min-width: 18.375rem;
+      height: 6.75rem;
+      font-size: 2.625rem;
+      font-family:PingFangSC-Medium,PingFang SC;
+      font-weight:600;
+      color:#000;
+      
+    }
+    .vx-interduce{
+      width: 24.6875rem;
+      height: 3.75rem;
+      font-size: 1.125rem;
+      font-family:PingFangSC-Light,PingFang SC;
+      font-weight:300;
+      color:rgba(14,19,24,0.7);
+      line-height: 1.875rem;
+      margin-top: 1.375rem;
+    }
+    .vx-begin{
+      margin-top: 1.875rem;
+      width: 25.375rem;
+      height: 3.375rem;
+      background:rgba(64,158,255,1);
+      border-radius:6px;
+      font-size: 1.125rem;
+      font-family:Helvetica;
+      color:rgba(255,255,255,1);
+      line-height:30px;
       display: flex;
       align-items: center;
-      flex-direction: row;
       justify-content: center;
-      min-width: 62.5rem;
-      .vx-homePage-modelInfoSecond-left {
-        width: 43.75rem;
-        min-width: 43.75rem;
-        height: 25rem;
-        .vx-homePage-modelInfoSecond-left-editModelPic {
-          max-width: 100%;
-          max-height: 100%;
-        }
-      }
-      .vx-homePage-modelInfoSecond-right {
-        width: 18.75rem;
-        margin-left: 3rem;
-        height: 25rem;
-        .vx-homePage-modelInfoSecond-rightTop {
-          width: 18.75rem;
-          line-height: 30px;
-          .vx-homePage-modelInfoSecond-rightTop-bigsize {
-            font-size: 20px;
-          }
-          .vx-homePage-modelInfoSecond-rightTop-smallsize {
-            font-size: 12px;
-            font-weight: bold;
-            color: gray;
-          }
-        }
-        // 开始制作按钮
-        .vx-homePage-modelInfoSecond-rightBot {
-          padding: 20px 0px;
-        }
+      cursor: pointer;
+    }
+    .vx-begin:active{
+      opacity: .3;
+    }
+  }
+  .copyright{
+    position: absolute;
+    // left: 2.75rem;
+    bottom: 1.5rem;
+    width: 15.375rem;
+    min-width: max-content;
+    height: 1.5625rem;
+    font-size: 1.125rem;
+    font-family:PingFangSC-Light,PingFang SC;
+    font-weight: 300;
+    color:rgba(41,48,57,1);
+    line-height: 1.5625rem;
+  }
+}
+.home-head{
+  width: 95rem;
+  margin: 0 auto;
+  height: 5.625rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  .logo{
+    color: #409EFF;
+    font-size: 1.625rem;
+    font-weight: 800;
+    display: flex;
+    flex-direction: row;
+    left: 0rem;
+    position: absolute;
+    font-family:SourceHanSansCN-Heavy,SourceHanSansCN;
+    .logo-img{
+      width: 2.375rem;
+      height: 2.375rem;
+      background-image: url(../image/logo@2x.png);
+      background-size: 100% 100%;
+    }
+    .logo-text{
+      padding: 0 8px;
+    }
+  }
+  .vx-nav{
+    display: flex;
+    position: absolute;
+    left: 14.875rem;
+    height: 100%;
+    color: #0E1318;
+    font-size: 1.25rem;
+    font-weight: 400;
+    font-family:PingFangSC-Medium,PingFang SC;
+    li{
+      list-style: none;
+      margin-right: 40px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+      .border{
+        position: absolute;
+        width: 100%;
+        height: 100%;
       }
     }
-    // 第三部分
-    .vx-homePage-posterTemplateThird {
-      min-width: 1200px;
-      background: #f1f1f1;
-      width: 100%;
-      height: 700px;
-      // min-width: 1528px;
-      .vx-homePage-posterTemplateThird-top {
-        height: 100px;
-        display: flex;
-        padding-top: 45px;
-        flex-direction: column;
-        align-items: center;
-        .vx-selectedPostersTop {
-          font-size: 24px;
-          font-weight: bold;
-          text-align: center;
-          width: 160px;
-          padding-bottom: 17px;
-          line-height: 0px;
-          height: 15px;
-          background: #abcefa;
-        }
-        .vx-selectedPostersBot {
-          font-size: 12px;
-          color: gray;
-          text-align: center;
-          margin-top: 20px;
-        }
-      }
-      // 第三部分 中间  四个盒子
-      .vx-homePage-posterTemplateThird-center {
-        height: 500px;
-        margin-top: 20px;
-        .posterTemplate {
-          width: 100%;
-          height: 500px;
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          // 四个模板盒子
-          .posterTemplateDiv {
-            position: relative;
-            z-index: 10;
-            margin-right: 20px;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            .posterTemplateDiv-imgModelDiv {
-              width: 100%;
-              height: 400px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              transition: all 1s;
-              .posterTemplateDiv-imgModel {
-                max-width: 100%;
-                max-height: 100%;
-              }
-            }
-            .posterTemplateDiv-nameModelDiv {
-              width: 100%;
-              height: 40px;
-              .posterTemplateDiv-nameModel {
-                width: 100%;
-                height: 40px;
-                padding: 0 10px;
-                line-height: 40px;
-                // padding: 10px;
-                color: #5b5b5b;
-                display: inline-block;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-              }
-            }
-            // 遮罩层
-            .posterTemplateMask {
-              position: absolute;
-              width: 227px;
-              height: 400px;
-              -webkit-box-flex: 1;
-              -ms-flex: 1;
-              flex: 1;
-              z-index: 11;
-              //
-              // display: none;
-            }
-          }
-          .posterTemplateMaskInfo {
-            display: none;
-          }
-          .posterTemplateDiv-imgModelDiv:hover .posterTemplateMask {
-            display: block;
-            background: rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-            .posterTemplateMaskInfo {
-              position: relative;
-              display: block;
-            }
-            .posterTemplateMaskInfo {
-              .vxMaskEdit {
-                animation: vxMaskEdit 1s;
-                -webkit-animation-fill-mode: both;
-                /*解决动画结束后，图标恢复默认消失不见状态*/
-                animation-fill-mode: both;
-                @-webkit-keyframes vxMaskEdit {
-                  /*兼容性写法。move是关键帧的动画名称*/
-                  from {
-                    /*动画起始状态*/
-                    left: 0;
-                  }
-  
-                  to {
-                    /*动画结束状态*/
-                    left: 22px;
-                  }
-                }
-              }
-              .vxMaskPreviewCollectDiv {
-                animation: vxMaskView 1s;
-                -webkit-animation-fill-mode: both;
-                /*解决动画结束后，图标恢复默认消失不见状态*/
-                animation-fill-mode: both;
-                @-webkit-keyframes vxMaskView {
-                  /*兼容性写法。move是关键帧的动画名称*/
-                  from {
-                    /*动画起始状态*/
-                    right: 0;
-                  }
-  
-                  to {
-                    /*动画结束状态*/
-                    right: 22px;
-                  }
-                }
-              }
-            }
-  
-            // 预览按钮  收藏按钮 盒子
-            .vxMaskPreviewCollectDiv {
-              position: absolute;
-              top: 14px;
-              // left: 150px;
-              width: 70px;
-              height: 30px;
-              font-size: 24px;
-              border-radius: 6px;
-              background: #f3eeee;
-              display: flex;
-              flex-direction: row;
-              justify-content: center;
-              align-items: center;
-              .vxMaskPreview {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                padding-right: 4px;
-              }
-            }
-            //编辑器按钮
-            .vxMaskEdit {
-              position: absolute;
-              top: 360px;
-              left: 22px;
-              font-size: 12px;
-              background: rgba(0, 0, 0, 0.6);
-              border-radius: 20px;
-              padding: 8px 20px;
-              color: white;
-            }
-            .vxMaskEdit:hover {
-              position: absolute;
-              background: rgba(0, 0, 0, 0.8);
-            }
-          }
-        }
-      }
-      .vx-homePage-posterTemplateThird-bot {
-        height: 100px;
-        text-align: center;
+    .active{
+      font-weight: 600;
+      transition: all .3s;
+      .border{
+        border-top: 4px solid #409EFF;
+        border-radius: 4px;
       }
     }
-    // 第四部分
-    .vx-homePage-characterIntroductionFourth {
-      width: 100%;
-      height: 600px;
-      .vx-homePage-characterIntroductionFourth-top {
-        height: 100px;
-        display: flex;
-        padding-top: 45px;
-        flex-direction: column;
-        align-items: center;
-        .vx-selectedPostersTop {
-          font-size: 24px;
-          font-weight: bold;
-          text-align: center;
-          width: 140px;
-          padding-bottom: 17px;
-          line-height: 0px;
-          height: 15px;
-          background: #abcefa;
-        }
-        .vx-selectedPostersBot {
-          font-size: 12px;
-          color: gray;
-          text-align: center;
-          margin-top: 20px;
-        }
-      }
-      .vx-homePage-characterIntroductionFourth-bot {
-        padding-top: 40px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        .peopleModel {
-          width: 300px;
-          min-width: 300px;
-          padding: 0 20px;
-          .peopleModelContent:hover {
-            border-color: #2e6af3;
-            box-shadow: 2px 2px 5px #666;
-  
-            transition: all 0.5s;
-          }
-          .peopleModelContent {
-            background-color: #fff;
-            cursor: pointer;
-            border: 1px solid lightgrey;
-            border-width: thin;
-            padding: 20px 10px;
-            height: 410px;
-            .peopleImage {
-              text-align: center;
-            }
-            .peopleName {
-              text-align: center;
-              margin-top: 10px;
-            }
-            .peoplePosition {
-              text-align: center;
-              margin-top: 10px;
-              .peoplePositionDiv {
-                margin-left: 72px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 100px;
-                height: 28px;
-                background: #eaf0fe;
-                border-radius: 14px;
-                span {
-                  width: 91px;
-                  height: 16px;
-                  font-size: 16px;
-                  font-family: PingFang SC;
-                  font-weight: 400;
-                  color: #2e6af3;
-                  line-height: 16px;
-                }
-              }
-            }
-  
-            .peopleComment {
-              font-size: 13px;
-              font-family: PingFang SC;
-              font-weight: 400;
-              color: rgba(51, 51, 51, 1);
-              line-height: 27px;
-              text-indent: 2em;
-              margin-top: 10px;
-              padding: 0 10px;
-            }
-          }
-        }
+    li:hover{
+      font-weight: 600;
+      .border{
+        border-top: 4px solid #409EFF;
+        border-radius: 4px;
       }
     }
   }
-.vx-animation{
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-name: move-up;
-  animation-name: move-up;
+  .login{
+    position: absolute;
+    right: 0rem;
+    width: 9rem;
+    color: #fff;
+    height: 3.375rem;
+    background:rgba(64,158,255,1);
+    border-radius:4px;
+    opacity:0.9;
+    font-size: 1.125rem;
+    font-family:PingFangSC-Regular,PingFang SC;
+    font-weight:400;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+  }
+  .login:active{
+    opacity: .3;
+  }
+  .afterlogin{
+    position: absolute;
+    right: 0rem;
+    width: 9rem;
+    color: #000;
+    height: 3.375rem;
+    border-radius:4px;
+    opacity:0.9;
+    font-size: 1.125rem;
+    font-family:PingFangSC-Regular,PingFang SC;
+    font-weight:400;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
-@keyframes move-up {
-  0% {
-    opacity: 0;
-    margin-top: 30px;
-  }
-
-  100% {
-    opacity: 1;
-    margin-top: 0px;
+.vx-mobile{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  
+  .vx-mobile-content{
+    background: #F8FAFC;
+    flex: 1;
+    .mobile-center{
+      width: 75rem;
+      height: 42.38rem;
+      background: linear-gradient(270deg, #42BBF6 0%, #1677FF 100%);
+      background-image: url(../image/mini.png);
+      background-size: cover;
+      border-radius: 0.25rem;
+      margin: 5.63rem auto;
+      position: relative;
+      .mobile-image{
+        position: absolute;
+        width: 31.63rem;
+        height: 40.13rem;
+        bottom: 0;
+        right: 6.13rem;
+      }
+    }
   }
 }

@@ -1,7 +1,6 @@
 <template>
   <div>
     <VxHead />
-
     <div class="wscn-http404-container">
       <div class="wscn-http404">
         <div class="pic-404">
@@ -30,12 +29,12 @@ const VxHead = () => import('./head')
 export default {
   name: 'vx-404',
   components: {
-    VxHead
+    VxHead,
   },
   computed: {
     message() {
       return 'The webmaster said that you can not enter this page...'
-    }
-  }
+    },
+  },
 }
 </script>

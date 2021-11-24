@@ -2,8 +2,8 @@
   <div class="vx-myCollect">
     <VxLoading v-if="loading" />
     <div v-if="userCenterListTotal === 0" class="vx-collect-nodata">
-      暂时还没有订单哦，
-      <a @click="$router.push('/mall/modelCenter')">立马去商城逛逛</a>
+      还没有开通购买功能，
+      <a @click="$router.push('/mall/modelCenter')">先去免费中心看看吧</a>
     </div>
     <transition-group
       v-on:before-enter="beforeEnter"

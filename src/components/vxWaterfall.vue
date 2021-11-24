@@ -1,7 +1,7 @@
 <!-- —————————————↓HTML————————分界线———————————————————————— -->
 <template lang="pug">
 .vue-waterfall-easy-container(:style="{width: width&&!isMobile ? width+'px' : '', height: bottomTop==0 ? '180px' : bottomTop+buttomHeight+'px'   }")
-  .loading.ball-beat(v-show="isloading||(isPreloading_c&&!over)", :style="{top:bottomTop+'px'}" :class="{first:isFirstLoad}")
+  .loading.ball-beat(v-show="isloading&&(isPreloading_c&&!over)", :style="{top:bottomTop+'px'}" :class="{first:isFirstLoad}")
     slot(name="loading", :isFirstLoad="isFirstLoad")
     .dot(v-if="!hasLoadingSlot", v-for="n in loadingDotCount",:style="loadingDotStyle")
   //- 为了防止loading 跟随滚动
@@ -34,8 +34,9 @@
         ref="buttom"
         :style="{top:bottomTop+30+'px'}"
       )
+      
       .over(v-if="over",ref="over" ,:style="{top:bottomTop-10+'px'}")
-        slot(name="waterfall-over") 被你看光了
+        slot(name="waterfall-over") 没有更多模板啦！
 </template>
 
 <!-- ——————————————↓JS—————————分界线———————————————————————— -->
@@ -122,6 +123,7 @@ export default {
       type: Boolean,
       default: false
     },
+   
     over: {
       type: Boolean,
       default: true
@@ -146,7 +148,7 @@ export default {
       colsHeightArr: [],
       // 自定义loading
       LoadingTimer: null,
-      isFirstLoad: true // 首次加载
+      isFirstLoad: true, // 首次加载
       // over: false // 结束waterfall加载
     }
   },

@@ -26,6 +26,7 @@
         :data.sync="item"
         :key="item.id"
       />
+      
       <vx-group-image
         :class="{
                 'editor-element-selected': itemSelected === `${index}-${i}`

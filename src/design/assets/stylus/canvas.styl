@@ -10,8 +10,6 @@
     height 100%
     width 100%
     position absolute
-    left 0
-    top 0
 
 // 背景
 .editor-background,
@@ -82,7 +80,7 @@
             display inline-block
         .element-main
             display inline-block
-            overflow hidden
+            overflow inherit
 
 // 图片
 .editor-element-image
@@ -153,12 +151,16 @@
 
 // 移动、缩放、旋转        
 .editor-transform-wrap
-    width 100%
-    height 100%
+    position: absolute
+    
+.transform-wrap-hover
+    &:click
+        border 1px solid #6ccfff
+        border-width thin
 .editor-transform
     box-sizing border-box
     position absolute
-    z-index 5
+    // z-index 5
     cursor move
     display none
     &.editor-custorm
@@ -168,7 +170,7 @@
         display block
         width 100%
         height 100%
-        border 1px solid #6ccfff
+        border 2px solid #6ccfff
         z-index 1
     &.editor-transform-multiple:before
         border-style: dotted;

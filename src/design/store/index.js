@@ -18,7 +18,7 @@ let state = window.state = Vue.observable({
   global: {
     dpi: 72,
     unit: 'px',
-    zoom: 0.2,
+    zoom: 0.3,
     showWatermark: false
   },
   goodsId: null,
@@ -152,9 +152,9 @@ function overlap(index) {
 
 const getter = window.getter = {
   zoom: () => {
+    // console.log(state.global.zoom)
     return state.global.zoom;
   },
-
   save: () => {
     return {
       global: state.global,
@@ -200,6 +200,7 @@ const getter = window.getter = {
   isLogin: () => state.userInfo.isLogin, // 登录标识
 };
 
+// 定义mitation
 const mitation = window.mitation = {
   resetCutZoom() {
     state.cutInfo.zoom = 100
@@ -216,6 +217,7 @@ const mitation = window.mitation = {
   },
 
   changeSize(index, w, h) {
+    
     if (index != -1) {
       state.layout.elements[index].width = w
       state.layout.elements[index].height = h
@@ -283,6 +285,9 @@ const mitation = window.mitation = {
   _updateTransformSize(index, data) {
     state.layout.elements[index].width = data.width / state.global.zoom;
     state.layout.elements[index].height = data.height / state.global.zoom;
+    state.layout.elements[index].fontSize = data.fontSize / state.global.zoom;
+
+
     if (data.left) {
       state.layout.elements[index].left = data.left / state.global.zoom;
     }
@@ -290,10 +295,12 @@ const mitation = window.mitation = {
       state.layout.elements[index].top = data.top / state.global.zoom;
     }
   },
+  
   // 更新旋转角度
   updateTransformRotate(index, data) {
     state.layout.elements[index].transform = data;
   },
+  // 更新组件边框大小
   updateWidgetSize(index, type, data) {
     if (type === "transform") {
       this._updateTransformSize(index, data);
@@ -393,7 +400,7 @@ const mitation = window.mitation = {
   lockWidget(index) {
     state.layout.elements[index].lock = !state.layout.elements[index].lock;
   },
-  // 添加文字
+  // 添加文字 
   addText(data) {
     state.layout.elements.push(data);
     this.setLogger();
@@ -530,17 +537,21 @@ const mitation = window.mitation = {
         state.layout.elements[info.id].clip || {}, {
         top: info.top,
         left: info.left,
-        width: info.height * state.cutInfo.zoom / 100,
-        height: info.width * state.cutInfo.zoom / 100
+        width: info.width * this.cutZoom * this.zoom * state.cutInfo.zoom  / 100,
+        height: info.height * this.cutZoom * this.zoom * state.cutInfo.zoom  / 100
       }
       );
     } else {
+     
       state.layout.backgroundImageInfo = Object.assign({},
         state.layout.backgroundImageInfo || {}, {
         top: info.top,
         left: info.left,
-        width: info.height * state.cutInfo.zoom / 100,
-        height: info.width * state.cutInfo.zoom / 100
+        // width: info.height * state.cutInfo.zoom / 100,
+        // height: info.width * state.cutInfo.zoom / 100,
+        width: info.width  * this.zoom * state.cutInfo.zoom / 100,
+        height: info.height  * this.zoom * state.cutInfo.zoom / 100,
+        
       }
       );
     }
@@ -555,24 +566,37 @@ const mitation = window.mitation = {
   },
   setCutBackgroundAble(able) {
     state.cutInfo.cutable = able;
-    if (able) {
-      // this.resetCutZoom()
-      this.initBackgroundCut();
-    }
+    // this.resetCutZoom()
+
+    this.initBackgroundCut();
+    // if (able) {
+    //   this.resetCutZoom()
+    //   this.initBackgroundCut();
+    // }
 
   },
+  // 背景裁剪
   initBackgroundCut() {
     let background = state.layout;
+    // originHeight originWidth  图片原始高度、宽度
+    
+
+
     if (!state.cutInfo.originHeight) {
       state.cutInfo.originHeight = background.backgroundImageInfo.height
       state.cutInfo.originWidth = background.backgroundImageInfo.width
     }
+    if (!state.cutInfo.widget.height) {
+      state.cutInfo.widget.height = background.backgroundImageInfo.height
+      state.cutInfo.widget.width = background.backgroundImageInfo.width
+    }
+    
     state.cutInfo.widget = {
       top: background.backgroundImageInfo.top || 0,
       left: background.backgroundImageInfo.left || 0,
       l: 0,
       t: 0,
-      height: state.cutInfo.originWidth || background.backgroundImageInfo.height,
+      height: state.cutInfo.originHeight || background.backgroundImageInfo.height,
       width: state.cutInfo.originWidth || background.backgroundImageInfo.width,
       w: background.width,
       h: background.height,
@@ -718,7 +742,6 @@ const mitation = window.mitation = {
     state.layout.elements.push(obj);
     state.selectedItem = [];
     state.current = {
-
       id: state.layout.elements.length - 1,
       type: 'group'
     }

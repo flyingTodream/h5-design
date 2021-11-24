@@ -33,7 +33,7 @@ export default {
     styles() {
       if (!this.isShow) return {}
       return {
-        top: `${getter.toolbarPos().top - 45}px`,
+        top: `${getter.toolbarPos().top - 20}px`,
         left: `${getter.toolbarPos().left}px`
       }
     }

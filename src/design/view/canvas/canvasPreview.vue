@@ -1,6 +1,6 @@
 <template>
   <div class="design-container" :class="[type]">
-    <div class="design-canvas" :style="canvasStyles">
+    <div class="design-canvas" :style="canvasStyles" >
       <div class="editor-shell" :style="canvasStyles">
         <div class="editor-canvas" id="canvas">
           <div class="editor-layout">
@@ -16,6 +16,7 @@
               />
             </template>
             <vx-water-mark />
+           
             <template v-for="(item, index) in layout.elements">
               <vx-editor-text
                 :index="index"

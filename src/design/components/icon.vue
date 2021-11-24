@@ -22,7 +22,8 @@ export default {
         styles(){
             return {
                 width: `${this.size}px`,
-                height: `${this.size}px`
+                height: `${this.size}px`,
+                textAlignLast: `justify`
             }
         },
     }

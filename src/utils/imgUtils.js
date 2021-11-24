@@ -12,11 +12,14 @@ export function createImg(srcImg, effectImg, width, height, callback) {
     img2.src = effectImg + '?v=' + getRanNum()
     img1.setAttribute('crossOrigin', 'Anonymous')
     img2.setAttribute('crossOrigin', 'Anonymous')
+    
+    
 
     if (img2.complete) {
         context.drawImage(img2, 0, 0, width, height)
     } else {
         img2.onload = () => {
+            // debugger
             context.drawImage(img2, 0, 0, width, height)
             context.globalCompositeOperation = 'source-in'
             if (img1.complete) {
@@ -26,6 +29,7 @@ export function createImg(srcImg, effectImg, width, height, callback) {
                 img1.onload = () => {
                     context.drawImage(img1, 0, 0, width, height)
                     callback(canvas.toDataURL('image/png'))
+                    // callback(canvas.toDataURL('image/png'))
                 }
             }
 

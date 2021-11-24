@@ -458,6 +458,14 @@ export function orderList(query) {
     params: query
   })
 }
+// 获取模板所有数据
+export function getAllCategory() {
+  return request({
+    url: '/catalog/all',
+    method: 'get'
+  })
+}
+
 // 获取一级分类
 export function getLevel1Category() {
   return request({

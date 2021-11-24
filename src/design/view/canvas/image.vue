@@ -1,8 +1,7 @@
 <template>
   <div
     class="editor-element editor-element-image"
-    @mouseup.left="transfromHandler"
-    @mouseover.left="hoverHandler"
+    @mousedown.left="transfromHandler"
     :style="elementStyles"
   >
     <div class="element-main" :style="mainStyles">
@@ -40,8 +39,7 @@ export default {
         width: this.data.width * this.zoom + 'px',
         height: this.data.height * this.zoom + 'px',
         top: this.data.top * this.zoom + 'px',
-        left: this.data.left * this.zoom + 'px',
-        'z-index': `${this.index}`
+        left: this.data.left * this.zoom + 'px'
       }
     },
     mainStyles() {
@@ -59,7 +57,8 @@ export default {
         top: (clip.top || 0) + 'px',
         left: (clip.left || 0) + 'px',
         width: (clip.width || this.data.width) * this.zoom + 'px',
-        height: (clip.height || this.data.height) * this.zoom + 'px'
+        height: (clip.height || this.data.height) * this.zoom + 'px',
+        display: 'none',
       }
       return style
     }
@@ -77,7 +76,7 @@ export default {
       this.$emit('event', {
         index: this.index,
         type: 'transfrom',
-        editable: false,
+        editable: true,
         parent: this.parent
       })
     }

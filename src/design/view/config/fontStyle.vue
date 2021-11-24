@@ -1,49 +1,70 @@
 <template>
   <div class="design-config">
     <!-- <VxToolBar :index="index"></VxToolBar> -->
-    <div :class="{'image-disable': locked}">
+    <div :class="{ 'image-disable': locked }">
       <div class="font-panel">
-        <div v-show="!isGroup" @click="getFontStyle" class="font-dropdown-effect-preview">
+        <div
+          v-show="!isGroup"
+          @click="getFontStyle"
+          class="font-dropdown-effect-preview"
+        >
           <span :style="fontStyles">样式</span>
           <span class="font-panel-icon"></span>
         </div>
-        <div v-show="popupShow&&!isGroup" class="font-popup">
+        <div v-show="popupShow && !isGroup" class="font-popup">
           <ul>
-            <li :class="{'font-popup-selected':sel==null}" @click="changeStyleHandler(null,null)">
+            <li
+              :class="{ 'font-popup-selected': sel == null }"
+              @click="changeStyleHandler(null, null)"
+            >
               无样式
               <!-- <img :src="item.preview.url" /> -->
             </li>
             <li
-              v-for="(item,index) in effectList"
+              v-for="(item, index) in effectList"
               :key="index"
-              :class="{'font-popup-selected':sel==index}"
-              @click="changeStyleHandler(item.id,index)"
-              :style="{'background-image':`url(${item.typefacePath})`}"
+              :class="{ 'font-popup-selected': sel == index }"
+              @click="changeStyleHandler(item.id, index)"
+              :style="{ 'background-image': `url(${item.typefacePath})` }"
             >
               <!-- <img :src="item.preview.url" /> -->
             </li>
           </ul>
         </div>
-        <div class="font-panel-image">
+        <div class="font-panel-image" v-if="colorbox">
           <div class="font-panel-label">
             <div>颜色</div>
             <vx-icon name="fill-color"></vx-icon>
           </div>
 
-          <VxColorPicker v-model="fontColor" class="font-color-picker"></VxColorPicker>
+          <VxColorPicker
+            v-model="fontColor"
+            :value="fontColor"
+            class="font-color-picker"
+          ></VxColorPicker>
         </div>
       </div>
       <div class="font-text">
         <div class="font-text-lable">文字</div>
         <div @click="showFontFamilyHandler" class="font-text-family">
-          <div class="font-text-family-lable">{{fontFamily}}</div>
+          <div class="font-text-family-lable">{{ fontFamily }}</div>
           <div class="font-text-family-icon"></div>
         </div>
         <div v-show="fontFamilyShow" class="font-family-lists">
           <div class="font-family-tabs">
             <div class="font-family-tab">
-              <div @click.stop="selFontFamily = 'cn'" :class="{'active':selFontFamily == 'cn'}">中文</div>
-              <div @click.stop="selFontFamily = 'en'" :class="{'active':selFontFamily == 'en'}">英文</div>
+              <div
+                @click.stop="selFontFamily = 'cn'"
+                :class="{ active: selFontFamily == 'cn' }"
+              >
+                中文
+              </div>
+              <div
+                @click.stop="selFontFamily = 'en'"
+                :class="{ active: selFontFamily == 'en' }"
+              >
+                英文
+              </div>
             </div>
           </div>
           <div class="font-family-label">
@@ -51,11 +72,11 @@
           </div>
           <ul>
             <li
-              v-for="(item,index) in fontFamilyList"
+              v-for="(item, index) in fontFamilyList"
               :key="index"
               @click="fontFamilyHandler(item.id)"
               class="font-family-item"
-              :style="{'background-image':`url(${item.typefacePath})`}"
+              :style="{ 'background-image': `url(${item.typefacePath})` }"
             ></li>
             <!--  typefacePath-->
           </ul>
@@ -64,60 +85,98 @@
           <vx-icon
             title="加粗"
             @click.native="isBold = !isBold"
-            :class="{'active':isBold}"
+            :class="{ active: isBold }"
             name="blod"
           ></vx-icon>
           <vx-icon
             title="斜体"
             @click.native="isItalic = !isItalic"
-            :class="{'active':isItalic}"
+            :class="{ active: isItalic }"
             name="italic"
           ></vx-icon>
           <vx-icon
             @click.native="isUnderline = !isUnderline"
             title="下划线"
-            :class="{'active':isUnderline}"
+            :class="{ active: isUnderline }"
             name="underline"
           ></vx-icon>
           <vx-icon
             @click.native="isDeleteline = !isDeleteline"
             title="删除线"
-            :class="{'active':isDeleteline}"
+            :class="{ active: isDeleteline }"
             name="deleteline"
           ></vx-icon>
         </div>
 
         <div class="font-text-family">
-          <vx-icon class="font-text-alignicon" :name="textAlignValue"></vx-icon>
+          <div
+            @click="textAlignHandler(item)"
+            v-for="(item, index) in textAlign"
+            :key="index"
+          >
+            <vx-icon :name="item.icon" :title="item.lable"></vx-icon>
+          </div>
+        </div>
+
+        <div class="font-text-family">
+          <!-- <vx-icon class="font-text-alignicon" :name="textAlignValue"></vx-icon>
           <div class="font-text-align">
             <ul>
-              <li @click="textAlignHandler(item)" v-for="(item,index) in textAlign" :key="index">
+              <li
+                @click="textAlignHandler(item)"
+                v-for="(item, index) in textAlign"
+                :key="index"
+              >
                 <vx-icon :name="item.icon"></vx-icon>
-                {{
-                item.lable
-                }}
+                {{ item.lable }}
               </li>
             </ul>
+          </div> -->
+          <vx-icon
+            title="文字方向"
+            @click.native="textDirectionHandler"
+            name="text-direction"
+          ></vx-icon>
+          <div @click.stop="zIntervalHandler">
+            <vx-icon class="font-wordSpace" name="word-space"></vx-icon>
           </div>
-          <vx-icon title="文字方向" @click.native="textDirectionHandler" name="text-direction"></vx-icon>
-          <vx-icon class="font-wordSpace" name="word-space"></vx-icon>
-          <div class="font-word-space">
+          <div class="font-word-space" v-if="zIsInterval">
             <div class="lable">字间距</div>
             <div class="slider">
               <el-slider :min="-50" :max="120" v-model="wordSpace"></el-slider>
             </div>
-            <div class="value">{{wordSpace}}</div>
+            <div class="value">{{ wordSpace }}</div>
           </div>
-          <vx-icon class="font-lineSpace" name="line-space"></vx-icon>
-          <div class="font-word-space">
+          <div @click.stop="hIntervalHandler">
+            <vx-icon class="font-lineSpace" name="line-space"></vx-icon>
+          </div>
+          <div class="font-word-space" v-if="hIsInterval">
             <div class="lable">行间距</div>
             <div class="slider">
               <el-slider v-model="lineSpace" :min="1" :max="50"></el-slider>
             </div>
-            <div class="value">{{lineSpace}}</div>
+            <div class="value">{{ lineSpace }}</div>
           </div>
         </div>
-        <vx-select @edit="editAbleHandler" :minValue="12" :maxValue="500" v-model="fontSize">
+        <vx-select
+          @edit="editAbleHandler"
+          :minValue="12"
+          :maxValue="500"
+          v-model="fontSize"
+        >
+          <template v-slot:label>
+            <p class="fontsizeBox">
+              <input type="number" v-model="fontSize" /><span>px</span>
+            </p>
+          </template>
+          <vx-option
+            v-for="item in fontsizeList"
+            :key="item.value"
+            :value="item.value"
+            :label="item.label"
+          />
+        </vx-select>
+        <!-- <vx-select @edit="editAbleHandler" :minValue="12" :maxValue="500" v-model="fontSize">
           <template v-slot:label>
             <p>{{fontSize}}px</p>
           </template>
@@ -127,14 +186,14 @@
             :value="item.value"
             :label="item.label"
           />
-        </vx-select>
+        </vx-select> -->
         <div class="font-text-range">
           <div class="font-range-input">
-            <div class="font-range-lable">不透明</div>
+            <div class="font-range-lable">透明度</div>
             <div class="font-range">
               <el-slider :min="0" :max="10" v-model="fontRange"></el-slider>
             </div>
-            <div class="font-range-value">{{fontRange}}</div>
+            <div class="font-range-value">{{ fontRange }}</div>
           </div>
         </div>
       </div>
@@ -142,12 +201,12 @@
   </div>
 </template>
 <script>
-import { state, mitation } from 'src/design/store'
-import { API } from 'src/design/utils'
-import { VxSelect, VxOption } from 'src/design/components/select'
-import VxColorPicker from 'src/design/components/colorPicker'
+import { state, mitation } from "src/design/store";
+import { API } from "src/design/utils";
+import { VxSelect, VxOption } from "src/design/components/select";
+import VxColorPicker from "src/design/components/colorPicker";
 export default {
-  name: 'vx-fontStyle',
+  name: "vx-fontStyle",
   components: {
     VxColorPicker,
     VxSelect,
@@ -166,91 +225,100 @@ export default {
   },
   data() {
     return {
+      zIsInterval: false,
+      hIsInterval: false,
+      colorbox: true,
       sizeShow: false,
       popupShow: false, //样式层是否显示
       fontStyles: {},
       sel: 0, //当前选中的样式
       effectTab: 0, //当前选中的字体样式
-      fontStyle: '无样式', //默认无样式
-      selFontFamily: 'cn', //字体语言类型
+      fontStyle: "无样式", //默认无样式
+      selFontFamily: "cn", //字体语言类型
       fontFamilyShow: false, //字体列表是否显示
-      textAlignValue: 'text-left', //居中方式
+      textAlignValue: "text-left", //居中方式
       effectList: [], //样式列表
-      effectTabs: [{ name: '平面样式' }, { name: '3D样式' }],
+      effectTabs: [{ name: "平面样式" }, { name: "3D样式" }],
       textAlign: [
         {
-          icon: 'text-left',
-          lable: '左对齐',
-          value: 'left'
+          icon: "text-left",
+          lable: "左对齐",
+          value: "left"
         },
         {
-          icon: 'text-center',
-          lable: '居中',
-          value: 'center'
+          icon: "text-center",
+          lable: "居中",
+          value: "center"
         },
         {
-          icon: 'text-right',
-          lable: '右对齐',
-          value: 'right'
+          icon: "text-right",
+          lable: "右对齐",
+          value: "right"
+        },
+        {
+          icon: "text-right",
+          lable: "两端对齐",
+          value: "justify"
         }
       ],
       fontsizeList: [
         {
           value: 12,
-          label: '12px'
+          label: "12px"
         },
         {
           value: 14,
-          label: '14px'
+          label: "14px"
         },
         {
           value: 16,
-          label: '16px'
+          label: "16px"
         },
         {
           value: 18,
-          label: '18px'
+          label: "18px"
         },
         {
           value: 22,
-          label: '22px'
+          label: "22px"
         },
         {
           value: 24,
-          label: '24px'
+          label: "24px"
         },
         {
           value: 32,
-          label: '32px'
+          label: "32px"
         },
         {
           value: 42,
-          label: '42px'
+          label: "42px"
         },
         {
           value: 48,
-          label: '48px'
+          label: "48px"
         },
         {
           value: 64,
-          label: '64px'
+          label: "64px"
         },
         {
           value: 72,
-          label: '72px'
+          label: "72px"
         },
         {
           value: 88,
-          label: '88px'
+          label: "88px"
         },
         {
           value: 128,
-          label: '128px'
+          label: "128px"
         }
       ],
       fontFamilyList: []
-    }
+    };
   },
+  
   computed: {
     fontFamily: {
       get() {
@@ -260,22 +328,22 @@ export default {
               element.name ==
               state.layout.elements[this.index].elements[this.elementIndex]
                 .fontFamily
-          )
+          );
           if (value) {
-            return value.name
+            return value.name;
           } else {
             return state.layout.elements[this.index].elements[this.elementIndex]
-              .fontFamily
+              .fontFamily;
           }
         } else {
           let value = this.fontFamilyList.find(
             element =>
               element.name == state.layout.elements[this.index].fontFamily
-          )
+          );
           if (value) {
-            return value.name
+            return value.name;
           } else {
-            return state.layout.elements[this.index].fontFamily
+            return state.layout.elements[this.index].fontFamily;
           }
         }
       },
@@ -283,18 +351,18 @@ export default {
         if (this.isGroup) {
           state.layout.elements[this.index].elements[
             this.elementIndex
-          ].fontFamily = newValue
+          ].fontFamily = newValue;
           state.layout.elements[this.index].elements[
             this.elementIndex
-          ].lineHeight = 1
+          ].lineHeight = 1;
         } else {
-          state.layout.elements[this.index].fontFamily = newValue
-          state.layout.elements[this.index].lineHeight = 1
+          state.layout.elements[this.index].fontFamily = newValue;
+          state.layout.elements[this.index].lineHeight = 1;
         }
       }
     },
     locked() {
-      return state.layout.elements[this.index].lock
+      return state.layout.elements[this.index].lock;
     },
     fontSize: {
       get() {
@@ -302,18 +370,18 @@ export default {
           return Math.round(
             state.layout.elements[this.index].elements[this.elementIndex]
               .fontSize
-          )
+          );
         } else {
-          return Math.round(state.layout.elements[this.index].fontSize)
+          return Math.round(state.layout.elements[this.index].fontSize);
         }
       },
       set(newValue) {
         if (this.isGroup) {
           state.layout.elements[this.index].elements[
             this.elementIndex
-          ].fontSize = newValue
+          ].fontSize = newValue;
         } else {
-          state.layout.elements[this.index].fontSize = newValue
+          state.layout.elements[this.index].fontSize = newValue;
         }
       }
     },
@@ -321,18 +389,16 @@ export default {
       get() {
         if (this.isGroup) {
           return state.layout.elements[this.index].elements[this.elementIndex]
-            .color
+            .color;
         } else {
-          return state.layout.elements[this.index].color
+          return state.layout.elements[this.index].color;
         }
       },
       set(newValue) {
         if (this.isGroup) {
-          state.layout.elements[this.index].elements[
-            this.elementIndex
-          ].color = newValue
+          state.layout.elements[this.index].color = newValue;
         } else {
-          state.layout.elements[this.index].color = newValue
+          state.layout.elements[this.index].color = newValue;
         }
       }
     },
@@ -342,9 +408,9 @@ export default {
           return (
             state.layout.elements[this.index].elements[this.elementIndex]
               .fontWeight !== 400
-          )
+          );
         } else {
-          return state.layout.elements[this.index].fontWeight !== 400
+          return state.layout.elements[this.index].fontWeight !== 400;
         }
       },
       set(newValue) {
@@ -352,17 +418,17 @@ export default {
           if (newValue) {
             state.layout.elements[this.index].elements[
               this.elementIndex
-            ].fontWeight = 800
+            ].fontWeight = 800;
           } else {
             state.layout.elements[this.index].elements[
               this.elementIndex
-            ].fontWeight = 400
+            ].fontWeight = 400;
           }
         } else {
           if (newValue) {
-            state.layout.elements[this.index].fontWeight = 800
+            state.layout.elements[this.index].fontWeight = 800;
           } else {
-            state.layout.elements[this.index].fontWeight = 400
+            state.layout.elements[this.index].fontWeight = 400;
           }
         }
       }
@@ -372,12 +438,12 @@ export default {
         if (this.isGroup) {
           return (
             state.layout.elements[this.index].elements[this.elementIndex]
-              .textDecoration === 'underline'
-          )
+              .textDecoration === "underline"
+          );
         } else {
           return (
-            state.layout.elements[this.index].textDecoration === 'underline'
-          )
+            state.layout.elements[this.index].textDecoration === "underline"
+          );
         }
       },
       set(newValue) {
@@ -385,17 +451,17 @@ export default {
           if (newValue) {
             state.layout.elements[this.index].elements[
               this.elementIndex
-            ].textDecoration = 'underline'
+            ].textDecoration = "underline";
           } else {
             state.layout.elements[this.index].elements[
               this.elementIndex
-            ].textDecoration = 'none'
+            ].textDecoration = "none";
           }
         } else {
           if (newValue) {
-            state.layout.elements[this.index].textDecoration = 'underline'
+            state.layout.elements[this.index].textDecoration = "underline";
           } else {
-            state.layout.elements[this.index].textDecoration = 'none'
+            state.layout.elements[this.index].textDecoration = "none";
           }
         }
       }
@@ -405,10 +471,10 @@ export default {
         if (this.isGroup) {
           return (
             state.layout.elements[this.index].elements[this.elementIndex]
-              .fontStyle == 'italic'
-          )
+              .fontStyle == "italic"
+          );
         } else {
-          return state.layout.elements[this.index].fontStyle == 'italic'
+          return state.layout.elements[this.index].fontStyle == "italic";
         }
       },
       set(newValue) {
@@ -416,17 +482,17 @@ export default {
           if (newValue) {
             state.layout.elements[this.index].elements[
               this.elementIndex
-            ].fontStyle = 'italic'
+            ].fontStyle = "italic";
           } else {
             state.layout.elements[this.index].elements[
               this.elementIndex
-            ].fontStyle = 'normal'
+            ].fontStyle = "normal";
           }
         } else {
           if (newValue) {
-            state.layout.elements[this.index].fontStyle = 'italic'
+            state.layout.elements[this.index].fontStyle = "italic";
           } else {
-            state.layout.elements[this.index].fontStyle = 'normal'
+            state.layout.elements[this.index].fontStyle = "normal";
           }
         }
       }
@@ -436,12 +502,12 @@ export default {
         if (this.isGroup) {
           return (
             state.layout.elements[this.index].elements[this.elementIndex]
-              .textDecoration === 'line-through'
-          )
+              .textDecoration === "line-through"
+          );
         } else {
           return (
-            state.layout.elements[this.index].textDecoration === 'line-through'
-          )
+            state.layout.elements[this.index].textDecoration === "line-through"
+          );
         }
       },
       set(newValue) {
@@ -449,17 +515,17 @@ export default {
           if (newValue) {
             state.layout.elements[this.index].elements[
               this.elementIndex
-            ].textDecoration = 'line-through'
+            ].textDecoration = "line-through";
           } else {
             state.layout.elements[this.index].elements[
               this.elementIndex
-            ].textDecoration = 'none'
+            ].textDecoration = "none";
           }
         } else {
           if (newValue) {
-            state.layout.elements[this.index].textDecoration = 'line-through'
+            state.layout.elements[this.index].textDecoration = "line-through";
           } else {
-            state.layout.elements[this.index].textDecoration = 'none'
+            state.layout.elements[this.index].textDecoration = "none";
           }
         }
       }
@@ -470,18 +536,18 @@ export default {
           return Math.round(
             state.layout.elements[this.index].elements[this.elementIndex]
               .opacity * 10
-          )
+          );
         } else {
-          return Math.round(state.layout.elements[this.index].opacity * 10)
+          return Math.round(state.layout.elements[this.index].opacity * 10);
         }
       },
       set(newValue) {
         if (this.isGroup) {
           state.layout.elements[this.index].elements[
             this.elementIndex
-          ].opacity = newValue / 10
+          ].opacity = newValue / 10;
         } else {
-          state.layout.elements[this.index].opacity = newValue / 10
+          state.layout.elements[this.index].opacity = newValue / 10;
         }
       }
     },
@@ -491,18 +557,18 @@ export default {
           return Math.round(
             state.layout.elements[this.index].elements[this.elementIndex]
               .lineHeight * 10
-          )
+          );
         } else {
-          return Math.round(state.layout.elements[this.index].lineHeight * 10)
+          return Math.round(state.layout.elements[this.index].lineHeight * 10);
         }
       },
       set(newValue) {
         if (this.isGroup) {
           state.layout.elements[this.index].elements[
             this.elementIndex
-          ].lineHeight = newValue / 10
+          ].lineHeight = newValue / 10;
         } else {
-          state.layout.elements[this.index].lineHeight = newValue / 10
+          state.layout.elements[this.index].lineHeight = newValue / 10;
         }
       }
     },
@@ -512,123 +578,245 @@ export default {
           return Math.round(
             state.layout.elements[this.index].elements[this.elementIndex]
               .letterSpacing
-          )
+          );
         } else {
-          return Math.round(state.layout.elements[this.index].letterSpacing)
+          return Math.round(state.layout.elements[this.index].letterSpacing);
         }
       },
       set(newValue) {
         if (this.isGroup) {
           state.layout.elements[this.index].elements[
             this.elementIndex
-          ].letterSpacing = newValue
+          ].letterSpacing = newValue;
         } else {
-          state.layout.elements[this.index].letterSpacing = newValue
+          state.layout.elements[this.index].letterSpacing = newValue;
         }
       }
     }
   },
   created() {
-    this.getFontFamily()
+    this.getFontFamily();
   },
   methods: {
+    // 点击字间距
+    zIntervalHandler() {
+      if (!this.zIsInterval) {
+        this.hIsInterval = false;
+        this.zIsInterval = !this.zIsInterval;
+        if (this.zIsInterval) {
+          setTimeout(() => {
+            window.addEventListener("click", this.hideTurnHandler);
+          }, 0);
+        }
+        // window.addEventListener("click", this.hideTurnHandler);
+      } else {
+        this.zIsInterval = !this.zIsInterval;
+      }
+      // if (!this.zIsInterval) {
+      //   this.hIsInterval = false;
+      //   this.zIsInterval = !this.zIsInterval
+      //   if (this.zIsInterval) {
+      //   setTimeout(() => {
+      //     window.addEventListener('click', this.hideTurnHandler)
+      //   }, 0)
+      // }
+      // } else {
+      //     this.zIsInterval = !this.zIsInterval
+      // }
+    },
+    // 点击行间距
+    hIntervalHandler() {
+      if (!this.hIsInterval) {
+        this.zIsInterval = false;
+        this.hIsInterval = !this.hIsInterval;
+          if (this.hIsInterval) {
+        setTimeout(() => {
+          window.addEventListener('click', this.hideTurnHandler)
+        }, 0)
+      }
+      } else {
+        this.hIsInterval = !this.hIsInterval;
+      }
+      // if (!this.hIsInterval) {
+      //   this.zIsInterval = false;
+      //   this.hIsInterval = !this.hIsInterval
+      //   if (this.hIsInterval) {
+      //   setTimeout(() => {
+      //     window.addEventListener('click', this.hideTurnHandler)
+      //   }, 0)
+      // }
+      // } else {
+      //   this.hIsInterval = !this.hIsInterval
+      // }
+    },
+
+    hideTurnHandler() {
+      console.log(12121212);
+      this.zIsInterval = false;
+      this.hIsInterval = false;
+
+      // this.hIsInterval = false
+      // window.removeEventListener('click', this.hideTurnHandler)
+    },
+    stopClick(event) {
+      var e = window.event || event;
+      if (e.stopPropagation) {
+        e.stopPropagation();
+      } else {
+        e.cancelBubble = true;
+      }
+    },
+
     editAbleHandler() {
-      mitation.updateCurrentEdit(true)
+      mitation.updateCurrentEdit(true);
     },
     getFontStyle() {
       if (!this.popupShow) {
         let params = {
           page: 1,
           limit: 100,
-          type: 'font_effect'
-        }
+          type: "font_effect"
+        };
         this.$axios.get(API.EFFECTS_API, { params }).then(res => {
-          this.effectList = [...res.data.list]
-        })
+          this.effectList = [...res.data.list];
+        });
       }
-      this.popupShow = !this.popupShow
+      this.popupShow = !this.popupShow;
     },
     getFontFamily() {
       let params = {
         page: 1,
         limit: 100,
-        type: 'font'
-      }
+        type: "font"
+      };
       this.$axios.get(API.EFFECTS_API, { params }).then(res => {
-        this.fontFamilyList = [...res.data.list]
-      })
+        this.fontFamilyList = [...res.data.list];
+      });
     },
     //更改样式
     changeStyleHandler(id, index) {
       if (id) {
         let params = {
           id: id
-        }
+        };
         this.$axios.get(API.EFFECT_DETAIL_API, { params }).then(res => {
-          const detail = JSON.parse(res.data.info.detail)
+          const detail = JSON.parse(res.data.info.detail);
+          state.layout.elements[this.index].fontFamily =
+            detail.model.fontFamily; // 字体存储
+          let params = {
+            name: detail.model.fontFamily
+          };
+          this.$axios.get(API.FONT_DETAIL_API, { params }).then(res => {
+            if (Object.keys(res.data).length == 0) {
+              this.$message({
+                message: "默认显示宋体",
+                type: "warning"
+              });
+            } else {
+              let style = document.createElement("style");
+              style.type = "text/css";
+              style.innerText = `@font-face {font-family:${res.data.info.name};src:url(${res.data.info.detail})}`;
+              document.getElementsByTagName("head")[0].appendChild(style);
+            }
+          });
+          if (
+            detail.model.textEffects[0].filling.type === 1 ||
+            detail.model.textEffects[0].filling.type === 2
+          ) {
+            this.colorbox = false;
+          } else {
+            this.colorbox = true;
+          }
           if (detail.model.textEffects) {
             state.layout.elements[this.index].textEffects = [
               ...detail.model.textEffects
-            ]
+            ];
+            state.layout.elements[this.index].color = state.layout.elements[
+              this.index
+            ].textEffects[0].filling.color.substring(0, 7);
           }
-        })
+        });
       } else {
-        state.layout.elements[this.index].textEffects = [...[]]
+        state.layout.elements[this.index].textEffects = [...[]];
       }
 
-      this.sel = index
+      this.sel = index;
       // this.fontStyle = item.name
-      this.popupShow = false
+      this.popupShow = false;
       // this.fontStyles = item.styles
     },
     //更改字体样式
     changeEffectTabHandler(item, index) {
-      this.effectTab = index
+      this.effectTab = index;
     },
     //文字对齐
     textAlignHandler(item) {
-      this.textAlignValue = item.icon
-      state.layout.elements[this.index].textAlign = item.value
+      this.textAlignValue = item.icon;
+      state.layout.elements[this.index].textAlign = item.value;
     },
     //字体
     fontFamilyHandler(id) {
       let params = {
         id: id
-      }
+      };
       this.$axios(API.EFFECT_DETAIL_API, { params }).then(res => {
-        this.fontFamily = res.data.info.name
-        this.setFontStyle(res.data.info)
-        this.fontFamilyShow = false
-      })
+        this.fontFamily = res.data.info.name;
+        this.setFontStyle(res.data.info);
+        this.fontFamilyShow = false;
+      });
     },
     //设置引入字体文件
     setFontStyle(data) {
-      let style = document.createElement('style')
-      style.type = 'text/css'
-      style.innerText = `@font-face {font-family:${data.name};src:url(${data.detail})}`
-      document.getElementsByTagName('head')[0].appendChild(style)
+      let style = document.createElement("style");
+      style.type = "text/css";
+      style.innerText = `@font-face {font-family:${data.name};src:url(${data.detail})}`;
+      document.getElementsByTagName("head")[0].appendChild(style);
     },
     showFontFamilyHandler() {
-      this.fontFamilyShow = !this.fontFamilyShow
+      this.fontFamilyShow = !this.fontFamilyShow;
       if (this.fontFamilyShow) {
         setTimeout(() => {
-          window.addEventListener('click', this.hideFontFamilyHandler)
-        }, 0)
+          window.addEventListener("click", this.hideFontFamilyHandler);
+        }, 0);
       }
     },
     hideFontFamilyHandler() {
-      this.fontFamilyShow = false
-      window.removeEventListener('click', this.hideFontFamilyHandler)
+      this.fontFamilyShow = false;
+      window.removeEventListener("click", this.hideFontFamilyHandler);
     },
     textDirectionHandler() {
-      if (state.layout.elements[this.index].writingMode == 'horizontal-tb') {
-        state.layout.elements[this.index].writingMode = 'vertical-rl'
+      if (state.layout.elements[this.index].writingMode == "horizontal-tb") {
+        state.layout.elements[this.index].writingMode = "vertical-rl";
       } else if (
-        state.layout.elements[this.index].writingMode == 'vertical-rl'
+        state.layout.elements[this.index].writingMode == "vertical-rl"
       ) {
-        state.layout.elements[this.index].writingMode = 'horizontal-tb'
+        state.layout.elements[this.index].writingMode = "horizontal-tb";
       }
     }
   }
-}
+};
 </script>
+<style lang="scss" scoped>
+.font-text-align {
+  right: 28px;
+  top: 44rem;
+}
+.font-word-space {
+  right: 28px;
+  top: 46.5rem;
+  box-shadow: 1px 1px 4px #cecaca;
+}
+.font-text-range {
+  margin-top: 0;
+}
+.fontsizeBox {
+  position: relative;
+  span {
+    position: absolute;
+    display: block;
+    width: 30px;
+    left: 25px;
+    top: 0;
+  }
+}
+</style>

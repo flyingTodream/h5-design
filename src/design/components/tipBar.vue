@@ -21,6 +21,7 @@ export default {
   methods: {
     changeWatermask() {
       mitation.setWaterMask(this.watermark)
+      console.log(this.watermark)
     }
   }
 }

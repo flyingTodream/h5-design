@@ -80,7 +80,7 @@
             </div>
             <div class="config-dialog-space"></div>
             <div @click="changeSizeHandler" class="config-dialog-btn">调整尺寸</div>
-            <el-button @click="printImageHandler">下载</el-button>
+            <!-- <el-button @click="printImageHandler">下载</el-button> -->
           </div>
         </div>
       </div>
@@ -219,7 +219,6 @@ export default {
         backgroundColor: null
       }
       return await this.$html2canvas(el, options).then(canvas => {
-        console.log(canvas)
         return canvas
       })
     },

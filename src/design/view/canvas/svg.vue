@@ -2,7 +2,6 @@
   <div
     class="editor-element editor-element-svg"
     @mouseup.left="transfromHandler"
-    @mouseover.left="hoverHandler"
     :style="elementStyles"
   >
     <div class="element-main" v-html="html"></div>
@@ -41,18 +40,17 @@ export default {
         opacity: this.data.opacity,
         transform: `matrix(${transform.a},${transform.b},${transform.c},${transform.d},${transform.tx},${transform.ty})`,
         width: this.data.width * this.zoom + 'px',
-        height: this.data.height * this.zoom + 'px',
+        height: this.data.height * this.zoom + 'px', 
         top: this.data.top * this.zoom + 'px',
-        left: this.data.left * this.zoom + 'px',
-        'z-index': `${this.index}`
-      }
+        left: this.data.left * this.zoom + 'px'
+      } 
     },
     mainStyles() {
       return {
         borderRadius: this.data.borderRadius,
         overflow: this.data.hidden ? 'hidden' : 'visible',
         opacity: this.data.opacity,
-        padding: this.data.padding.join('px ')
+        padding: this.data.padding.join('px')
       }
     },
     imageStyles() {

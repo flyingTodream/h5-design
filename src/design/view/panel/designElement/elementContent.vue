@@ -109,6 +109,7 @@ export default {
     selectHandler(id) {
       this.setTextPositionHandler()
       this.$axios.get(`${API.TEMPLATE_API}/114382`, { id }).then(data => {
+        
         data.data.left = this.l
         data.data.top = this.t
         mitation.addImage(data.data)
